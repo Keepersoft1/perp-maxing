@@ -49,8 +49,9 @@ nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
 .xbtn svg{width:13px;height:13px}
 /* hero */
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-.hero .wrap{position:relative;z-index:2;padding-block:clamp(40px,7vw,90px) clamp(70px,9vw,120px)}
-.gridfloor{position:absolute;left:-20%;right:-20%;bottom:-2px;height:58%;z-index:1;background:
+.hero .wrap{position:relative;z-index:2;padding-block:clamp(14px,2vw,26px);display:flex;align-items:center;justify-content:space-between;gap:20px 32px;flex-wrap:wrap}
+.hero .lead{min-width:0;flex:1 1 560px}
+.gridfloor{position:absolute;left:-20%;right:-20%;bottom:-2px;height:90%;opacity:.55;z-index:1;background:
   linear-gradient(to top,rgba(255,43,214,.0),var(--bg) 92%),
   repeating-linear-gradient(90deg,rgba(255,43,214,.45) 0 1px,transparent 1px 70px),
   repeating-linear-gradient(0deg,rgba(255,43,214,.45) 0 1px,transparent 1px 44px);
@@ -59,29 +60,33 @@ nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
 .sun{position:absolute;right:8%;top:16%;width:clamp(160px,22vw,320px);aspect-ratio:1;border-radius:50%;z-index:1;background:linear-gradient(180deg,#ffd166 0%,#ff2bd6 70%);opacity:.22;filter:blur(1px);
   mask-image:repeating-linear-gradient(180deg,#000 0 14px,transparent 14px 20px)}
 .sun{display:none}
-.heromark{position:absolute;right:9%;top:50%;width:clamp(180px,22vw,320px);aspect-ratio:1;z-index:2;transform:translateY(-58%);border-radius:24%;
+.heromark{position:relative;flex:none;width:clamp(84px,8vw,118px);aspect-ratio:1;z-index:2;border-radius:24%;
   box-shadow:0 0 0 1px rgba(255,79,216,.18),0 0 60px rgba(255,79,216,.22),0 0 120px rgba(77,232,255,.12);animation:bob 6s ease-in-out infinite}
-@keyframes bob{50%{transform:translateY(-62%)}}
+@keyframes bob{50%{transform:translateY(-5px)}}
 .eyebrow{font-size:12px;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
 .live{display:inline-flex;align-items:center;gap:8px;margin-left:12px;color:var(--up)}
 .live i{width:8px;height:8px;border-radius:50%;background:var(--up);box-shadow:0 0 10px var(--up);animation:pulse 1.6s infinite}
 @keyframes pulse{50%{opacity:.3}}
-h1{font-family:var(--disp);font-weight:800;font-size:clamp(38px,6.6vw,96px);line-height:.98;letter-spacing:-.03em;margin:.3em 0 0;max-width:13ch;text-wrap:balance;text-transform:uppercase}
-.sub{color:var(--mute);font-size:clamp(14px,1.15vw,17px);max-width:50ch;line-height:1.6;margin:22px 0 0}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+h1{font-family:var(--disp);font-weight:800;font-size:clamp(28px,3.9vw,58px);line-height:1;letter-spacing:-.03em;margin:.35em 0 0;max-width:none;text-wrap:balance;text-transform:uppercase}
+.sub{color:var(--mute);font-size:clamp(13px,1vw,15px);max-width:62ch;line-height:1.55;margin:12px 0 0}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.side{display:flex;align-items:center;gap:22px}
+.side .cta{flex-direction:column;align-items:stretch}
+.side .b{justify-content:center;padding:10px 18px}
 .b{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font:700 13px var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;border-radius:10px;cursor:pointer;color:var(--ink);background:transparent;border:1px solid var(--line2)}
 .b.pri{border-color:var(--pink);background:rgba(255,43,214,.12);box-shadow:0 0 16px rgba(255,43,214,.45),inset 0 0 14px rgba(255,43,214,.25)}
 .b.pri:hover{box-shadow:0 0 26px rgba(255,43,214,.7),inset 0 0 18px rgba(255,43,214,.35)}
 .b.cy{border-color:var(--cyan);box-shadow:0 0 14px rgba(34,230,255,.35),inset 0 0 12px rgba(34,230,255,.18)}
 .b:focus-visible,.ctl button:focus-visible,tr:focus-visible,.xbtn:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
 /* sections */
-.sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:34px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-top:20px}
+.rsh{align-items:center;padding-top:16px}.rsh h2{margin-right:auto}.rsh p{margin-right:6px}
 .sh h2{font-family:var(--disp);font-size:clamp(16px,1.6vw,22px);font-weight:700;margin:0;text-transform:uppercase;letter-spacing:.02em}
 .sh p{margin:0;font-size:12px;color:var(--dim)}
 .ctl{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0}
 .ctl button{font:500 12px var(--mono);color:var(--mute);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 12px;cursor:pointer;text-transform:uppercase;letter-spacing:.06em}
 .ctl button.on{color:var(--ink);border-color:var(--cyan);box-shadow:0 0 12px rgba(34,230,255,.4),inset 0 0 8px rgba(34,230,255,.2)}
-.stage{position:relative;height:clamp(460px,48vw,600px);margin-top:14px;border:1px solid var(--line2);border-radius:18px;background:radial-gradient(circle at 50% 50%,#130d2b 0,#07050f 72%);overflow:hidden;touch-action:none;box-shadow:0 0 40px rgba(124,58,237,.12) inset}
+.stage{position:relative;height:clamp(400px,calc(100vh - 342px),720px);margin-top:14px;border:1px solid var(--line2);border-radius:18px;background:radial-gradient(circle at 50% 50%,#130d2b 0,#07050f 72%);overflow:hidden;touch-action:none;box-shadow:0 0 40px rgba(124,58,237,.12) inset}
 .stage svg{position:absolute;inset:0;width:100%;height:100%}
 .stage .cap{position:absolute;left:14px;bottom:12px;font-size:11px;color:var(--dim)}
 .stage .scan{position:absolute;right:14px;bottom:12px;font-size:11px;color:var(--cyan);text-shadow:0 0 8px var(--cyan)}
@@ -173,7 +178,7 @@ section.view:not(#radar){padding-top:8px;min-height:calc(100vh - 260px)}
 .kv b{display:block;margin-top:5px;font-weight:700;font-variant-numeric:tabular-nums}
 .dcta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .note{font-size:11px;color:var(--dim);margin-top:auto;padding-top:18px}
-@media (max-width:760px){.heromark{display:none}.stats{grid-template-columns:repeat(2,1fr)}.kv{grid-template-columns:repeat(2,1fr)}.sun{display:none}}
+@media (max-width:760px){.heromark{display:none}.side,.side .cta{width:100%}.side .cta{flex-direction:row;flex-wrap:wrap}.side .b{flex:1 1 auto}.mobhide{display:none}.stats{grid-template-columns:repeat(2,1fr)}.kv{grid-template-columns:repeat(2,1fr)}.sun{display:none}}
 @media (prefers-reduced-motion:reduce){.heromark,.gridfloor,.logo .m,.live i{animation:none}.drawer,.scrim{transition:none}}
 </style>
 </head><body>
@@ -185,26 +190,31 @@ section.view:not(#radar){padding-top:8px;min-height:calc(100vh - 260px)}
 
 <main id="top">
 <section class="hero" data-view="radar">
-  <div class="sun" aria-hidden="true"></div><img class="heromark" src="brand/mark.svg" alt="perp maxing logo">
+  <div class="sun" aria-hidden="true"></div>
   <div class="gridfloor" aria-hidden="true"></div>
-  <div class="wrap">
+  <div class="wrap"><div class="lead">
     <div class="eyebrow"><span class="num">01</span>Community tool · No token<span class="live" id="liveTop"><i></i><span>live</span></span></div>
     <h1>Every perp <span class="glow-p">point</span>, <span class="glow-c">priced.</span></h1>
     <p class="sub">Volume, open interest and OTC point prices for the perps worth farming. Updated every hour.</p>
-    <div class="cta">
+
+  </div>
+    <div class="side">
+      <div class="cta">
       <a class="b pri" href="#perps">Explore perps</a>
       <a class="b" href="#arb">Arbitrage</a>
       <a class="b cy" href="https://t.me/PointsOTC" target="_blank" rel="noopener">Sell points OTC</a>
+    </div>
+      <img class="heromark" src="brand/mark.svg" alt="perp maxing logo">
     </div>
   </div>
 </section>
 
 <section class="wrap view" id="radar" data-view="radar">
-  <div class="sh"><h2><span class="num">01</span>The Radar</h2><p>bubble size = <span id="mLabel">24h volume</span></p></div>
-  <div class="ctl" id="ctl">
+  <div class="sh rsh"><h2><span class="num">01</span>The Radar</h2><p class="mobhide">bubble size = <span id="mLabel">24h volume</span></p>
+  <div class="ctl" id="ctl" style="margin:0">
     <button type="button" data-m="vol" class="on">Volume</button>
     <button type="button" data-m="price">Point price</button>
-  </div>
+  </div></div>
   <div class="stage" id="stage">
     <svg id="rsvg" aria-label="Radar of perp DEX point prices"></svg>
     <div class="cap">drag to move · tap for the chart</div>
