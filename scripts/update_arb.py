@@ -21,14 +21,14 @@ VENUES = {  # our project id -> CoinGecko derivatives exchange id
 
 
 def get(url):
-    for attempt in range(3):
+    for attempt in range(5):
         try:
             with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=60) as r:
                 return json.loads(r.read())
-        except Exception:
-            if attempt == 2:
+        except Exception as e:
+            if attempt == 4:
                 raise
-            time.sleep(8)
+            time.sleep(35 if "429" in str(e) else 8)
 
 
 def norm_base(t):
@@ -49,6 +49,7 @@ def f(x):
 def main():
     now = datetime.now(timezone.utc)
     out = {"updated": now.strftime("%Y-%m-%dT%H:%MZ"), "source": "CoinGecko", "venues": {}, "assets": {}, "status": {}}
+    time.sleep(20)  # the volume step just used the same API
     for pid, cg in VENUES.items():
         try:
             d = get(f"https://api.coingecko.com/api/v3/derivatives/exchanges/{cg}?include_tickers=unexpired")
@@ -74,7 +75,7 @@ def main():
                 "spread": f(t.get("bid_ask_spread")),
             }
         out["status"][pid] = f"{len(tick)} tickers"
-        time.sleep(2.5)  # be gentle with the free API
+        time.sleep(14)  # free CoinGecko API allows only a few calls per minute
     out["assets"] = {k: v for k, v in out["assets"].items() if len(v) >= 2}
     out["status"]["shared_assets"] = len(out["assets"])
     json.dump(out, open(OUT, "w"), indent=1)
