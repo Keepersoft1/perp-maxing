@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27T14:55Z",
+ "updated": "2026-10-27T14:56Z",
  "source": "DefiLlama",
  "projects": {},
  "debug": {
@@ -10,5 +10,9 @@
   "nado": [],
   "entropy": [],
   "arcus": []
+ },
+ "fetch": {
+  "derivatives": "HTTPError: HTTP Error 402: Payment Required",
+  "open-interest": "144 rows"
  }
 }
