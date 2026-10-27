@@ -6,14 +6,14 @@
  "projects": {
   "variational": {
    "name": "Variational",
-   "chain": "Omni \u00b7 Arbitrum",
+   "chain": "Omni · Arbitrum",
    "ab": "Va",
    "col": "#3da9ff",
    "status": "Season 1",
    "trade": "https://omni.variational.io/?ref=OMNIFORT",
-   "boost": "+18% points",
+   "boost": "+16% points",
    "price": 45,
-   "label": "$40\u201350",
+   "label": "$40–50",
    "live": false,
    "history": [
     [

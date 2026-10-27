@@ -121,6 +121,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ctitle{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-top:22px}
 .ctitle+.chart{margin-top:8px}
 #dTabs{margin-top:18px}
+.calc{margin-top:20px;padding:16px;border:1px solid var(--line2);border-radius:14px;background:linear-gradient(135deg,rgba(255,43,214,.06),rgba(34,230,255,.04))}
+.crow{display:flex;align-items:flex-end;gap:10px;margin-top:10px}
+.crow label{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0}
+.crow label span,.cres span{font-size:11px;color:var(--dim)}
+.crow i{font-style:normal;color:var(--dim);font-size:20px;padding-bottom:10px}
+.crow input{font:700 20px var(--mono);color:var(--ink);background:#07050f;border:1px solid var(--line2);border-radius:10px;padding:10px 12px;width:100%;min-width:0;box-sizing:border-box}
+.crow input:focus{outline:none;border-color:var(--cyan);box-shadow:0 0 0 3px rgba(34,230,255,.15)}
+.cres{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:14px;flex-wrap:wrap}
+.cres output{font:800 clamp(28px,4vw,40px) var(--disp);color:var(--up);text-shadow:0 0 18px rgba(57,255,159,.35);letter-spacing:-.02em;overflow-wrap:anywhere}
+.cchips{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+.cchips button{font:500 12px var(--mono);color:var(--mute);background:transparent;border:1px solid var(--line2);border-radius:999px;padding:5px 11px;cursor:pointer}
+.cchips button:hover,.cchips button:focus-visible{color:var(--ink);border-color:var(--cyan);outline:none}
 .chart svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .tip{position:absolute;left:0;top:0;pointer-events:none;background:#07050f;border:1px solid var(--cyan);box-shadow:0 0 14px rgba(34,230,255,.35);border-radius:9px;padding:8px 11px;font-size:12px;opacity:0;white-space:nowrap}
 .tip b{display:block;font:700 18px var(--disp);margin-top:3px}
@@ -201,6 +213,16 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <div class="kv" id="dKv"></div>
   </div>
   <div class="dcta" id="dCta"></div>
+  <div class="calc">
+    <div class="ctitle" style="margin-top:0">Points calculator</div>
+    <div class="crow">
+      <label for="cPts"><span>Your points</span><input id="cPts" inputmode="decimal" autocomplete="off" placeholder="1,000"></label>
+      <i aria-hidden="true">×</i>
+      <label for="cPx"><span>Price per point, $</span><input id="cPx" inputmode="decimal" autocomplete="off" placeholder="TBA"></label>
+    </div>
+    <div class="cres"><span>Your bag</span><output id="cOut" for="cPts cPx">$0</output></div>
+    <div class="cchips" id="cChips"></div>
+  </div>
   <div class="note" id="dNote"></div>
 </aside>
 
@@ -213,7 +235,7 @@ const pct=v=>v==null?'—':(v>=0?'+':'')+v.toFixed(1)+'%';
 const cls=v=>v==null?'':v>=0?'up':'down';
 const ago=t=>{const m=Math.max(1,Math.round((Date.now()-t)/6e4));return m<60?m+' min ago':m<1440?Math.round(m/60)+' h ago':Math.round(m/1440)+' d ago'};
 const $=id=>document.getElementById(id);
-const FALLBACK={"updated": "2026-10-27T14:00Z", "sources": ["https://t.me/PointsOTC"], "projects": {"variational": {"name": "Variational", "chain": "Omni · Arbitrum", "ab": "Va", "col": "#3da9ff", "status": "Season 1", "trade": "https://omni.variational.io/?ref=OMNIFORT", "boost": "+18% points", "price": 45, "label": "$40–50", "live": false, "history": [["2025-12-10T00:00Z", 1], ["2026-03-01T00:00Z", 2.6], ["2026-05-01T00:00Z", 6], ["2026-06-22T00:00Z", 20.5], ["2026-08-15T00:00Z", 20.6], ["2026-09-12T00:00Z", 20], ["2026-09-24T00:00Z", 30], ["2026-09-30T00:00Z", 40.5], ["2026-10-27T00:00Z", 45]]}, "lighter": {"name": "Lighter RH", "chain": "Robinhood Chain", "ab": "Li", "col": "#e8e6ff", "status": "New", "trade": "https://robinhoodchain.lighter.xyz/?referral=REGISTER&source=none", "boost": "+10% points", "price": null, "label": "TBA", "live": false, "history": []}, "extended": {"name": "Extended", "chain": "Starknet", "ab": "Ex", "col": "#2dffa8", "status": "Points live", "trade": null, "boost": null, "price": 1.6, "label": "$1.60", "live": false, "history": [["2026-10-27T14:00Z", 1.6]]}, "risex": {"name": "RiseX", "chain": "RISE chain", "ab": "Rx", "col": "#ff3dbb", "status": "Points live", "trade": "https://www.rise.trade/invite/forto", "boost": "+12% points", "price": 1.15, "label": "$1.15", "live": false, "history": [["2026-10-27T14:00Z", 1.15]]}, "nado": {"name": "Nado", "chain": "Ink", "ab": "Na", "col": "#ffd166", "status": "Points live", "trade": null, "boost": null, "price": 1, "label": "$1.00", "live": false, "history": [["2026-10-27T14:00Z", 1]]}, "entropy": {"name": "Entropy", "chain": "Perp DEX", "ab": "En", "col": "#a78bfa", "status": "Season 1", "trade": "https://entropy.io/?r=entropyregister", "boost": "max ref tier", "price": null, "label": "TBA", "live": false, "history": []}, "arcus": {"name": "Arcus", "chain": "Perp DEX", "ab": "Ar", "col": "#ff8a3d", "status": "Points live", "trade": "https://app.arcus.xyz/ref/FORTO", "boost": "up to 50% rebate", "price": null, "label": "TBA", "live": false, "history": []}}};
+const FALLBACK={"updated": "2026-10-27T14:00Z", "sources": ["https://t.me/PointsOTC"], "projects": {"variational": {"name": "Variational", "chain": "Omni · Arbitrum", "ab": "Va", "col": "#3da9ff", "status": "Season 1", "trade": "https://omni.variational.io/?ref=OMNIFORT", "boost": "+16% points", "price": 45, "label": "$40–50", "live": false, "history": [["2025-12-10T00:00Z", 1], ["2026-03-01T00:00Z", 2.6], ["2026-05-01T00:00Z", 6], ["2026-06-22T00:00Z", 20.5], ["2026-08-15T00:00Z", 20.6], ["2026-09-12T00:00Z", 20], ["2026-09-24T00:00Z", 30], ["2026-09-30T00:00Z", 40.5], ["2026-10-27T00:00Z", 45]]}, "lighter": {"name": "Lighter RH", "chain": "Robinhood Chain", "ab": "Li", "col": "#e8e6ff", "status": "New", "trade": "https://robinhoodchain.lighter.xyz/?referral=REGISTER&source=none", "boost": "+10% points", "price": null, "label": "TBA", "live": false, "history": []}, "extended": {"name": "Extended", "chain": "Starknet", "ab": "Ex", "col": "#2dffa8", "status": "Points live", "trade": null, "boost": null, "price": 1.6, "label": "$1.60", "live": false, "history": [["2026-10-27T14:00Z", 1.6]]}, "risex": {"name": "RiseX", "chain": "RISE chain", "ab": "Rx", "col": "#ff3dbb", "status": "Points live", "trade": "https://www.rise.trade/invite/forto", "boost": "+12% points", "price": 1.15, "label": "$1.15", "live": false, "history": [["2026-10-27T14:00Z", 1.15]]}, "nado": {"name": "Nado", "chain": "Ink", "ab": "Na", "col": "#ffd166", "status": "Points live", "trade": null, "boost": null, "price": 1, "label": "$1.00", "live": false, "history": [["2026-10-27T14:00Z", 1]]}, "entropy": {"name": "Entropy", "chain": "Perp DEX", "ab": "En", "col": "#a78bfa", "status": "Season 1", "trade": "https://entropy.io/?r=entropyregister", "boost": "max ref tier", "price": null, "label": "TBA", "live": false, "history": []}, "arcus": {"name": "Arcus", "chain": "Perp DEX", "ab": "Ar", "col": "#ff8a3d", "status": "Points live", "trade": "https://app.arcus.xyz/ref/FORTO", "boost": "up to 50% rebate", "price": null, "label": "TBA", "live": false, "history": []}}};
 
 function mono(xs,ys){const n=xs.length;if(n===1)return()=>ys[0];const d=[],m=[];
  for(let i=0;i<n-1;i++)d.push((ys[i+1]-ys[i])/((xs[i+1]-xs[i])||1));m[0]=d[0];m[n-1]=d[n-2];
@@ -328,7 +350,18 @@ function drawOI(ht){const p=cur,ch=p.vol.oi_chart||[],el=$('vChart').getBounding
  $('vSvg').innerHTML=h}
 $('vChart').addEventListener('pointermove',e=>{if(!cur)return;const ch=cur.vol.oi_chart||[];if(ch.length<2)return;const r=$('vChart').getBoundingClientRect(),t0=ch[0][0]*1000,t1=ch[ch.length-1][0]*1000;drawOI(t0+(e.clientX-r.left-56)/(r.width-64)*(t1-t0))});
 $('vChart').addEventListener('pointerleave',()=>{if(cur)drawOI(null)});
-function openP(id){cur=P.find(p=>p.id===id);if(!cur)return;const p=cur;fillVol(p);
+const cnum=v=>parseFloat(String(v).replace(/[^0-9.]/g,''))||0;
+function calc(){const v=cnum($('cPts').value)*cnum($('cPx').value);$('cOut').textContent='$'+v.toLocaleString('en-US',{maximumFractionDigits:v<100?2:0})}
+$('cPts').addEventListener('input',e=>{const el=e.target,raw=el.value.replace(/[^0-9.]/g,''),[a,b]=raw.split('.');el.value=(a?Number(a).toLocaleString('en-US'):'')+(b!==undefined?'.'+b:'');calc()});
+$('cPx').addEventListener('input',calc);
+function setCalc(p){const lab=String(p.label||'');const nums=(lab.match(/[\d.]+/g)||[]).map(Number);
+ const lo=nums.length?nums[0]:null,hi=nums.length>1?nums[1]:lo;
+ $('cPx').value=p.price!=null?String(+((lo+hi)/2).toFixed(2)):'';if(!$('cPts').value)$('cPts').value='1,000';
+ const ch=[];if(lo!=null&&hi!==lo){ch.push(['Low $'+lo,lo],['High $'+hi,hi])}else if(lo!=null){ch.push(['Now $'+lo,lo])}
+ [1,5,10,25,50].forEach(v=>{if(!ch.some(c=>c[1]===v))ch.push(['$'+v,v])});
+ $('cChips').innerHTML=ch.slice(0,6).map(([t,v])=>`<button type="button" data-v="${v}">${t}</button>`).join('');
+ document.querySelectorAll('#cChips button').forEach(b=>b.onclick=()=>{$('cPx').value=b.dataset.v;calc()});calc()}
+function openP(id){cur=P.find(p=>p.id===id);if(!cur)return;const p=cur;fillVol(p);setCalc(p);
  const ic=$('dIc');ic.outerHTML=icon(p).replace('class="ic"','class="ic" id="dIc"');
  $('dName').textContent=p.name;$('dChain').textContent=p.chain+(p.status?' · '+p.status:'');setHead(null);
  $('dKv').innerHTML=(p.hasHist?[['7d',pct(p.d7),p.d7==null?null:p.d7>=0],['30d',pct(p.d30),p.d30==null?null:p.d30>=0],['Since first print',pct((p.price/p.first-1)*100),p.price>=p.first],['First print',money(p.first),null],['ATH',money(p.ath),null],['From ATH',pct(p.fromAth),p.fromAth>=-0.5]]
