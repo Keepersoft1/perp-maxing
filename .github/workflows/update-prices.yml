@@ -20,7 +20,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Read OTC channels and update prices
+      - run: pip install telethon==1.36.0
+      - name: Read OTC groups and update prices
+        env:
+          TG_API_ID: ${{ secrets.TG_API_ID }}
+          TG_API_HASH: ${{ secrets.TG_API_HASH }}
+          TG_SESSION: ${{ secrets.TG_SESSION }}
         run: python scripts/update_prices.py
       - name: Commit if changed
         run: |

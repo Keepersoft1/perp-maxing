@@ -69,6 +69,48 @@ def messages(channel):
     return out
 
 
+TG_SOURCES = ["PointsOTC", "https://t.me/+RcZMsrK_iiBlZTMy"]
+
+
+def tg_messages(limit=300):
+    """Read groups through a Telegram user session (needs TG_API_ID, TG_API_HASH, TG_SESSION)."""
+    api_id, api_hash, sess = (os.environ.get(k) for k in ("TG_API_ID", "TG_API_HASH", "TG_SESSION"))
+    if not (api_id and api_hash and sess):
+        DEBUG["telegram"] = "no secrets set"
+        return []
+    import asyncio
+    from telethon import TelegramClient, functions, types
+    from telethon.sessions import StringSession
+
+    async def run():
+        out = []
+        async with TelegramClient(StringSession(sess), int(api_id), api_hash) as client:
+            for src in TG_SOURCES:
+                try:
+                    if "/+" in src:
+                        inv = await client(functions.messages.CheckChatInviteRequest(src.split("/+")[1]))
+                        ent = inv.chat if isinstance(inv, (types.ChatInviteAlready, types.ChatInvitePeek)) else None
+                        if ent is None:
+                            DEBUG[src] = "account is not a member of this group"
+                            continue
+                    else:
+                        ent = await client.get_entity(src)
+                    n = 0
+                    async for m in client.iter_messages(ent, limit=limit):
+                        if not m.message:
+                            continue
+                        uname = getattr(ent, "username", None)
+                        link = f"{uname}/{m.id}" if uname else f"c/{ent.id}/{m.id}"
+                        out.append({"post": link, "time": m.date.astimezone(timezone.utc), "text": m.message})
+                        n += 1
+                    DEBUG[src] = f"{n} messages"
+                except Exception as e:
+                    DEBUG[src] = f"error: {e}"
+        return out
+
+    return asyncio.run(run())
+
+
 def num(s):
     return float(s.replace(",", "."))
 
@@ -117,6 +159,10 @@ def main():
     data = json.load(open(DATA))
     now = datetime.now(timezone.utc)
     msgs = []
+    try:
+        msgs += tg_messages()
+    except Exception as e:
+        DEBUG["telegram"] = f"error: {e}"
     for ch in CHANNELS:
         try:
             msgs += messages(ch)
