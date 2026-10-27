@@ -51,32 +51,30 @@ def pick(rows, pattern):
 
 def main():
     now = datetime.now(timezone.utc)
-    vol_rows = protocols("derivatives")
     oi_rows = protocols("open-interest")
     out = {"updated": now.strftime("%Y-%m-%dT%H:%MZ"), "source": "DefiLlama", "projects": {}, "debug": {}}
     for pid, pat in MATCH.items():
-        hits = pick(vol_rows, pat)
-        out["debug"][pid] = [f'{h.get("displayName") or h.get("name")} [{h.get("slug")}] 24h={h.get("total24h")}' for h in hits[:6]]
+        hits = pick(oi_rows, pat)
+        out["debug"][pid] = [f'{h.get("displayName") or h.get("name")} [{h.get("slug")}] oi={h.get("total24h")}' for h in hits[:6]]
         if not hits:
             continue
         h = hits[0]
-        rec = {
-            "name": h.get("displayName") or h.get("name"), "slug": h.get("slug"),
-            "v24h": h.get("total24h"), "v7d": h.get("total7d"), "v30d": h.get("total30d"),
-            "ch1d": h.get("change_1d"), "ch7d": h.get("change_7d"), "ch1m": h.get("change_1m"),
-            "chains": h.get("chains"), "url": f"https://defillama.com/perps/{h.get('slug')}",
-        }
-        oi = pick(oi_rows, pat)
-        if oi:
-            rec["oi"] = oi[0].get("total24h")
+        slug = h.get("slug")
+        rec = {"name": h.get("displayName") or h.get("name"), "slug": slug, "oi": h.get("total24h"),
+               "oi_ch1d": h.get("change_1d"), "chains": h.get("chains"),
+               "url": f"https://defillama.com/protocol/{slug}"}
         try:
-            s = get(f"/summary/derivatives/{h.get('slug')}?dataType=dailyVolume")
-            chart = s.get("totalDataChart") or []
+            sm = get(f"/summary/derivatives/{slug}?dataType=dailyVolume")
+            rec.update({"v24h": sm.get("total24h"), "v7d": sm.get("total7d"), "v30d": sm.get("total30d"),
+                        "ch1d": sm.get("change_1d"), "ch7d": sm.get("change_7d"), "ch1m": sm.get("change_1m")})
+            chart = sm.get("totalDataChart") or []
             rec["chart"] = [[int(t), round(float(v))] for t, v in chart[-120:] if v is not None]
+            if rec.get("v24h") is None and rec["chart"]:
+                rec["v24h"] = rec["chart"][-1][1]
+            ERR[pid] = "summary ok"
         except Exception as e:
-            print("summary fail", pid, e)
+            ERR[pid] = f"summary {type(e).__name__}: {e}"
         out["projects"][pid] = rec
-        print(pid, rec["name"], rec["v24h"])
     out["fetch"] = ERR
     json.dump(out, open(OUT, "w"), indent=1)
 
