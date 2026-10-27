@@ -121,6 +121,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ctitle{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-top:22px}
 .ctitle+.chart{margin-top:8px}
 #dTabs{margin-top:18px}
+.links a{position:relative;padding:6px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
+.links a.on{color:var(--ink);border-bottom-color:var(--pink);box-shadow:0 8px 12px -10px rgba(255,79,216,.8)}
+section.view:not(#radar){padding-top:8px;min-height:calc(100vh - 260px)}
+@media (max-width:760px){nav .wrap{flex-wrap:wrap;height:auto;padding-block:10px 0;row-gap:4px}
+ .links{display:flex!important;order:3;width:100%;margin:0;justify-content:space-between;font-size:11px;gap:8px}
+ .links a{padding:8px 0 10px}}
 .arbbar{display:flex;gap:10px 14px;flex-wrap:wrap;align-items:center;margin-top:14px}
 .arbq{flex:1;min-width:200px}
 .arbq input{width:100%;box-sizing:border-box;font:500 13px var(--mono);color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 12px}
@@ -164,18 +170,18 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .kv b{display:block;margin-top:5px;font-weight:700;font-variant-numeric:tabular-nums}
 .dcta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .note{font-size:11px;color:var(--dim);margin-top:auto;padding-top:18px}
-@media (max-width:760px){.heromark{display:none}.links{display:none}.stats{grid-template-columns:repeat(2,1fr)}.kv{grid-template-columns:repeat(2,1fr)}.sun{display:none}}
+@media (max-width:760px){.heromark{display:none}.stats{grid-template-columns:repeat(2,1fr)}.kv{grid-template-columns:repeat(2,1fr)}.sun{display:none}}
 @media (prefers-reduced-motion:reduce){.heromark,.gridfloor,.logo .m,.live i{animation:none}.drawer,.scrim{transition:none}}
 </style>
 </head><body>
 <nav><div class="wrap">
   <a class="logo" href="#top"><img src="brand/mark.svg" alt="" width="38" height="38"><span>perp</span> <span class="m glow-p">maxing</span></a>
-  <div class="links"><a href="#radar"><span class="num">01</span>Radar</a><a href="#perps"><span class="num">02</span>Perps</a><a href="#arb"><span class="num">03</span>Arbitrage</a></div>
+  <div class="links" id="tabs"><a href="#radar" data-v="radar"><span class="num">01</span>Radar</a><a href="#perps" data-v="perps"><span class="num">02</span>Perps</a><a href="#arb" data-v="arb"><span class="num">03</span>Arbitrage</a></div>
   <a class="xbtn" href="https://x.com/floppa_perp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></svg>Follow</a>
 </div></nav>
 
 <main id="top">
-<section class="hero">
+<section class="hero" data-view="radar">
   <div class="sun" aria-hidden="true"></div><img class="heromark" src="brand/mark.svg" alt="perp maxing logo">
   <div class="gridfloor" aria-hidden="true"></div>
   <div class="wrap">
@@ -184,12 +190,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <p class="sub">Volume, open interest and OTC point prices for the perps worth farming. Updated every hour.</p>
     <div class="cta">
       <a class="b pri" href="#perps">Explore perps</a>
+      <a class="b" href="#arb">Arbitrage</a>
       <a class="b cy" href="https://t.me/PointsOTC" target="_blank" rel="noopener">Sell points OTC</a>
     </div>
   </div>
 </section>
 
-<section class="wrap" id="radar">
+<section class="wrap view" id="radar" data-view="radar">
   <div class="sh"><h2><span class="num">01</span>The Radar</h2><p>bubble size = <span id="mLabel">24h volume</span></p></div>
   <div class="ctl" id="ctl">
     <button type="button" data-m="vol" class="on">Volume</button>
@@ -203,7 +210,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="stats" id="stats"></div>
 </section>
 
-<section class="wrap" id="perps" style="margin-top:28px">
+<section class="wrap view" id="perps" data-view="perps" hidden>
   <div class="sh"><h2><span class="num">02</span>Perps</h2><p id="srcLine">OTC per point · USD</p></div>
   <div class="tbl"><table>
     <thead><tr><th>Perp</th><th class="r">24h volume</th><th class="r">Open interest</th><th>OI · 90d</th><th class="r">Point price</th><th>Status</th></tr></thead>
@@ -211,7 +218,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </table></div>
 </section>
 
-<section class="wrap" id="arb" style="margin-top:28px">
+<section class="wrap view" id="arb" data-view="arb" hidden>
   <div class="sh"><h2><span class="num">03</span>Arbitrage</h2><p id="arbSrc">same token · different venues</p></div>
   <div class="arbbar">
     <div class="ctl" id="arbSort" style="margin:0"><button type="button" data-s="price" class="on">Price spread</button><button type="button" data-s="fund">Funding spread</button></div>
@@ -271,7 +278,7 @@ const pct=v=>v==null?'—':(v>=0?'+':'')+v.toFixed(1)+'%';
 const cls=v=>v==null?'':v>=0?'up':'down';
 const ago=t=>{const m=Math.max(1,Math.round((Date.now()-t)/6e4));return m<60?m+' min ago':m<1440?Math.round(m/60)+' h ago':Math.round(m/1440)+' d ago'};
 const $=id=>document.getElementById(id);
-const FALLBACK={"updated": "2026-10-27T14:00Z", "sources": ["https://t.me/PointsOTC"], "projects": {"variational": {"name": "Variational", "chain": "Omni · Arbitrum", "ab": "Va", "col": "#3da9ff", "status": "Season 1", "trade": "https://omni.variational.io/?ref=OMNIFORT", "boost": "+16% points", "price": 45, "label": "$40–50", "live": false, "history": [["2025-12-10T00:00Z", 1], ["2026-03-01T00:00Z", 2.6], ["2026-05-01T00:00Z", 6], ["2026-06-22T00:00Z", 20.5], ["2026-08-15T00:00Z", 20.6], ["2026-09-12T00:00Z", 20], ["2026-09-24T00:00Z", 30], ["2026-09-30T00:00Z", 40.5], ["2026-10-27T00:00Z", 45]]}, "lighter": {"name": "Lighter RH", "chain": "Robinhood Chain", "ab": "Li", "col": "#e8e6ff", "status": "New", "trade": "https://robinhoodchain.lighter.xyz/?referral=REGISTER&source=none", "boost": "+10% points", "price": null, "label": "TBA", "live": false, "history": []}, "extended": {"name": "Extended", "chain": "Starknet", "ab": "Ex", "col": "#2dffa8", "status": "Points live", "trade": null, "boost": null, "price": 1.6, "label": "$1.60", "live": false, "history": [["2026-10-27T14:00Z", 1.6]]}, "risex": {"name": "RiseX", "chain": "RISE chain", "ab": "Rx", "col": "#ff3dbb", "status": "Points live", "trade": "https://www.rise.trade/invite/forto", "boost": "+12% points", "price": 1.15, "label": "$1.15", "live": false, "history": [["2026-10-27T14:00Z", 1.15]]}, "nado": {"name": "Nado", "chain": "Ink", "ab": "Na", "col": "#ffd166", "status": "Points live", "trade": null, "boost": null, "price": 1, "label": "$1.00", "live": false, "history": [["2026-10-27T14:00Z", 1]]}, "entropy": {"name": "Entropy", "chain": "Perp DEX", "ab": "En", "col": "#a78bfa", "status": "Season 1", "trade": "https://entropy.io/?r=entropyregister", "boost": "max ref tier", "price": null, "label": "TBA", "live": false, "history": []}, "arcus": {"name": "Arcus", "chain": "Perp DEX", "ab": "Ar", "col": "#ff8a3d", "status": "Points live", "trade": "https://app.arcus.xyz/ref/FORTO", "boost": "up to 50% rebate", "price": null, "label": "TBA", "live": false, "history": []}}};
+const FALLBACK={"updated": "2026-10-27T14:00Z", "sources": ["https://t.me/PointsOTC"], "projects": {"variational": {"name": "Variational", "chain": "Omni · Arbitrum", "ab": "Va", "col": "#3da9ff", "status": "Season 1", "trade": "https://omni.variational.io/?ref=OMNIFORT", "boost": "+16% points", "price": 45, "label": "$40–50", "live": false, "history": [["2025-12-10T00:00Z", 1], ["2026-03-01T00:00Z", 2.6], ["2026-05-01T00:00Z", 6], ["2026-06-22T00:00Z", 20.5], ["2026-08-15T00:00Z", 20.6], ["2026-09-12T00:00Z", 20], ["2026-09-24T00:00Z", 30], ["2026-09-30T00:00Z", 40.5], ["2026-10-27T00:00Z", 45]]}, "lighter": {"name": "Lighter RH", "chain": "Robinhood Chain", "ab": "Li", "col": "#e8e6ff", "status": "New", "trade": "https://robinhoodchain.lighter.xyz/?referral=REGISTER&source=none", "boost": "+10% points", "price": null, "label": "TBA", "live": false, "history": []}, "extended": {"name": "Extended", "chain": "Starknet", "ab": "Ex", "col": "#2dffa8", "status": "Points live", "trade": null, "boost": null, "price": 1.6, "label": "$1.60", "live": false, "history": [["2026-10-27T14:00Z", 1.6]]}, "risex": {"name": "RiseX", "chain": "RISE chain", "ab": "Rx", "col": "#ff3dbb", "status": "Points live", "trade": "https://www.rise.trade/invite/forto", "boost": "+12% points", "price": 1.15, "label": "$1.15", "live": false, "history": [["2026-10-27T14:00Z", 1.15]]}, "nado": {"name": "Nado", "chain": "Ink", "ab": "Na", "col": "#ffd166", "status": "Points live", "trade": "https://app.nado.xyz/?ref=bdoniao", "boost": null, "price": 1, "label": "$1.00", "live": false, "history": [["2026-10-27T14:00Z", 1]]}, "entropy": {"name": "Entropy", "chain": "Perp DEX", "ab": "En", "col": "#a78bfa", "status": "Season 1", "trade": "https://entropy.io/?r=entropyregister", "boost": "max ref tier", "price": null, "label": "TBA", "live": false, "history": []}, "arcus": {"name": "Arcus", "chain": "Perp DEX", "ab": "Ar", "col": "#ff8a3d", "status": "Points live", "trade": "https://app.arcus.xyz/ref/FORTO", "boost": "up to 50% rebate", "price": null, "label": "TBA", "live": false, "history": []}}};
 
 function mono(xs,ys){const n=xs.length;if(n===1)return()=>ys[0];const d=[],m=[];
  for(let i=0;i<n-1;i++)d.push((ys[i+1]-ys[i])/((xs[i+1]-xs[i])||1));m[0]=d[0];m[n-1]=d[n-2];
@@ -305,7 +312,7 @@ function build(data){
  $('stats').innerHTML=[['24h volume',usd(sum('v24')),`top: ${topv.name}`],['Open interest',usd(sum('oi')),P.length+' perps'],['Priced on OTC',P.filter(p=>p.price!=null).length+' / '+P.length,'points'],['Updated',VUPD?ago(VUPD):'—','every hour']]
   .map(([a,b,c])=>`<div class="stat"><span>${a}</span><b>${b}</b><small>${c}</small></div>`).join('');
  renderTable();initRadar();if(ARB)renderArb();
- if(location.hash&&P.find(p=>'#'+p.id===location.hash))openP(location.hash.slice(1));
+ route();
 }
 function icon(p){return `<div class="ic" style="border-color:${p.col};box-shadow:0 0 12px ${p.col}66;color:${p.col}">${p.img?`<img src="${p.img}" alt="">`:p.ab}</div>`}
 function spark(p){const ch=(p.vol.oi_chart||[]).slice(-90);if(ch.length<2)return '<span style="color:var(--dim)">—</span>';const w=120,h=32,N=ch.length-1;let d='';const v=ch.map(x=>x[1]),mn=Math.min(...v),mx=Math.max(...v);
@@ -320,7 +327,9 @@ function renderTable(){
 const fpct=v=>v==null?'—':(v>=0?'+':'')+v.toFixed(3)+'%';
 const fmtP=v=>v==null?'—':v>=1000?'$'+v.toLocaleString('en-US',{maximumFractionDigits:1}):v>=1?'$'+v.toFixed(v>=100?2:3):'$'+v.toPrecision(3);
 function arbRows(){if(!ARB)return[];const out=[];
- for(const [tok,vs] of Object.entries(ARB.assets||{})){const ent=Object.entries(vs).filter(([id])=>P.find(p=>p.id===id));if(ent.length<arbMin)continue;
+ for(const [tok,vs] of Object.entries(ARB.assets||{})){let ent=Object.entries(vs).filter(([id,x])=>P.find(p=>p.id===id)&&x.price>0);
+  const srt=ent.map(e=>e[1].price).sort((a,b)=>a-b),med=srt[Math.floor(srt.length/2)];ent=ent.filter(([,x])=>Math.abs(x.price/med-1)<0.1);
+  if(ent.length<arbMin||ent.length<2)continue;
   const pr=ent.filter(([,x])=>x.price>0);const lo=pr.reduce((a,b)=>b[1].price<a[1].price?b:a),hi=pr.reduce((a,b)=>b[1].price>a[1].price?b:a);
   const precise=lo[1].price>=1;const ps=precise?(hi[1].price-lo[1].price)/lo[1].price*100:null;
   const fr=ent.filter(([,x])=>x.fund!=null);let fl=null,fh=null,fs=null;if(fr.length>=2){fl=fr.reduce((a,b)=>b[1].fund<a[1].fund?b:a);fh=fr.reduce((a,b)=>b[1].fund>a[1].fund?b:a);fs=fh[1].fund-fl[1].fund}
@@ -347,6 +356,15 @@ function renderArb(){if(!ARB)return;const rows=arbRows();
 document.querySelectorAll('#arbSort button').forEach(b=>b.onclick=()=>{arbSort=b.dataset.s;document.querySelectorAll('#arbSort button').forEach(x=>x.classList.toggle('on',x===b));renderArb()});
 document.querySelectorAll('#arbMin button').forEach(b=>b.onclick=()=>{arbMin=+b.dataset.n;document.querySelectorAll('#arbMin button').forEach(x=>x.classList.toggle('on',x===b));renderArb()});
 $('arbQ').addEventListener('input',renderArb);
+// ---- tabs ----
+const VIEWS=['radar','perps','arb'];
+function showView(v,scroll){if(!VIEWS.includes(v))v='radar';
+ document.querySelectorAll('[data-view]').forEach(el=>el.hidden=el.dataset.view!==v);
+ document.querySelectorAll('#tabs a').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
+ if(v==='radar')requestAnimationFrame(place);if(v==='arb'&&ARB)renderArb();
+ if(scroll!==false)window.scrollTo({top:0,behavior:'instant'in window?'instant':'auto'})}
+function route(){const h=location.hash.slice(1);if(VIEWS.includes(h))showView(h);else if(P.find(p=>p.id===h)){showView('radar',false);openP(h)}else showView('radar',false)}
+addEventListener('hashchange',route);
 // ---- radar ----
 const stage=$('stage'),rs=$('rsvg');let SW=0,SH=0,metric='vol',nodes=[],started=false;
 function initRadar(){nodes=P.map((p,i)=>({p,a:-Math.PI/2+i*2*Math.PI/P.length+0.3,x:0,y:0,drag:false,moved:false}));place();if(!started){started=true;requestAnimationFrame(loop)}
