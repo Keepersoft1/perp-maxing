@@ -106,6 +106,9 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .bigsub{font-size:12px;color:var(--mute);margin-top:10px}
 .bigsub a{color:var(--cyan)}
 .chart{position:relative;height:280px;margin-top:22px;cursor:crosshair;touch-action:pan-y}
+.ctitle{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-top:22px}
+.ctitle+.chart{margin-top:8px}
+#dTabs{margin-top:18px}
 .chart svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
 .tip{position:absolute;left:0;top:0;pointer-events:none;background:#07050f;border:1px solid var(--cyan);box-shadow:0 0 14px rgba(34,230,255,.35);border-radius:9px;padding:8px 11px;font-size:12px;opacity:0;white-space:nowrap}
 .tip b{display:block;font:700 18px var(--disp);margin-top:3px}
@@ -132,7 +135,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span>Community tool · No token<span class="live" id="liveTop"><i></i><span>live</span></span></div>
     <h1>Every perp <span class="glow-p">point</span>, <span class="glow-c">priced.</span></h1>
-    <p class="sub">OTC point prices for the perps worth farming. Updated every hour.</p>
+    <p class="sub">Volume, open interest and OTC point prices for the perps worth farming. Updated every hour.</p>
     <div class="cta">
       <a class="b pri" href="#perps">Explore perps</a>
       <a class="b cy" href="https://t.me/PointsOTC" target="_blank" rel="noopener">Sell points OTC</a>
@@ -141,11 +144,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </section>
 
 <section class="wrap" id="radar">
-  <div class="sh"><h2><span class="num">01</span>The Radar</h2><p>bubble size = <span id="mLabel">point price</span></p></div>
+  <div class="sh"><h2><span class="num">01</span>The Radar</h2><p>bubble size = <span id="mLabel">24h volume</span></p></div>
   <div class="ctl" id="ctl">
-    <button type="button" data-m="price" class="on">Point price</button>
-    <button type="button" data-m="d30">30d</button>
-    <button type="button" data-m="ath">From ATH</button>
+    <button type="button" data-m="vol" class="on">Volume</button>
+    <button type="button" data-m="price">Point price</button>
   </div>
   <div class="stage" id="stage">
     <svg id="rsvg" aria-label="Radar of perp DEX point prices"></svg>
@@ -158,7 +160,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="wrap" id="perps" style="margin-top:28px">
   <div class="sh"><h2><span class="num">02</span>Perps</h2><p id="srcLine">OTC per point · USD</p></div>
   <div class="tbl"><table>
-    <thead><tr><th>Perp</th><th class="r">Point price</th><th class="r">7d</th><th class="r">30d</th><th>Last 90d</th><th>Status</th></tr></thead>
+    <thead><tr><th>Perp</th><th class="r">24h volume</th><th class="r">Open interest</th><th>OI · 90d</th><th class="r">Point price</th><th>Status</th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
 </section>
@@ -172,10 +174,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" aria-hidden="true" aria-labelledby="dName">
   <div class="dh"><div class="ic" id="dIc"></div><div><h3 id="dName"></h3><small id="dChain"></small></div><button class="x" id="dClose" type="button">Esc ✕</button></div>
-  <div class="big glow-c" id="dPrice"></div>
-  <div class="bigsub" id="dSub"></div>
-  <div class="chart" id="dChart"><svg id="dSvg"></svg><div class="tip" id="dTip"></div></div>
-  <div class="kv" id="dKv"></div>
+  <div class="ctl" id="dTabs"><button type="button" data-t="vol">Volume</button><button type="button" data-t="price">Point price</button></div>
+  <div id="pVol">
+    <div class="big glow-c" id="vBig"></div>
+    <div class="bigsub" id="vSub"></div>
+    <div class="ctitle">Open interest · last 180 days</div>
+    <div class="chart" id="vChart"><svg id="vSvg"></svg><div class="tip" id="vTip"></div></div>
+    <div class="kv" id="vKv"></div>
+  </div>
+  <div id="pPrice" hidden>
+    <div class="big glow-c" id="dPrice"></div>
+    <div class="bigsub" id="dSub"></div>
+    <div class="chart" id="dChart"><svg id="dSvg"></svg><div class="tip" id="dTip"></div></div>
+    <div class="kv" id="dKv"></div>
+  </div>
   <div class="dcta" id="dCta"></div>
   <div class="note" id="dNote"></div>
 </aside>
@@ -198,7 +210,8 @@ function mono(xs,ys){const n=xs.length;if(n===1)return()=>ys[0];const d=[],m=[];
  return x=>{if(x<=xs[0])return ys[0];if(x>=xs[n-1])return ys[n-1];let lo=0,hi=n-1;while(hi-lo>1){const md=(lo+hi)>>1;if(xs[md]<=x)lo=md;else hi=md}const i=lo,h=xs[i+1]-xs[i],t=(x-xs[i])/h,t2=t*t,t3=t2*t;
   return (2*t3-3*t2+1)*ys[i]+(t3-2*t2+t)*h*m[i]+(-2*t3+3*t2)*ys[i+1]+(t3-t2)*h*m[i+1]}}
 
-let P=[],NOW=Date.now(),UPDATED=0;
+let P=[],NOW=Date.now(),UPDATED=0,VOL={projects:{}},VUPD=0;
+const usd=v=>v==null?'—':v>=1e9?'$'+(v/1e9).toFixed(2)+'B':v>=1e6?'$'+(v/1e6).toFixed(1)+'M':v>=1e3?'$'+(v/1e3).toFixed(1)+'K':'$'+Math.round(v);
 function build(data){
  UPDATED=pdate(data.updated||'2026-10-27T14:00Z');
  P=Object.entries(data.projects).map(([id,p])=>{
@@ -210,32 +223,33 @@ function build(data){
   if(o.hasHist){const at=d=>o.f(o.end-d*DAY);const sp=(o.end-o.start)/DAY;o.d7=sp>=7?(o.price/at(7)-1)*100:null;o.d30=sp>=30?(o.price/at(30)-1)*100:null;
    let ath=0;for(let t=o.start;t<=o.end;t+=DAY)ath=Math.max(ath,o.f(t));ath=Math.max(ath,o.price);o.ath=ath;o.fromAth=(o.price/ath-1)*100;o.first=o.ys[0];}
   else{o.d7=o.d30=o.fromAth=null;o.ath=o.price;o.first=o.price;}
+  o.vol=(VOL.projects||{})[id]||{};o.v24=o.vol.v24h??null;o.oi=o.vol.oi??o.vol.oi_cg??null;
   o.img=null;const im=new Image();im.onload=()=>{o.img=im.src;renderTable()};im.src='logos/'+id+'.png';
   return o});
  NOW=Math.max(...P.map(p=>p.end));
  const anyLive=P.some(p=>p.live);
  $('liveTop').style.display=anyLive?'':'none';
  $('srcLine').innerHTML=anyLive?`OTC per point · USD · updated ${ago(UPDATED)} · <a href="https://t.me/PointsOTC" target="_blank" rel="noopener" style="color:var(--cyan)">PointsOTC</a>`:`OTC per point · USD · updated ${fmtD(UPDATED).replace(/, \d{4}$/,'')}`;
- const priced=P.filter(p=>p.price!=null),top=[...priced].sort((a,b)=>b.price-a.price)[0];
- $('stats').innerHTML=[['Perps tracked',P.length,'and counting'],['Priced on OTC',priced.length+' / '+P.length,P.length-priced.length+' TBA'],['Highest point',top.name,top.label],['Updated',anyLive?ago(UPDATED):fmtD(UPDATED).replace(/, \d{4}$/,''),'every hour']]
+ const sum=k=>P.reduce((a,p)=>a+(p[k]||0),0),topv=[...P].sort((a,b)=>(b.v24||0)-(a.v24||0))[0];
+ $('stats').innerHTML=[['24h volume',usd(sum('v24')),`top: ${topv.name}`],['Open interest',usd(sum('oi')),P.length+' perps'],['Priced on OTC',P.filter(p=>p.price!=null).length+' / '+P.length,'points'],['Updated',VUPD?ago(VUPD):'—','every hour']]
   .map(([a,b,c])=>`<div class="stat"><span>${a}</span><b>${b}</b><small>${c}</small></div>`).join('');
  renderTable();initRadar();
  if(location.hash&&P.find(p=>'#'+p.id===location.hash))openP(location.hash.slice(1));
 }
 function icon(p){return `<div class="ic" style="border-color:${p.col};box-shadow:0 0 12px ${p.col}66;color:${p.col}">${p.img?`<img src="${p.img}" alt="">`:p.ab}</div>`}
-function spark(p){if(!p.hasHist)return '<span style="color:var(--dim)">—</span>';const w=120,h=32,N=45;let d='',mn=1e9,mx=-1e9;const v=[];for(let i=0;i<=N;i++){const x=p.f(p.end-90*DAY+90*DAY*i/N);v.push(x);mn=Math.min(mn,x);mx=Math.max(mx,x)}
- v.forEach((x,i)=>{d+=(i?'L':'M')+(i/N*w).toFixed(1)+' '+(h-3-(x-mn)/(mx-mn||1)*(h-6)).toFixed(1)});const c=p.d30>=0?'#39ff9f':'#ff4d6d';
+function spark(p){const ch=(p.vol.oi_chart||[]).slice(-90);if(ch.length<2)return '<span style="color:var(--dim)">—</span>';const w=120,h=32,N=ch.length-1;let d='';const v=ch.map(x=>x[1]),mn=Math.min(...v),mx=Math.max(...v);
+ v.forEach((x,i)=>{d+=(i?'L':'M')+(i/N*w).toFixed(1)+' '+(h-3-(x-mn)/(mx-mn||1)*(h-6)).toFixed(1)});const c=v[N]>=v[0]?'#39ff9f':'#ff4d6d';
  return `<svg width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" style="filter:drop-shadow(0 0 4px ${c})"><path d="${d}" fill="none" stroke="${c}" stroke-width="1.8"/></svg>`}
 function renderTable(){
- $('rows').innerHTML=[...P].sort((a,b)=>(b.price??-1)-(a.price??-1)).map(p=>`<tr tabindex="0" data-id="${p.id}"><td><div class="pn">${icon(p)}<div><b>${p.name}</b><small>${p.chain}</small></div></div></td>
- <td class="r"><b style="${p.tba?'color:var(--mute)':''}">${p.label}</b></td><td class="r ${cls(p.d7)}">${pct(p.d7)}</td><td class="r ${cls(p.d30)}">${pct(p.d30)}</td><td>${spark(p)}</td><td>${p.live?'<span class="pill live">● live</span> ':''}<span class="pill">${p.status||''}</span></td></tr>`).join('');
+ $('rows').innerHTML=[...P].sort((a,b)=>(b.v24??-1)-(a.v24??-1)).map(p=>`<tr tabindex="0" data-id="${p.id}"><td><div class="pn">${icon(p)}<div><b>${p.name}</b><small>${p.chain}</small></div></div></td>
+ <td class="r"><b>${usd(p.v24)}</b></td><td class="r">${usd(p.oi)}<br><small class="${cls(p.vol.oi_ch1d)}">${pct(p.vol.oi_ch1d)} 24h</small></td><td>${spark(p)}</td><td class="r"><b style="${p.tba?'color:var(--mute)':''}">${p.label}</b></td><td>${p.live?'<span class="pill live">● live</span> ':''}<span class="pill">${p.status||''}</span></td></tr>`).join('');
  document.querySelectorAll('#rows tr').forEach(tr=>{tr.onclick=()=>openP(tr.dataset.id);tr.onkeydown=e=>{if(e.key==='Enter')openP(tr.dataset.id)}});
 }
 // ---- radar ----
-const stage=$('stage'),rs=$('rsvg');let SW=0,SH=0,metric='price',nodes=[],started=false;
+const stage=$('stage'),rs=$('rsvg');let SW=0,SH=0,metric='vol',nodes=[],started=false;
 function initRadar(){nodes=P.map((p,i)=>({p,a:-Math.PI/2+i*2*Math.PI/P.length+0.3,x:0,y:0,drag:false,moved:false}));place();if(!started){started=true;requestAnimationFrame(loop)}
  setTimeout(()=>$('scan').textContent=`${P.length} perps · ${P.filter(p=>p.price!=null).length} priced`,1200)}
-function mval(p){return metric==='price'?Math.log10((p.price||0)+1):metric==='d30'?Math.abs(p.d30||0):Math.abs(p.fromAth||0)}
+function mval(p){return metric==='price'?Math.log10((p.price||0)+1):Math.log10((p.v24||p.oi||0)+1)}
 function rOf(n){const vals=P.map(mval),v=mval(n.p),mx=Math.max(...vals),mn=Math.min(...vals),base=Math.min(SW,SH),small=SW<600;
  return base*((small?0.08:0.05)+(small?0.055:0.07)*((v-mn)/(mx-mn||1)))}
 function place(){const r=stage.getBoundingClientRect();SW=r.width;SH=r.height;
@@ -254,8 +268,8 @@ function drawRadar(t){
    if(!n.drag){n.x+=(n.hx+Math.sin(t/1700+i*1.7)*10-n.x)*0.04;n.y+=(n.hy+Math.cos(t/1900+i)*10-n.y)*0.04}
    h+=`<line x1="${cx}" y1="${cy}" x2="${n.x}" y2="${n.y}" stroke="${n.p.col}" stroke-opacity=".18" stroke-dasharray="3 6"/>`});
  nodes.forEach(n=>{const p=n.p,r=n.r,diff=((Math.atan2(n.y-cy,n.x-cx)-ang)%(2*Math.PI)+2*Math.PI)%(2*Math.PI),hit=diff>2*Math.PI-0.45;
-   const val=metric==='price'?p.label:metric==='d30'?pct(p.d30):pct(p.fromAth);
-   const mv=metric==='d30'?p.d30:p.fromAth,vc=metric==='price'?(p.tba?'#9d95c4':'#f3f0ff'):(mv==null?'#9d95c4':mv>=0?'#39ff9f':'#ff4d6d');
+   const val=metric==='price'?p.label:(p.v24!=null?usd(p.v24):'OI '+usd(p.oi));
+   const vc=metric==='price'?(p.tba?'#9d95c4':'#f3f0ff'):(p.v24!=null?'#22e6ff':'#9d95c4');
    const inner=p.img?`<image href="${p.img}" x="${-r+4}" y="${-r+4}" width="${2*r-8}" height="${2*r-8}" clip-path="url(#cp_${p.id})" preserveAspectRatio="xMidYMid slice"/>`
      :`<text y="${r*0.16}" text-anchor="middle" font-family="Unbounded,Arial Black,sans-serif" font-weight="800" font-size="${r*0.55}" fill="${p.col}">${p.ab}</text>`;
    const fs=Math.max(11,Math.min(15,r*0.28));
@@ -272,22 +286,46 @@ stage.addEventListener('pointerdown',e=>{const g=e.target.closest('.node');if(!g
  dragN=n;n.drag=true;n.moved=false;ox=e.clientX-r.left-n.x;oy=e.clientY-r.top-n.y;downAt=[e.clientX,e.clientY];stage.setPointerCapture(e.pointerId)});
 stage.addEventListener('pointermove',e=>{if(!dragN)return;const r=stage.getBoundingClientRect();if(Math.hypot(e.clientX-downAt[0],e.clientY-downAt[1])>5)dragN.moved=true;dragN.x=e.clientX-r.left-ox;dragN.y=e.clientY-r.top-oy});
 stage.addEventListener('pointerup',()=>{if(!dragN)return;const n=dragN;dragN=null;n.drag=false;if(!n.moved)openP(n.p.id);else{n.hx=n.x;n.hy=n.y}});
-document.querySelectorAll('#ctl button').forEach(b=>b.onclick=()=>{metric=b.dataset.m;document.querySelectorAll('#ctl button').forEach(x=>x.classList.toggle('on',x===b));$('mLabel').textContent=b.textContent.toLowerCase()});
+document.querySelectorAll('#ctl button').forEach(b=>b.onclick=()=>{metric=b.dataset.m;document.querySelectorAll('#ctl button').forEach(x=>x.classList.toggle('on',x===b));$('mLabel').textContent=metric==='vol'?'24h volume':'point price'});
 const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
 function loop(t){drawRadar(reduce?0:t);requestAnimationFrame(loop)}
-addEventListener('resize',()=>{place();if(cur)drawChart(null)});
+addEventListener('resize',()=>{place();if(cur){drawChart(null);drawOI(null)}});
 // ---- drawer ----
-let cur=null;
-function openP(id){cur=P.find(p=>p.id===id);if(!cur)return;const p=cur;
+let cur=null,dTab='vol';
+function setTab(t){dTab=t;document.querySelectorAll('#dTabs button').forEach(b=>b.classList.toggle('on',b.dataset.t===t));$('pVol').hidden=t!=='vol';$('pPrice').hidden=t!=='price';
+ requestAnimationFrame(()=>{if(!cur)return;if(t==='vol')drawOI(null);else drawChart(null)})}
+document.querySelectorAll('#dTabs button').forEach(b=>b.onclick=()=>setTab(b.dataset.t));
+function fillVol(p){const v=p.vol;
+ $('vBig').textContent=p.v24!=null?usd(p.v24):usd(p.oi);
+ $('vSub').innerHTML=(p.v24!=null?'24h volume':'open interest · volume n/a')+(VUPD?' · updated '+ago(VUPD):'');
+ $('vKv').innerHTML=[['24h volume',usd(p.v24),null],['Open interest',usd(p.oi),null],['Perp pairs',v.pairs??'—',null],['OI 24h',pct(v.oi_ch1d),v.oi_ch1d],['OI 7d',pct(v.oi_ch7d),v.oi_ch7d],['OI 30d',pct(v.oi_ch1m),v.oi_ch1m]]
+  .map(([a,b,u])=>`<div><span>${a}</span><b class="${u==null?'':u>=0?'up':'down'}">${b}</b></div>`).join('')}
+function drawOI(ht){const p=cur,ch=p.vol.oi_chart||[],el=$('vChart').getBoundingClientRect(),W=el.width,H=el.height;
+ if(ch.length<2){$('vSvg').innerHTML=`<text x="${W/2}" y="${H/2}" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12" fill="#9d95c4">no open-interest history yet</text>`;return}
+ const xs=ch.map(c=>c[0]*1000),ys=ch.map(c=>c[1]),t0=xs[0],t1=xs[xs.length-1],ym=niceMax(Math.max(...ys)*1.1),padL=56,padB=26,padT=8,padR=8;
+ const X=t=>padL+(t-t0)/(t1-t0||1)*(W-padL-padR),Y=v=>H-padB-v/ym*(H-padB-padT);
+ let h=`<defs><linearGradient id="vg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22e6ff" stop-opacity=".3"/><stop offset="1" stop-color="#22e6ff" stop-opacity="0"/></linearGradient></defs>`;
+ for(let i=1;i<=4;i++){const v=ym*i/4,y=Y(v);h+=`<line x1="${padL}" x2="${W}" y1="${y}" y2="${y}" stroke="#1f1a38"/><text x="0" y="${y+4}" font-family="JetBrains Mono,monospace" font-size="11" fill="#5d5684">${usd(v)}</text>`}
+ const s=new Date(t0);for(let y=s.getUTCFullYear(),m=s.getUTCMonth()+1;;){const mt=Date.UTC(y,m,1);if(mt>t1)break;const x=X(mt);if(x>padL+16)h+=`<text x="${x}" y="${H-6}" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="11" fill="#5d5684">${new Date(mt).toLocaleDateString('en-US',{month:'short',timeZone:'UTC'})}</text>`;m++;if(m>11){m=0;y++}}
+ const bw=Math.max(1,(W-padL-padR)/xs.length-1);
+ xs.forEach((t,i)=>{h+=`<rect x="${X(t)-bw/2}" y="${Y(ys[i])}" width="${bw}" height="${Y(0)-Y(ys[i])}" fill="${p.col}" opacity="${ht!=null&&Math.abs(t-ht)<DAY/2?1:.55}"/>`});
+ if(ht!=null){const i=xs.reduce((bi,t,k)=>Math.abs(t-ht)<Math.abs(xs[bi]-ht)?k:bi,0),x=X(xs[i]),y=Y(ys[i]);
+  h+=`<line x1="${x}" x2="${x}" y1="0" y2="${H-padB}" stroke="#22e6ff" stroke-opacity=".6" stroke-dasharray="3 4"/>`;
+  const tip=$('vTip');tip.innerHTML=`${fmtD(xs[i])}<b>${usd(ys[i])}</b>`;tip.style.opacity=1;const tw=tip.offsetWidth;let tx=x+14;if(tx+tw>W)tx=x-tw-14;tip.style.transform=`translate(${tx}px,${Math.max(0,y-64)}px)`}
+ else $('vTip').style.opacity=0;
+ $('vSvg').innerHTML=h}
+$('vChart').addEventListener('pointermove',e=>{if(!cur)return;const ch=cur.vol.oi_chart||[];if(ch.length<2)return;const r=$('vChart').getBoundingClientRect(),t0=ch[0][0]*1000,t1=ch[ch.length-1][0]*1000;drawOI(t0+(e.clientX-r.left-56)/(r.width-64)*(t1-t0))});
+$('vChart').addEventListener('pointerleave',()=>{if(cur)drawOI(null)});
+function openP(id){cur=P.find(p=>p.id===id);if(!cur)return;const p=cur;fillVol(p);
  const ic=$('dIc');ic.outerHTML=icon(p).replace('class="ic"','class="ic" id="dIc"');
  $('dName').textContent=p.name;$('dChain').textContent=p.chain+(p.status?' · '+p.status:'');setHead(null);
  $('dKv').innerHTML=(p.hasHist?[['7d',pct(p.d7),p.d7==null?null:p.d7>=0],['30d',pct(p.d30),p.d30==null?null:p.d30>=0],['Since first print',pct((p.price/p.first-1)*100),p.price>=p.first],['First print',money(p.first),null],['ATH',money(p.ath),null],['From ATH',pct(p.fromAth),p.fromAth>=-0.5]]
    :[['Point price',p.label,null],['Status',p.status||'—',null],['Ref bonus',p.boost||'—',null]])
    .map(([a,b,u])=>`<div><span>${a}</span><b class="${u==null?'':u?'up':'down'}">${b}</b></div>`).join('');
  $('dCta').innerHTML=(p.trade?`<a class="b pri" href="${p.trade}" target="_blank" rel="noopener">Farm on ${p.name}${p.boost?' · '+p.boost:''}</a>`:'')+`<a class="b cy" href="https://t.me/PointsOTC" target="_blank" rel="noopener">Sell points OTC</a>`;
- $('dNote').innerHTML=p.live&&p.source?`Last OTC mention: <a href="${p.source}" target="_blank" rel="noopener" style="color:var(--cyan)">${p.source.replace('https://','')}</a>${p.seen?' · '+ago(pdate(p.seen)):''}`:'Price from OTC desks. The bot checks OTC chats every hour.';
+ $('dNote').innerHTML=p.live&&p.source?`Last OTC mention: <a href="${p.source}" target="_blank" rel="noopener" style="color:var(--cyan)">${p.source.replace('https://','')}</a>${p.seen?' · '+ago(pdate(p.seen)):''}`:`Point price from OTC desks · volume from <a href="${p.vol.cg_url||'https://www.coingecko.com/en/exchanges/derivatives'}" target="_blank" rel="noopener" style="color:var(--cyan)">CoinGecko</a> · OI from <a href="${p.vol.dl_url||'https://defillama.com'}" target="_blank" rel="noopener" style="color:var(--cyan)">DefiLlama</a> · hourly`;
  $('drawer').classList.add('on');$('drawer').setAttribute('aria-hidden','false');$('scrim').classList.add('on');
- requestAnimationFrame(()=>drawChart(null));$('dClose').focus({preventScroll:true})}
+ setTab(metric==='price'?'price':'vol');$('dClose').focus({preventScroll:true})}
 function closeP(){$('drawer').classList.remove('on');$('drawer').setAttribute('aria-hidden','true');$('scrim').classList.remove('on');cur=null}
 $('dClose').onclick=closeP;$('scrim').onclick=closeP;addEventListener('keydown',e=>{if(e.key==='Escape')closeP()});
 function setHead(t){const p=cur;if(t==null){$('dPrice').textContent=p.label;$('dSub').innerHTML='now · per point'+(p.live?' · <span class="up">live</span>':'');return}
@@ -309,6 +347,8 @@ function drawChart(ht){const p=cur;if(!p.hasHist){$('dTip').style.opacity=0;cons
 $('dChart').addEventListener('pointermove',e=>{if(!cur||!cur.hasHist)return;const g=geo(),r=$('dChart').getBoundingClientRect();let t=g.T(e.clientX-r.left);t=Math.max(cur.start,Math.min(cur.end,Math.round(t/HOUR)*HOUR));drawChart(t);setHead(t)});
 $('dChart').addEventListener('pointerleave',()=>{if(!cur||!cur.hasHist)return;drawChart(null);setHead(null)});
 // ---- load data ----
-fetch('data/prices.json?t='+Math.floor(Date.now()/3e5),{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject()).then(build).catch(()=>build(FALLBACK));
+const q='?t='+Math.floor(Date.now()/3e5);
+fetch('data/volume.json'+q,{cache:'no-store'}).then(r=>r.ok?r.json():{projects:{}}).catch(()=>({projects:{}})).then(v=>{VOL=v||{projects:{}};VUPD=VOL.updated?pdate(VOL.updated):0;
+ return fetch('data/prices.json'+q,{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject())}).then(build).catch(()=>build(FALLBACK));
 </script>
 </body></html>
