@@ -1,0 +1,1593 @@
+{
+ "updated": "2026-10-27T16:07Z",
+ "source": "CoinGecko",
+ "venues": {
+  "variational": {
+   "name": "Variational Omni",
+   "pairs": 581,
+   "url": "https://omni.variational.io"
+  },
+  "lighter": {
+   "name": "Robinhood Chain Lighter (Futures)",
+   "pairs": 58,
+   "url": "https://robinhoodchain.lighter.xyz/"
+  },
+  "arcus": {
+   "name": "Arcus (Futures)",
+   "pairs": 64,
+   "url": "https://arcus.xyz/"
+  }
+ },
+ "assets": {
+  "BONK": {
+   "variational": {
+    "sym": "1000BONK-PERP",
+    "price": 0.003,
+    "fund": 0.005,
+    "oi": 224375.82,
+    "vol": 27880.99575984658,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "KBONK-USD",
+    "price": 0.003,
+    "fund": 0.001,
+    "oi": 23502.66141168,
+    "vol": 40178.7812522144,
+    "spread": 0.0017295956662205887
+   }
+  },
+  "AAPL": {
+   "variational": {
+    "sym": "AAPL-PERP",
+    "price": 347.225,
+    "fund": 0.0,
+    "oi": 6193856.57,
+    "vol": 2442960.467476921,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "AAPL_USDG",
+    "price": 346.58,
+    "fund": -0.001,
+    "oi": 12113540.708204,
+    "vol": 15059925.266773,
+    "spread": 8.656010156377377e-05
+   },
+   "arcus": {
+    "sym": "AAPL-USD",
+    "price": 346.81,
+    "fund": -0.004,
+    "oi": 3805787.8951077,
+    "vol": 4347791.564417417,
+    "spread": 2.888754080362511e-05
+   }
+  },
+  "AAVE": {
+   "variational": {
+    "sym": "AAVE-PERP",
+    "price": 132.464,
+    "fund": 0.002,
+    "oi": 7874031.24,
+    "vol": 587542.0356093792,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "AAVE-USD",
+    "price": 132.66,
+    "fund": 0.001,
+    "oi": 539405.961553976,
+    "vol": 198477.8389385882,
+    "spread": 0.0007535795026374854
+   }
+  },
+  "AMD": {
+   "variational": {
+    "sym": "AMD-PERP",
+    "price": 559.967,
+    "fund": 0.0,
+    "oi": 2611829.03,
+    "vol": 524213.3019865565,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "AMD_USDG",
+    "price": 560.51,
+    "fund": 0.0,
+    "oi": 2241868.4839399997,
+    "vol": 5036111.897644,
+    "spread": 0.00037453183520605736
+   },
+   "arcus": {
+    "sym": "AMD-USD",
+    "price": 560.64,
+    "fund": -0.002,
+    "oi": 1273281.92436536,
+    "vol": 7602636.498491777,
+    "spread": 1.7869268432134137e-05
+   }
+  },
+  "AMZN": {
+   "variational": {
+    "sym": "AMZN-PERP",
+    "price": 252.585,
+    "fund": 0.004,
+    "oi": 4933752.79,
+    "vol": 1842420.059123287,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "AMZN_USDG",
+    "price": 252.24,
+    "fund": 0.0,
+    "oi": 14798187.891456,
+    "vol": 20082401.902135,
+    "spread": 0.00011892491873464338
+   },
+   "arcus": {
+    "sym": "AMZN-USD",
+    "price": 252.62,
+    "fund": 0.004,
+    "oi": 988135.164651712,
+    "vol": 1604226.529636386,
+    "spread": 3.955383276635909e-05
+   }
+  },
+  "ANTHROPIC": {
+   "variational": {
+    "sym": "ANTHROPIC-PERP",
+    "price": 1881.49,
+    "fund": 0.005,
+    "oi": 5127821.7,
+    "vol": 942622.6335861483,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "ANTHROPIC_USDG",
+    "price": 1946.1,
+    "fund": 0.0,
+    "oi": 16629061.318818,
+    "vol": 27349192.531864,
+    "spread": 0.0001541307028360984
+   }
+  },
+  "ASTS": {
+   "variational": {
+    "sym": "ASTS-PERP",
+    "price": 42.559,
+    "fund": 0.006,
+    "oi": 82734.81,
+    "vol": 134895.9289110308,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "ASTS_USDG",
+    "price": 42.912,
+    "fund": 0.001,
+    "oi": 69168.56543999999,
+    "vol": 56565.505765,
+    "spread": 0.0007268123417424459
+   }
+  },
+  "BABA": {
+   "variational": {
+    "sym": "BABA-PERP",
+    "price": 99.744,
+    "fund": 0.0,
+    "oi": 1242788.88,
+    "vol": 205333.0753793165,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "BABA_USDG",
+    "price": 99.6,
+    "fund": 0.0,
+    "oi": 994185.3876,
+    "vol": 215419.058187,
+    "spread": 0.0004012841091493404
+   },
+   "arcus": {
+    "sym": "BABA-USD",
+    "price": 99.55,
+    "fund": 0.0,
+    "oi": 432561.38173886,
+    "vol": 601968.0104175671,
+    "spread": 0.00010039152695517635
+   }
+  },
+  "BE": {
+   "variational": {
+    "sym": "BE-PERP",
+    "price": 220.697,
+    "fund": 0.0,
+    "oi": 1213334.96,
+    "vol": 390321.7765815508,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "BE_USDG",
+    "price": 220.57,
+    "fund": 0.0,
+    "oi": 554667.114316,
+    "vol": 997511.318101,
+    "spread": 0.0004980756169345041
+   },
+   "arcus": {
+    "sym": "BE-USD",
+    "price": 220.45,
+    "fund": 0.002,
+    "oi": 315576.312632294,
+    "vol": 3485027.676677204,
+    "spread": 4.5427701812523986e-05
+   }
+  },
+  "BNB": {
+   "variational": {
+    "sym": "BNB-PERP",
+    "price": 749.185,
+    "fund": 0.01,
+    "oi": 15570110.68,
+    "vol": 7760390.653674837,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "BNB-USD",
+    "price": 749.5,
+    "fund": 0.001,
+    "oi": 1287905.12164144,
+    "vol": 610963.0166637455,
+    "spread": 0.00039968025579545456
+   }
+  },
+  "BOT": {
+   "variational": {
+    "sym": "BOT-PERP",
+    "price": 23.706,
+    "fund": 0.0,
+    "oi": 251675.41,
+    "vol": 25664.22133530143,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "BOT-USD",
+    "price": 23.73,
+    "fund": 0.004,
+    "oi": 163041.87889797,
+    "vol": 1273601.244392821,
+    "spread": 0.00042698548249366195
+   }
+  },
+  "BTC": {
+   "variational": {
+    "sym": "BTC-PERP",
+    "price": 80510.73,
+    "fund": 0.01,
+    "oi": 384287619.12,
+    "vol": 386489933.6032167,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "BTC_USDG",
+    "price": 80604.9,
+    "fund": 0.001,
+    "oi": 30229686.077166,
+    "vol": 67200427.878181,
+    "spread": 5.0870569142300724e-05
+   },
+   "arcus": {
+    "sym": "BTC-USD",
+    "price": 80487.0,
+    "fund": 0.001,
+    "oi": 32539070.91934135,
+    "vol": 45241620.9198763,
+    "spread": 1.2431301520698833e-06
+   }
+  },
+  "CASHCAT": {
+   "variational": {
+    "sym": "CASHCAT-PERP",
+    "price": 0.098,
+    "fund": 0.005,
+    "oi": 1048223.04,
+    "vol": 264198.5191352612,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "CASHCAT_USDG",
+    "price": 0.098,
+    "fund": 0.003,
+    "oi": 315598.98387,
+    "vol": 395800.042551,
+    "spread": 0.0018285249898415238
+   },
+   "arcus": {
+    "sym": "CASHCAT-USD",
+    "price": 0.099,
+    "fund": 0.017,
+    "oi": 448684.450268856,
+    "vol": 359366.9304867285,
+    "spread": 0.002217878735707817
+   }
+  },
+  "COIN": {
+   "variational": {
+    "sym": "COIN-PERP",
+    "price": 160.481,
+    "fund": 0.017,
+    "oi": 1540588.05,
+    "vol": 668723.3694327573,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "COIN_USDG",
+    "price": 160.27,
+    "fund": 0.0,
+    "oi": 5819202.72142,
+    "vol": 5947273.412033,
+    "spread": 0.0003743448964312595
+   },
+   "arcus": {
+    "sym": "COIN-USD",
+    "price": 160.05,
+    "fund": -0.001,
+    "oi": 459253.663986896,
+    "vol": 1027804.096258362,
+    "spread": 6.239081607181748e-05
+   }
+  },
+  "CRCL": {
+   "variational": {
+    "sym": "CRCL-PERP",
+    "price": 80.508,
+    "fund": 0.005,
+    "oi": 3081850.26,
+    "vol": 966760.2358949017,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "CRCL_USDG",
+    "price": 80.458,
+    "fund": 0.002,
+    "oi": 2842492.9580320003,
+    "vol": 4074168.750317,
+    "spread": 0.00024851512214513313
+   },
+   "arcus": {
+    "sym": "CRCL-USD",
+    "price": 80.44,
+    "fund": 0.0,
+    "oi": 1068561.10869368,
+    "vol": 5076864.024030689,
+    "spread": 0.0001243008079553153
+   }
+  },
+  "CRWV": {
+   "variational": {
+    "sym": "CRWV-PERP",
+    "price": 58.724,
+    "fund": 0.0,
+    "oi": 3024975.16,
+    "vol": 800045.8022045163,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "CRWV_USDG",
+    "price": 58.77,
+    "fund": 0.0,
+    "oi": 762211.826064,
+    "vol": 1595931.280126,
+    "spread": 0.00034025178632193136
+   },
+   "arcus": {
+    "sym": "CRWV-USD",
+    "price": 59.25,
+    "fund": 0.001,
+    "oi": 698650.671723576,
+    "vol": 2417504.140917572,
+    "spread": 0.00016852039096739325
+   }
+  },
+  "DOGE": {
+   "variational": {
+    "sym": "DOGE-PERP",
+    "price": 0.078,
+    "fund": 0.01,
+    "oi": 3060414.09,
+    "vol": 290321.2894402473,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "DOGE-USD",
+    "price": 0.078,
+    "fund": 0.001,
+    "oi": 134764.10264352,
+    "vol": 69431.44256627932,
+    "spread": 0.00012807377049175363
+   }
+  },
+  "DRAM": {
+   "variational": {
+    "sym": "DRAM-PERP",
+    "price": 50.614,
+    "fund": 0.0,
+    "oi": 3443039.76,
+    "vol": 1240964.989636307,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "DRAM-USD",
+    "price": 50.7,
+    "fund": 0.001,
+    "oi": 2038992.70541179,
+    "vol": 1800779.82305853,
+    "spread": 0.00019758940920762717
+   }
+  },
+  "ENA": {
+   "variational": {
+    "sym": "ENA-PERP",
+    "price": 0.212,
+    "fund": 0.005,
+    "oi": 8906537.45,
+    "vol": 3136383.662300156,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "ENA-USD",
+    "price": 0.213,
+    "fund": 0.001,
+    "oi": 851881.13604177,
+    "vol": 995516.9178262219,
+    "spread": 0.00046992481203002345
+   }
+  },
+  "ETH": {
+   "variational": {
+    "sym": "ETH-PERP",
+    "price": 2345.21,
+    "fund": 0.01,
+    "oi": 265253922.26,
+    "vol": 173547068.1347217,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "ETH_USDG",
+    "price": 2347.62,
+    "fund": 0.001,
+    "oi": 36693227.82377999,
+    "vol": 43514988.895396,
+    "spread": 8.520464024463024e-05
+   },
+   "arcus": {
+    "sym": "ETH-USD",
+    "price": 2344.53,
+    "fund": 0.001,
+    "oi": 11317962.1494555,
+    "vol": 8331758.079247016,
+    "spread": 4.266211604188685e-06
+   }
+  },
+  "FARTCOIN": {
+   "variational": {
+    "sym": "FARTCOIN-PERP",
+    "price": 0.13,
+    "fund": 0.005,
+    "oi": 1033043.15,
+    "vol": 115710.4956843141,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "FARTCOIN-USD",
+    "price": 0.13,
+    "fund": 0.001,
+    "oi": 262616.597016542,
+    "vol": 56449.21335190521,
+    "spread": 0.0007674597083652264
+   }
+  },
+  "GME": {
+   "variational": {
+    "sym": "GME-PERP",
+    "price": 23.656,
+    "fund": 0.0,
+    "oi": 113909.42,
+    "vol": 326245.9222264594,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "GME-USD",
+    "price": 23.58,
+    "fund": 0.001,
+    "oi": 200764.0315638,
+    "vol": 1420254.606472259,
+    "spread": 0.0004233700254022677
+   }
+  },
+  "GOOGL": {
+   "variational": {
+    "sym": "GOOGL-PERP",
+    "price": 320.386,
+    "fund": 0.0,
+    "oi": 16800453.81,
+    "vol": 3458949.088634297,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "GOOGL_USDG",
+    "price": 320.52,
+    "fund": 0.0,
+    "oi": 22990904.664215997,
+    "vol": 35672310.785152,
+    "spread": 0.00015595757953840102
+   },
+   "arcus": {
+    "sym": "GOOGL-USD",
+    "price": 321.07,
+    "fund": -0.001,
+    "oi": 3142837.760527368,
+    "vol": 3950117.592466679,
+    "spread": 3.1115813056166856e-05
+   }
+  },
+  "HOOD": {
+   "variational": {
+    "sym": "HOOD-PERP",
+    "price": 96.518,
+    "fund": 0.0,
+    "oi": 2936100.82,
+    "vol": 1379237.303045214,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "HOOD-USD",
+    "price": 96.63,
+    "fund": 0.001,
+    "oi": 2722956.691779506,
+    "vol": 8185315.439457408,
+    "spread": 0.00010373443983407797
+   }
+  },
+  "HYPE": {
+   "variational": {
+    "sym": "HYPE-PERP",
+    "price": 79.213,
+    "fund": 0.01,
+    "oi": 55198544.18,
+    "vol": 42203825.74858635,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "HYPE_USDG",
+    "price": 79.41,
+    "fund": 0.001,
+    "oi": 7860013.393859999,
+    "vol": 8248590.455813,
+    "spread": 2.5199072674066865e-05
+   },
+   "arcus": {
+    "sym": "HYPE-USD",
+    "price": 79.499,
+    "fund": 0.003,
+    "oi": 9633931.240417212,
+    "vol": 2458678.321160827,
+    "spread": 0.00010058844238791388
+   }
+  },
+  "INTC": {
+   "variational": {
+    "sym": "INTC-PERP",
+    "price": 93.662,
+    "fund": 0.0,
+    "oi": 3600582.11,
+    "vol": 1655950.159360891,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "INTC_USDG",
+    "price": 93.76,
+    "fund": 0.0,
+    "oi": 4441751.061248,
+    "vol": 6556911.804866,
+    "spread": 0.0003198976327575297
+   },
+   "arcus": {
+    "sym": "INTC-USD",
+    "price": 94.04,
+    "fund": 0.0,
+    "oi": 1016804.657134904,
+    "vol": 2066284.711772413,
+    "spread": 0.0001062134891131717
+   }
+  },
+  "IREN": {
+   "variational": {
+    "sym": "IREN-PERP",
+    "price": 26.992,
+    "fund": 0.0,
+    "oi": 1249385.92,
+    "vol": 463060.7360124818,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "IREN_USDG",
+    "price": 26.98,
+    "fund": 0.0,
+    "oi": 183318.90156,
+    "vol": 235560.420392,
+    "spread": 0.0005184033177812096
+   }
+  },
+  "LINK": {
+   "variational": {
+    "sym": "LINK-PERP",
+    "price": 11.439,
+    "fund": 0.01,
+    "oi": 5044300.19,
+    "vol": 555935.4131112144,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "LINK-USD",
+    "price": 11.452,
+    "fund": 0.001,
+    "oi": 459589.09323269,
+    "vol": 183984.9493780904,
+    "spread": 0.0006987509826184924
+   }
+  },
+  "META": {
+   "variational": {
+    "sym": "META-PERP",
+    "price": 626.304,
+    "fund": 0.0,
+    "oi": 5783558.59,
+    "vol": 1092275.959649089,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "META_USDG",
+    "price": 626.17,
+    "fund": 0.001,
+    "oi": 4730855.363484,
+    "vol": 8296153.172866,
+    "spread": 0.00015972654814960425
+   },
+   "arcus": {
+    "sym": "META-USD",
+    "price": 626.66,
+    "fund": 0.004,
+    "oi": 1957016.548216204,
+    "vol": 2479793.904106986,
+    "spread": 1.599027791101555e-05
+   }
+  },
+  "MRNA": {
+   "variational": {
+    "sym": "MRNA-PERP",
+    "price": 195.733,
+    "fund": 0.0,
+    "oi": 329971.54,
+    "vol": 162104.3662081865,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "MRNA-USD",
+    "price": 196.01,
+    "fund": 0.001,
+    "oi": 256589.486825456,
+    "vol": 4000507.413584004,
+    "spread": 5.091649694510859e-05
+   }
+  },
+  "MRVL": {
+   "variational": {
+    "sym": "MRVL-PERP",
+    "price": 242.99,
+    "fund": 0.0,
+    "oi": 1210319.47,
+    "vol": 362925.5154692397,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "MRVL-USD",
+    "price": 243.76,
+    "fund": 0.002,
+    "oi": 230513.524743452,
+    "vol": 841234.1993495538,
+    "spread": 4.108125872973012e-05
+   }
+  },
+  "MSFT": {
+   "variational": {
+    "sym": "MSFT-PERP",
+    "price": 534.281,
+    "fund": 0.0,
+    "oi": 3993281.71,
+    "vol": 1218754.451481782,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "MSFT_USDG",
+    "price": 534.2,
+    "fund": 0.0,
+    "oi": 16736265.16172,
+    "vol": 20637565.642338,
+    "spread": 7.488252803407833e-05
+   },
+   "arcus": {
+    "sym": "MSFT-USD",
+    "price": 534.42,
+    "fund": 0.0,
+    "oi": 980032.2781941,
+    "vol": 1731580.349227911,
+    "spread": 5.6150333158592344e-05
+   }
+  },
+  "MSTR": {
+   "variational": {
+    "sym": "MSTR-PERP",
+    "price": 141.129,
+    "fund": 0.003,
+    "oi": 3798944.39,
+    "vol": 880020.1081061895,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "MSTR-USD",
+    "price": 140.91,
+    "fund": 0.001,
+    "oi": 926908.415455864,
+    "vol": 1841991.349787628,
+    "spread": 7.09874352239008e-05
+   }
+  },
+  "MU": {
+   "variational": {
+    "sym": "MU-PERP",
+    "price": 929.72,
+    "fund": 0.0,
+    "oi": 9563630.29,
+    "vol": 2268358.292424263,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "MU_USDG",
+    "price": 930.23,
+    "fund": 0.0,
+    "oi": 3330280.14403,
+    "vol": 4563063.711985,
+    "spread": 0.00022580402361268846
+   },
+   "arcus": {
+    "sym": "MU-USD",
+    "price": 933.23,
+    "fund": 0.002,
+    "oi": 3021983.857760112,
+    "vol": 4693276.305493116,
+    "spread": 3.217261681338028e-05
+   }
+  },
+  "NBIS": {
+   "variational": {
+    "sym": "NBIS-PERP",
+    "price": 168.751,
+    "fund": 0.0,
+    "oi": 4883977.74,
+    "vol": 1062831.533112673,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "NBIS-USD",
+    "price": 169.49,
+    "fund": 0.001,
+    "oi": 593895.480845936,
+    "vol": 3031661.463591504,
+    "spread": 5.898661003946738e-05
+   }
+  },
+  "NEAR": {
+   "variational": {
+    "sym": "NEAR-PERP",
+    "price": 4.564,
+    "fund": 0.01,
+    "oi": 17482504.47,
+    "vol": 7943980.548323876,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "NEAR_USDG",
+    "price": 4.569,
+    "fund": 0.001,
+    "oi": 2590663.110032,
+    "vol": 2552449.820494,
+    "spread": 0.00019702708027751896
+   },
+   "arcus": {
+    "sym": "NEAR-USD",
+    "price": 4.562,
+    "fund": 0.001,
+    "oi": 1185275.365062616,
+    "vol": 1498944.883676665,
+    "spread": 0.0002168256721596561
+   }
+  },
+  "NVDA": {
+   "variational": {
+    "sym": "NVDA-PERP",
+    "price": 219.079,
+    "fund": 0.0,
+    "oi": 13520372.32,
+    "vol": 2571792.963863582,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "NVDA_USDG",
+    "price": 219.01,
+    "fund": 0.0,
+    "oi": 13303800.689145999,
+    "vol": 19729526.077257,
+    "spread": 0.00018262338492440323
+   },
+   "arcus": {
+    "sym": "NVDA-USD",
+    "price": 218.95,
+    "fund": -0.002,
+    "oi": 10848453.72683261,
+    "vol": 24466672.65784009,
+    "spread": 4.570175037699787e-05
+   }
+  },
+  "ONDO": {
+   "variational": {
+    "sym": "ONDO-PERP",
+    "price": 0.416,
+    "fund": -0.002,
+    "oi": 1137261.84,
+    "vol": 244740.972573534,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "ONDO-USD",
+    "price": 0.417,
+    "fund": 0.001,
+    "oi": 104667.346553796,
+    "vol": 122399.9033628277,
+    "spread": 0.0007897003924571575
+   }
+  },
+  "OPENAI": {
+   "variational": {
+    "sym": "OPENAI-PERP",
+    "price": 1427.81,
+    "fund": 0.005,
+    "oi": 1968253.92,
+    "vol": 438095.398634461,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "OPENAI_USDG",
+    "price": 1506.63,
+    "fund": 0.002,
+    "oi": 8957622.260796,
+    "vol": 17658017.633832,
+    "spread": 0.0001924966147146826
+   }
+  },
+  "ORCL": {
+   "variational": {
+    "sym": "ORCL-PERP",
+    "price": 130.252,
+    "fund": 0.0,
+    "oi": 2330634.88,
+    "vol": 55448.82199793828,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "ORCL_USDG",
+    "price": 130.24,
+    "fund": 0.0,
+    "oi": 927962.761088,
+    "vol": 666993.75819,
+    "spread": 0.0003837593061630436
+   },
+   "arcus": {
+    "sym": "ORCL-USD",
+    "price": 131.02,
+    "fund": 0.0,
+    "oi": 388799.86147847,
+    "vol": 692292.5790339025,
+    "spread": 7.613247049859844e-05
+   }
+  },
+  "PENGU": {
+   "variational": {
+    "sym": "PENGU-PERP",
+    "price": 0.008,
+    "fund": 0.005,
+    "oi": 415485.09,
+    "vol": 29270.10502349386,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "PENGU-USD",
+    "price": 0.008,
+    "fund": 0.001,
+    "oi": 91935.14610076,
+    "vol": 41678.71825079434,
+    "spread": 0.0013106159895150188
+   }
+  },
+  "PLTR": {
+   "variational": {
+    "sym": "PLTR-PERP",
+    "price": 200.701,
+    "fund": 0.0,
+    "oi": 1899235.13,
+    "vol": 323626.6753315169,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "PLTR_USDG",
+    "price": 200.691,
+    "fund": 0.0,
+    "oi": 1416715.0975259999,
+    "vol": 1190221.269077,
+    "spread": 0.0004184079577208879
+   },
+   "arcus": {
+    "sym": "PLTR-USD",
+    "price": 200.63,
+    "fund": 0.001,
+    "oi": 292648.73221278,
+    "vol": 933162.5942773668,
+    "spread": 4.974134500592372e-05
+   }
+  },
+  "PONS": {
+   "variational": {
+    "sym": "PONS-PERP",
+    "price": 0.251,
+    "fund": 0.005,
+    "oi": 1978773.86,
+    "vol": 260000.461622448,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "PONS_USDG",
+    "price": 0.252,
+    "fund": 0.001,
+    "oi": 651965.039908,
+    "vol": 1247666.301525,
+    "spread": 0.0013144268302397713
+   },
+   "arcus": {
+    "sym": "PONS-USD",
+    "price": 0.249,
+    "fund": 0.001,
+    "oi": 247944.544790064,
+    "vol": 86307.89899536094,
+    "spread": 0.001509493922300973
+   }
+  },
+  "QNT": {
+   "variational": {
+    "sym": "QNT-PERP",
+    "price": 197.595,
+    "fund": 0.01,
+    "oi": 1527352.92,
+    "vol": 549716.0150143824,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "QNT-USD",
+    "price": 39.2,
+    "fund": 0.002,
+    "oi": 74308.6931774,
+    "vol": 987675.5975937904,
+    "spread": 0.00025451768897933344
+   }
+  },
+  "QQQ": {
+   "variational": {
+    "sym": "QQQ-PERP",
+    "price": 721.868,
+    "fund": 0.0,
+    "oi": 33513209.56,
+    "vol": 4570449.110877734,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "QQQ_USDG",
+    "price": 721.89,
+    "fund": 0.0,
+    "oi": 62737729.52967,
+    "vol": 67173928.796133,
+    "spread": 6.926550854745825e-05
+   },
+   "arcus": {
+    "sym": "QQQ-USD",
+    "price": 722.14,
+    "fund": -0.005,
+    "oi": 41347774.03465744,
+    "vol": 23095441.89222494,
+    "spread": 1.3854637147040519e-05
+   }
+  },
+  "SKHY": {
+   "variational": {
+    "sym": "SKHY-PERP",
+    "price": 146.597,
+    "fund": 0.0,
+    "oi": 3908771.74,
+    "vol": 2488898.445549153,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "SKHY_USDG",
+    "price": 146.41,
+    "fund": 0.0,
+    "oi": 3687742.547698,
+    "vol": 3860418.98756,
+    "spread": 0.00027331738981887285
+   },
+   "arcus": {
+    "sym": "SKHY-USD",
+    "price": 146.65,
+    "fund": 0.001,
+    "oi": 1108754.94761791,
+    "vol": 2045058.581225666,
+    "spread": 6.823144104797287e-05
+   }
+  },
+  "SMCI": {
+   "variational": {
+    "sym": "SMCI-PERP",
+    "price": 35.032,
+    "fund": 0.0,
+    "oi": 219426.25,
+    "vol": 27795.02843912248,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "SMCI_USDG",
+    "price": 35.007,
+    "fund": 0.0,
+    "oi": 161491.701882,
+    "vol": 64091.135942,
+    "spread": 0.0012274491893126075
+   }
+  },
+  "SNDK": {
+   "variational": {
+    "sym": "SNDK-PERP",
+    "price": 1299.55,
+    "fund": 0.0,
+    "oi": 9159617.61,
+    "vol": 6001187.200698306,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "SNDK_USDG",
+    "price": 1300.0,
+    "fund": 0.0,
+    "oi": 13312642.98,
+    "vol": 15478667.558671,
+    "spread": 0.0002691769338439305
+   },
+   "arcus": {
+    "sym": "SNDK-USD",
+    "price": 1305.89,
+    "fund": 0.001,
+    "oi": 5465740.061919144,
+    "vol": 35171462.93297425,
+    "spread": 7.668123610145621e-06
+   }
+  },
+  "SOFI": {
+   "variational": {
+    "sym": "SOFI-PERP",
+    "price": 16.645,
+    "fund": 0.0,
+    "oi": 258079.43,
+    "vol": 512939.1193081015,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "SOFI_USDG",
+    "price": 16.604,
+    "fund": 0.002,
+    "oi": 192692.04343199998,
+    "vol": 144024.350458,
+    "spread": 0.001439971200576043
+   }
+  },
+  "SOL": {
+   "variational": {
+    "sym": "SOL-PERP",
+    "price": 100.813,
+    "fund": 0.01,
+    "oi": 72831061.16,
+    "vol": 16220945.40671965,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "SOL_USDG",
+    "price": 100.971,
+    "fund": 0.001,
+    "oi": 5631219.714744,
+    "vol": 7428211.386592,
+    "spread": 0.00016837851490145804
+   },
+   "arcus": {
+    "sym": "SOL-USD",
+    "price": 100.863,
+    "fund": 0.001,
+    "oi": 4283735.878091736,
+    "vol": 4174404.326201161,
+    "spread": 0.0001784492757933625
+   }
+  },
+  "SOXL": {
+   "variational": {
+    "sym": "SOXL-PERP",
+    "price": 99.465,
+    "fund": 0.0,
+    "oi": 7941366.85,
+    "vol": 12834188.55411878,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "SOXL_USDG",
+    "price": 99.76,
+    "fund": 0.0,
+    "oi": 2768118.0938560003,
+    "vol": 2889516.43657,
+    "spread": 0.00030075187969925954
+   }
+  },
+  "SPCX": {
+   "variational": {
+    "sym": "SPCX-PERP",
+    "price": 149.993,
+    "fund": 0.007,
+    "oi": 9720690.88,
+    "vol": 3234501.327298245,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "SPCX_USDG",
+    "price": 149.99,
+    "fund": 0.001,
+    "oi": 8361181.360746001,
+    "vol": 9716393.989645,
+    "spread": 0.00020005334755935673
+   },
+   "arcus": {
+    "sym": "SPCX-USD",
+    "price": 150.3,
+    "fund": -0.002,
+    "oi": 2015036.49127918,
+    "vol": 7189623.984381529,
+    "spread": 0.00013223140495874534
+   }
+  },
+  "STRK": {
+   "variational": {
+    "sym": "STRK-PERP",
+    "price": 0.046,
+    "fund": 0.005,
+    "oi": 1503216.6,
+    "vol": 430021.5911531806,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "STRK-USD",
+    "price": 0.046,
+    "fund": 0.001,
+    "oi": 196312.042957824,
+    "vol": 62017.56437865461,
+    "spread": 0.0021579628830383237
+   }
+  },
+  "SUI": {
+   "variational": {
+    "sym": "SUI-PERP",
+    "price": 0.923,
+    "fund": 0.008,
+    "oi": 3156495.13,
+    "vol": 2792466.941581606,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "SUI_USDG",
+    "price": 0.925,
+    "fund": 0.001,
+    "oi": 968515.73667,
+    "vol": 412235.019869,
+    "spread": 0.0002595941677843832
+   },
+   "arcus": {
+    "sym": "SUI-USD",
+    "price": 0.923,
+    "fund": 0.001,
+    "oi": 288141.364841692,
+    "vol": 171517.1404719331,
+    "spread": 0.001081081081081082
+   }
+  },
+  "TAO": {
+   "variational": {
+    "sym": "TAO-PERP",
+    "price": 250.943,
+    "fund": 0.005,
+    "oi": 3090453.07,
+    "vol": 691211.0842856296,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "TAO-USD",
+    "price": 251.28,
+    "fund": 0.001,
+    "oi": 359282.402384328,
+    "vol": 83874.9806981656,
+    "spread": 0.000397883261051298
+   }
+  },
+  "TSLA": {
+   "variational": {
+    "sym": "TSLA-PERP",
+    "price": 406.535,
+    "fund": 0.0,
+    "oi": 5362374.86,
+    "vol": 3402633.832291091,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "TSLA_USDG",
+    "price": 406.62,
+    "fund": 0.0,
+    "oi": 4971256.910424001,
+    "vol": 14445201.103593,
+    "spread": 0.00022130966139629634
+   },
+   "arcus": {
+    "sym": "TSLA-USD",
+    "price": 407.15,
+    "fund": -0.002,
+    "oi": 1087887.341850488,
+    "vol": 2704180.121670782,
+    "spread": 2.461599054743724e-05
+   }
+  },
+  "TSM": {
+   "variational": {
+    "sym": "TSM-PERP",
+    "price": 437.815,
+    "fund": 0.0,
+    "oi": 1776076.08,
+    "vol": 176096.7460852243,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "TSM_USDG",
+    "price": 437.77,
+    "fund": 0.0,
+    "oi": 464774.805544,
+    "vol": 355358.166317,
+    "spread": 0.0004339286529941025
+   }
+  },
+  "UNI": {
+   "variational": {
+    "sym": "UNI-PERP",
+    "price": 7.14,
+    "fund": 0.001,
+    "oi": 4950279.77,
+    "vol": 2629859.594641432,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "UNI-USD",
+    "price": 7.147,
+    "fund": 0.001,
+    "oi": 526527.142029332,
+    "vol": 172558.3264548667,
+    "spread": 0.0005576467307961031
+   }
+  },
+  "USAR": {
+   "variational": {
+    "sym": "USAR-PERP",
+    "price": 10.023,
+    "fund": 0.0,
+    "oi": 416534.9,
+    "vol": 116275.8047212085,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "USAR_USDG",
+    "price": 9.992,
+    "fund": 0.0,
+    "oi": 649621.48672,
+    "vol": 319656.893829,
+    "spread": 0.0011958146487294923
+   },
+   "arcus": {
+    "sym": "USAR-USD",
+    "price": 10.0,
+    "fund": 0.001,
+    "oi": 210061.329960482,
+    "vol": 1339641.225546036,
+    "spread": 0.0009980039920159467
+   }
+  },
+  "USELESS": {
+   "variational": {
+    "sym": "USELESS-PERP",
+    "price": 0.156,
+    "fund": 0.005,
+    "oi": 1103075.57,
+    "vol": 396408.7482526392,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "USELESS_USDG",
+    "price": 0.157,
+    "fund": 0.001,
+    "oi": 41850.75411,
+    "vol": 30948.486976,
+    "spread": 0.0008968609865470931
+   },
+   "arcus": {
+    "sym": "USELESS-USD",
+    "price": 0.158,
+    "fund": 0.009,
+    "oi": 263531.84816518,
+    "vol": 574895.652966965,
+    "spread": 0.0006395906619762647
+   }
+  },
+  "VVV": {
+   "variational": {
+    "sym": "VVV-PERP",
+    "price": 25.676,
+    "fund": 0.005,
+    "oi": 2589763.48,
+    "vol": 463610.4055484173,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "VVV_USDG",
+    "price": 25.718,
+    "fund": 0.001,
+    "oi": 885186.093176,
+    "vol": 306459.00946,
+    "spread": 0.0006221081690579646
+   }
+  },
+  "W": {
+   "variational": {
+    "sym": "W-PERP",
+    "price": 0.013,
+    "fund": -0.038,
+    "oi": 202366.36,
+    "vol": 13603.87909364004,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "W-USD",
+    "price": 0.013,
+    "fund": -0.003,
+    "oi": 38572.41288428,
+    "vol": 52986.00263118578,
+    "spread": 0.0007616146230007306
+   }
+  },
+  "WLFI": {
+   "variational": {
+    "sym": "WLFI-PERP",
+    "price": 0.052,
+    "fund": 0.002,
+    "oi": 1115165.93,
+    "vol": 15242.8009224119,
+    "spread": 0.0
+   },
+   "arcus": {
+    "sym": "WLFI-USD",
+    "price": 0.052,
+    "fund": 0.001,
+    "oi": 103962.76910144,
+    "vol": 21716.2606204717,
+    "spread": 0.0009920634920634252
+   }
+  },
+  "XAG": {
+   "variational": {
+    "sym": "XAG-SWAP",
+    "price": 54.469,
+    "fund": 0.0,
+    "oi": 18581964.21,
+    "vol": 30875194.78670517,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "XAG_USDG",
+    "price": 54.538,
+    "fund": 0.0,
+    "oi": 4812316.115418,
+    "vol": 8147481.771519,
+    "spread": 0.00017975912277558325
+   }
+  },
+  "XAU": {
+   "variational": {
+    "sym": "XAU-SWAP",
+    "price": 4062.09,
+    "fund": 0.0,
+    "oi": 101603132.19,
+    "vol": 144978698.5010725,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "XAU_USDG",
+    "price": 4065.07,
+    "fund": 0.0,
+    "oi": 21706920.137466002,
+    "vol": 38270090.283577,
+    "spread": 0.00010333450609787205
+   }
+  },
+  "XRP": {
+   "variational": {
+    "sym": "XRP-PERP",
+    "price": 1.318,
+    "fund": 0.01,
+    "oi": 11460179.11,
+    "vol": 5840616.194680874,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "XRP_USDG",
+    "price": 1.32,
+    "fund": 0.001,
+    "oi": 1420058.948874,
+    "vol": 1045265.004398,
+    "spread": 0.00015152663080534735
+   },
+   "arcus": {
+    "sym": "XRP-USD",
+    "price": 1.32,
+    "fund": 0.001,
+    "oi": 806590.56615592,
+    "vol": 803453.412924663,
+    "spread": 0.00015144631228227926
+   }
+  },
+  "ZEC": {
+   "variational": {
+    "sym": "ZEC-PERP",
+    "price": 1291.3,
+    "fund": 0.01,
+    "oi": 64125380.9,
+    "vol": 16705685.77675449,
+    "spread": 0.0
+   },
+   "lighter": {
+    "sym": "ZEC_USDG",
+    "price": 1293.65,
+    "fund": 0.001,
+    "oi": 2024882.2990100002,
+    "vol": 1959750.881712,
+    "spread": 0.00034790676098809035
+   },
+   "arcus": {
+    "sym": "ZEC-USD",
+    "price": 1291.906,
+    "fund": 0.001,
+    "oi": 2532796.35662416,
+    "vol": 3686775.38568192,
+    "spread": 7.752460824694015e-07
+   }
+  },
+  "LIT": {
+   "lighter": {
+    "sym": "LIT_USDG",
+    "price": 3.036,
+    "fund": 0.001,
+    "oi": 4294459.950462,
+    "vol": 2768752.875104,
+    "spread": 0.0001316352387533998
+   },
+   "arcus": {
+    "sym": "LIT-USD",
+    "price": 3.04,
+    "fund": 0.001,
+    "oi": 2613925.98728928,
+    "vol": 979146.0807506504,
+    "spread": 0.00026210602188582395
+   }
+  },
+  "SLV": {
+   "lighter": {
+    "sym": "SLV_USDG",
+    "price": 49.214,
+    "fund": 0.0,
+    "oi": 565061.7617919999,
+    "vol": 841423.725619,
+    "spread": 0.0003250711093051247
+   },
+   "arcus": {
+    "sym": "SLV-USD",
+    "price": 49.21,
+    "fund": 0.001,
+    "oi": 2206721.364620418,
+    "vol": 2796576.799478724,
+    "spread": 0.00020345879959304193
+   }
+  },
+  "SPY": {
+   "lighter": {
+    "sym": "SPY_USDG",
+    "price": 770.66,
+    "fund": 0.0,
+    "oi": 81923136.592484,
+    "vol": 87871621.069856,
+    "spread": 1.2976564324817556e-05
+   },
+   "arcus": {
+    "sym": "SPY-USD",
+    "price": 770.39,
+    "fund": -0.004,
+    "oi": 80660438.3993569,
+    "vol": 62548800.11734041,
+    "spread": 1.2984652141157329e-05
+   }
+  },
+  "USO": {
+   "lighter": {
+    "sym": "USO_USDG",
+    "price": 163.8,
+    "fund": 0.0,
+    "oi": 1333799.4524400001,
+    "vol": 918925.128292,
+    "spread": 0.0009750746541531878
+   },
+   "arcus": {
+    "sym": "USO-USD",
+    "price": 163.39,
+    "fund": 0.0,
+    "oi": 1719130.101382224,
+    "vol": 4346877.917184261,
+    "spread": 0.00012213740458021517
+   }
+  }
+ },
+ "status": {
+  "variational": "581 tickers",
+  "lighter": "58 tickers",
+  "extended": "HTTP Error 429: Too Many Requests",
+  "risex": "HTTP Error 429: Too Many Requests",
+  "nado": "HTTP Error 429: Too Many Requests",
+  "arcus": "64 tickers",
+  "shared_assets": 71
+ },
+ "sample": {
+  "symbol": "0G-PERP",
+  "base": "0G",
+  "target": "USDC",
+  "coin_id": "zero-gravity",
+  "target_coin_id": "usd-coin",
+  "trade_url": "https://omni.variational.io/perpetual/0G",
+  "contract_type": "perpetual",
+  "last": 0.199,
+  "h24_percentage_change": -2.447,
+  "index": 0.1997,
+  "index_basis_percentage": 0.201,
+  "bid_ask_spread": 0.0,
+  "funding_rate": 0.005,
+  "open_interest_usd": 25434.74,
+  "h24_volume": 15001.98,
+  "last_traded": 1793116554,
+  "expired_at": null
+ }
+}
