@@ -2,7 +2,14 @@
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>perp maxing</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="Live OTC point prices for perp DEXs. Updated hourly.">
+<meta name="description" content="Volume, open interest and OTC point prices for perp DEXs. Updated hourly.">
+<link rel="icon" type="image/svg+xml" href="brand/mark.svg">
+<link rel="apple-touch-icon" href="brand/pm-avatar-400.png">
+<meta property="og:title" content="perp maxing">
+<meta property="og:description" content="Every perp point, priced. Volume, open interest and OTC point prices, updated hourly.">
+<meta property="og:image" content="brand/pm-x-header-1500x500.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@floppa_perp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
@@ -28,7 +35,8 @@ a{color:inherit}
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(5,4,11,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--bg)}
 nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
-.logo{font-family:var(--disp);font-weight:800;font-size:17px;letter-spacing:.02em;text-decoration:none;white-space:nowrap;text-transform:uppercase}
+.logo{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:800;font-size:17px;letter-spacing:.02em;text-decoration:none;white-space:nowrap;text-transform:uppercase}
+.logo img{border-radius:8px;box-shadow:0 0 14px rgba(255,79,216,.25)}
 .logo .m{animation:flick 6s infinite}
 @keyframes flick{0%,18%,20%,52%,54%,100%{opacity:1}19%,53%{opacity:.35}}
 .links{display:flex;gap:20px;font-size:12px;color:var(--mute);margin-left:auto;text-transform:uppercase;letter-spacing:.08em}
@@ -123,7 +131,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </style>
 </head><body>
 <nav><div class="wrap">
-  <a class="logo" href="#top"><span>perp</span> <span class="m glow-p">maxing</span></a>
+  <a class="logo" href="#top"><img src="brand/mark.svg" alt="" width="30" height="30"><span>perp</span> <span class="m glow-p">maxing</span></a>
   <div class="links"><a href="#radar"><span class="num">01</span>Radar</a><a href="#perps"><span class="num">02</span>Perps</a></div>
   <a class="xbtn" href="https://x.com/floppa_perp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></svg>Follow</a>
 </div></nav>
