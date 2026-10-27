@@ -26,13 +26,19 @@ def get(path):
         return json.loads(r.read())
 
 
+ERR = {}
+
+
 def protocols(kind):
-    try:
-        d = get(f"/overview/{kind}?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true")
-        return d.get("protocols", [])
-    except Exception as e:
-        print("overview fail", kind, e)
-        return []
+    for q in ("?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true", ""):
+        try:
+            d = get(f"/overview/{kind}{q}")
+            rows = d.get("protocols", [])
+            ERR[kind] = f"{len(rows)} rows"
+            return rows
+        except Exception as e:
+            ERR[kind] = f"{type(e).__name__}: {e}"
+    return []
 
 
 def pick(rows, pattern):
@@ -71,6 +77,7 @@ def main():
             print("summary fail", pid, e)
         out["projects"][pid] = rec
         print(pid, rec["name"], rec["v24h"])
+    out["fetch"] = ERR
     json.dump(out, open(OUT, "w"), indent=1)
 
 
