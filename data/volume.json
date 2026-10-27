@@ -1,0 +1,14 @@
+{
+ "updated": "2026-10-27T14:55Z",
+ "source": "DefiLlama",
+ "projects": {},
+ "debug": {
+  "variational": [],
+  "lighter": [],
+  "extended": [],
+  "risex": [],
+  "nado": [],
+  "entropy": [],
+  "arcus": []
+ }
+}
