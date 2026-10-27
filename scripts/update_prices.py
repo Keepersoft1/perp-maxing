@@ -46,8 +46,15 @@ def get(url):
         return r.read()
 
 
+DEBUG = {}
+
+
 def messages(channel):
     page = get(f"https://t.me/s/{channel}").decode("utf-8", "replace")
+    title = re.search(r"<title>(.*?)</title>", page, re.S)
+    DEBUG[channel] = {"bytes": len(page), "title": title.group(1).strip() if title else None,
+                      "wraps": page.count("tgme_widget_message_wrap"),
+                      "head": re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", page))[:600]}
     out = []
     for block in re.split(r'<div class="tgme_widget_message_wrap', page)[1:]:
         post = re.search(r'data-post="([^"]+)"', block)
@@ -142,7 +149,7 @@ def main():
             changed = True
             print(pid, label, m["post"])
             break
-    report = {"run": now.strftime("%Y-%m-%dT%H:%MZ"), "messages": len(msgs),
+    report = {"run": now.strftime("%Y-%m-%dT%H:%MZ"), "messages": len(msgs), "debug": DEBUG,
               "latest": [{"post": m["post"], "time": m["time"].strftime("%Y-%m-%dT%H:%MZ"),
                           "text": m["text"][:400]} for m in msgs[:15]]}
     json.dump(report, open(os.path.join(ROOT, "data", "last_run.json"), "w"), indent=1, ensure_ascii=False)
