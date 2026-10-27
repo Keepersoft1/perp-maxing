@@ -142,6 +142,10 @@ def main():
             changed = True
             print(pid, label, m["post"])
             break
+    report = {"run": now.strftime("%Y-%m-%dT%H:%MZ"), "messages": len(msgs),
+              "latest": [{"post": m["post"], "time": m["time"].strftime("%Y-%m-%dT%H:%MZ"),
+                          "text": m["text"][:400]} for m in msgs[:15]]}
+    json.dump(report, open(os.path.join(ROOT, "data", "last_run.json"), "w"), indent=1, ensure_ascii=False)
     data["updated"] = now.strftime("%Y-%m-%dT%H:%MZ")
     json.dump(data, open(DATA, "w"), indent=1)
     fetch_logos()
