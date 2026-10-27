@@ -12,7 +12,8 @@
 <meta name="twitter:image" content="https://perpmaxing.com/brand/pm-x-header-1500x500.png">
 <link rel="canonical" href="https://perpmaxing.com/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@floppa_perp">
+<meta name="twitter:site" content="@perpmaxing">
+<meta name="twitter:creator" content="@keeperssd">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
@@ -129,6 +130,26 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ctitle{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-top:22px}
 .ctitle+.chart{margin-top:8px}
 #dTabs{margin-top:18px}
+.xbtn.by{border-color:var(--line2);box-shadow:none;color:var(--mute)}
+.xbtn.by span{color:var(--dim)}
+.xbtn.by:hover{border-color:var(--pink);color:var(--ink)}
+.ct{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;margin-top:18px}
+.ctlead{font-size:clamp(15px,1.2vw,18px);line-height:1.6;color:var(--ink);margin:0;max-width:52ch}
+.cards{display:flex;flex-direction:column;gap:12px;margin-top:22px}
+.ccard{display:flex;align-items:center;gap:16px;padding:18px 20px;border-radius:14px;border:1px solid var(--line2);background:var(--panel);text-decoration:none;transition:border-color .15s,box-shadow .15s,transform .15s}
+.ccard:hover,.ccard:focus-visible{transform:translateY(-1px);outline:none}
+.ccard svg{width:26px;height:26px;flex:none}
+.ccard div{flex:1}.ccard b{display:block;font-family:var(--disp);font-size:15px}.ccard span{font-size:13px;color:var(--mute)}
+.ccard i{font-style:normal;font-size:12px;color:var(--dim);letter-spacing:.06em;text-transform:uppercase}
+.ccard.tg svg{color:#2aabee}.ccard.tg:hover{border-color:#2aabee;box-shadow:0 0 18px rgba(42,171,238,.3)}
+.ccard.xx:hover{border-color:var(--pink);box-shadow:0 0 18px rgba(255,43,214,.3)}
+.ccard.pm:hover{border-color:var(--cyan);box-shadow:0 0 18px rgba(34,230,255,.3)}
+.ctr{display:flex;flex-direction:column;gap:12px}
+.cblock{padding:16px 18px;border-left:2px solid var(--line2)}
+.cblock h3{font-family:var(--disp);font-size:14px;margin:0 0 6px;text-transform:uppercase;letter-spacing:.03em}
+.cblock p{margin:0;font-size:13px;line-height:1.65;color:var(--mute)}
+.cblock a{color:var(--cyan)}
+@media (max-width:760px){.ct{grid-template-columns:1fr}.xbtn.by{display:none}}
 .links a{position:relative;padding:6px 2px;border-bottom:2px solid transparent;transition:color .15s,border-color .15s}
 .links a.on{color:var(--ink);border-bottom-color:var(--pink);box-shadow:0 8px 12px -10px rgba(255,79,216,.8)}
 section.view:not(#radar){padding-top:8px;min-height:calc(100vh - 260px)}
@@ -184,8 +205,9 @@ section.view:not(#radar){padding-top:8px;min-height:calc(100vh - 260px)}
 </head><body>
 <nav><div class="wrap">
   <a class="logo" href="#top"><img src="brand/mark.svg" alt="" width="38" height="38"><span>perp</span> <span class="m glow-p">maxing</span></a>
-  <div class="links" id="tabs"><a href="#radar" data-v="radar"><span class="num">01</span>Radar</a><a href="#perps" data-v="perps"><span class="num">02</span>Perps</a><a href="#arb" data-v="arb"><span class="num">03</span>Arbitrage</a></div>
-  <a class="xbtn" href="https://x.com/floppa_perp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></svg>Follow</a>
+  <div class="links" id="tabs"><a href="#radar" data-v="radar"><span class="num">01</span>Radar</a><a href="#perps" data-v="perps"><span class="num">02</span>Perps</a><a href="#arb" data-v="arb"><span class="num">03</span>Arbitrage</a><a href="#contact" data-v="contact"><span class="num">04</span>Contact</a></div>
+  <a class="xbtn" href="https://x.com/perpmaxing" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></svg>Follow</a>
+  <a class="xbtn by" href="https://x.com/Keeperssd" target="_blank" rel="noopener"><span>by</span> @keeperssd</a>
 </div></nav>
 
 <main id="top">
@@ -244,11 +266,30 @@ section.view:not(#radar){padding-top:8px;min-height:calc(100vh - 260px)}
   </table></div>
   <p class="arbnote">Snapshot from CoinGecko, refreshed hourly. Prices can lag the venues by minutes and funding intervals differ between venues, so check live books before you trade. Not financial advice.</p>
 </section>
+
+<section class="wrap view" id="contact" data-view="contact" hidden>
+  <div class="sh"><h2><span class="num">04</span>Contact</h2><p>we read everything</p></div>
+  <div class="ct">
+    <div class="ctl2">
+      <p class="ctlead">Missing a perp, spotted a wrong number or want to work together? Write to us. Short questions get answered fastest on Telegram.</p>
+      <div class="cards">
+        <a class="ccard tg" href="https://t.me/keeperssd" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.3 18.6 19.9c-.25 1.1-.9 1.37-1.83.85l-5.06-3.73-2.44 2.35c-.27.27-.5.5-1.02.5l.36-5.15 9.37-8.47c.41-.36-.09-.56-.63-.2L5.77 13.33.78 11.77c-1.08-.34-1.1-1.08.23-1.6L20.5 2.65c.9-.33 1.69.2 1.4 1.65Z"/></svg><div><b>Telegram</b><span>@keeperssd</span></div><i>Message →</i></a>
+        <a class="ccard xx" href="https://x.com/Keeperssd" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></svg><div><b>X · creator</b><span>@keeperssd</span></div><i>DM →</i></a>
+        <a class="ccard pm" href="https://x.com/perpmaxing" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></svg><div><b>X · project</b><span>@perpmaxing</span></div><i>Follow →</i></a>
+      </div>
+    </div>
+    <div class="ctr">
+      <div class="cblock"><h3>Run a perp DEX?</h3><p>We add venues with public markets, volume and open interest. Send your API docs or a CoinGecko or DefiLlama listing, plus your points program details and a ref link if you have one.</p></div>
+      <div class="cblock"><h3>Wrong number?</h3><p>Tell us the perp, the tab and what you expected to see. Point prices come from OTC desks, volume from CoinGecko and open interest from DefiLlama, refreshed every hour.</p></div>
+      <div class="cblock"><h3>Selling or buying points?</h3><p>OTC deals happen in <a href="https://t.me/PointsOTC" target="_blank" rel="noopener">t.me/PointsOTC</a>. We only show prices, we never hold funds.</p></div>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer><div class="wrap">
   <span>perp maxing · not financial advice · OTC prices are indicative</span>
-  <span><a href="https://t.me/PointsOTC" target="_blank" rel="noopener">t.me/PointsOTC</a> · <a href="https://x.com/floppa_perp" target="_blank" rel="noopener">@floppa_perp</a></span>
+  <span><a href="#contact">Contact</a> · <a href="https://x.com/perpmaxing" target="_blank" rel="noopener">@perpmaxing</a> · built by <a href="https://x.com/Keeperssd" target="_blank" rel="noopener">@keeperssd</a></span>
 </div></footer>
 
 <div class="scrim" id="scrim"></div>
@@ -370,7 +411,7 @@ document.querySelectorAll('#arbSort button').forEach(b=>b.onclick=()=>{arbSort=b
 document.querySelectorAll('#arbMin button').forEach(b=>b.onclick=()=>{arbMin=+b.dataset.n;document.querySelectorAll('#arbMin button').forEach(x=>x.classList.toggle('on',x===b));renderArb()});
 $('arbQ').addEventListener('input',renderArb);
 // ---- tabs ----
-const VIEWS=['radar','perps','arb'];
+const VIEWS=['radar','perps','arb','contact'];
 function showView(v,scroll){if(!VIEWS.includes(v))v='radar';
  document.querySelectorAll('[data-view]').forEach(el=>el.hidden=el.dataset.view!==v);
  document.querySelectorAll('#tabs a').forEach(a=>a.classList.toggle('on',a.dataset.v===v));
