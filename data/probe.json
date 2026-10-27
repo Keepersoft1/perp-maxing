@@ -1,318 +1,86 @@
 {
- "/overview/open-interest?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true": {
-  "ok": true,
-  "keys": [
-   "totalDataChart",
-   "totalDataChartBreakdown",
-   "breakdown24h",
-   "breakdown30d",
-   "chain",
-   "allChains",
-   "total24h",
-   "total48hto24h",
-   "total7d",
-   "total14dto7d",
-   "total30d",
-   "total60dto30d",
-   "total1y",
-   "total7DaysAgo",
-   "total30DaysAgo",
-   "totalAllTime",
-   "change_1d",
-   "change_7d",
-   "change_1m",
-   "change_7dover7d",
-   "change_30dover30d",
-   "protocols"
-  ],
-  "sample": {}
- },
- "oi_row_variational": {
-  "total24h": 986497362,
-  "total48hto24h": 952573673,
-  "total7d": 6759844514,
-  "total14dto7d": 7006963702,
-  "total30d": 30683859262,
-  "total60dto30d": 25348667304,
-  "total1y": 167605449880,
-  "annualized1y": 206675639210.13513,
-  "total7DaysAgo": 980700305,
-  "total30DaysAgo": 1031235662,
-  "average1y": 566234627.972973,
-  "monthlyAverage1y": 17236182075.4973,
-  "change_1d": 3.56,
-  "change_7d": 0.59,
-  "change_1m": -4.34,
-  "change_7dover7d": -3.53,
-  "change_30dover30d": 21.05,
-  "defillamaId": "7194",
-  "name": "Variational",
-  "displayName": "Variational",
-  "module": "variational-omni",
-  "category": "Derivatives",
-  "logo": "https://icons.llamao.fi/icons/protocols/variational",
-  "protocolType": "protocol",
-  "methodologyURL": "https://github.com/DefiLlama/dimension-adapters/blob/master/dexs/variational-omni",
-  "slug": "variational",
-  "id": "7194"
- },
- "/summary/open-interest/variational": {
-  "ok": true,
-  "keys": [
-   "id",
-   "name",
-   "address",
-   "symbol",
-   "url",
-   "referralUrl",
-   "description",
-   "chain",
-   "logo",
-   "audits",
-   "gecko_id",
-   "cmcId",
-   "category",
-   "chains",
-   "module",
-   "twitter",
-   "dimensions",
-   "github",
-   "methodology",
-   "misrepresentedTokens",
-   "doublecounted",
-   "tvlCodePath",
-   "defillamaId",
-   "displayName",
-   "methodologyURL",
-   "forkedFrom",
-   "audit_links",
-   "governanceID",
-   "treasury",
-   "parentProtocol"
-  ],
-  "sample": {},
-  "scalars": {
-   "id": "7194",
-   "name": "Variational",
-   "symbol": "-",
-   "url": "https://omni.variational.io",
-   "referralUrl": "https://omni.variational.io/?ref=OMNILLAMA",
-   "chain": "Off Chain",
-   "logo": "https://icons.llamao.fi/icons/protocols/variational",
-   "audits": "0",
-   "category": "Derivatives",
-   "module": "variational-omni",
-   "twitter": "variational_io",
-   "misrepresentedTokens": false,
-   "doublecounted": false,
-   "defillamaId": "7194",
-   "displayName": "Variational",
-   "slug": "variational",
-   "protocolType": "protocol",
-   "total24h": 986497362,
-   "total48hto24h": 952573673,
-   "total7d": 6759844514,
-   "total30d": 30683859262,
-   "total1y": 167605449880,
-   "annualized1y": 206675639210.13513,
-   "hasLabelBreakdown": false,
-   "change_1d": 3.56
+ "coingecko_total": 113,
+ "coingecko_hits": [
+  {
+   "id": "variational-omni",
+   "name": "Variational Omni",
+   "trade_volume_24h_btc": "28735.67",
+   "open_interest_btc": 24502.48,
+   "number_of_perpetual_pairs": 581
   },
-  "chart_len": 297,
-  "chart_tail": [
-   [
-    1792886400,
-    952573673
-   ],
-   [
-    1792972800,
-    971755498
-   ],
-   [
-    1793059200,
-    986497362
-   ]
-  ]
- },
- "/summary/open-interest/variational?dataType=openInterestAtEnd": {
-  "ok": true,
-  "keys": [
-   "id",
-   "name",
-   "address",
-   "symbol",
-   "url",
-   "referralUrl",
-   "description",
-   "chain",
-   "logo",
-   "audits",
-   "gecko_id",
-   "cmcId",
-   "category",
-   "chains",
-   "module",
-   "twitter",
-   "dimensions",
-   "github",
-   "methodology",
-   "misrepresentedTokens",
-   "doublecounted",
-   "tvlCodePath",
-   "defillamaId",
-   "displayName",
-   "methodologyURL",
-   "forkedFrom",
-   "audit_links",
-   "governanceID",
-   "treasury",
-   "parentProtocol"
-  ],
-  "sample": {},
-  "scalars": {
-   "id": "7194",
-   "name": "Variational",
-   "symbol": "-",
-   "url": "https://omni.variational.io",
-   "referralUrl": "https://omni.variational.io/?ref=OMNILLAMA",
-   "chain": "Off Chain",
-   "logo": "https://icons.llamao.fi/icons/protocols/variational",
-   "audits": "0",
-   "category": "Derivatives",
-   "module": "variational-omni",
-   "twitter": "variational_io",
-   "misrepresentedTokens": false,
-   "doublecounted": false,
-   "defillamaId": "7194",
-   "displayName": "Variational",
-   "slug": "variational",
-   "protocolType": "protocol",
-   "total24h": 986497362,
-   "total48hto24h": 952573673,
-   "total7d": 6759844514,
-   "total30d": 30683859262,
-   "total1y": 167605449880,
-   "annualized1y": 206675639210.13513,
-   "hasLabelBreakdown": false,
-   "change_1d": 3.56
+  {
+   "id": "lighter",
+   "name": "Lighter",
+   "trade_volume_24h_btc": "23131.32",
+   "open_interest_btc": 13392.92,
+   "number_of_perpetual_pairs": 199
   },
-  "chart_len": 297,
-  "chart_tail": [
-   [
-    1792886400,
-    952573673
-   ],
-   [
-    1792972800,
-    971755498
-   ],
-   [
-    1793059200,
-    986497362
-   ]
+  {
+   "id": "robinhood-chain-lighter-futures",
+   "name": "Robinhood Chain Lighter (Futures)",
+   "trade_volume_24h_btc": "7336.62",
+   "open_interest_btc": 5432.31,
+   "number_of_perpetual_pairs": 58
+  },
+  {
+   "id": "arcus-futures",
+   "name": "Arcus (Futures)",
+   "trade_volume_24h_btc": "3887.18",
+   "open_interest_btc": 3151.17,
+   "number_of_perpetual_pairs": 64
+  },
+  {
+   "id": "extended",
+   "name": "Extended",
+   "trade_volume_24h_btc": "6126.93",
+   "open_interest_btc": 2498.33,
+   "number_of_perpetual_pairs": 332
+  },
+  {
+   "id": "risex",
+   "name": "RISEx",
+   "trade_volume_24h_btc": "1739.22",
+   "open_interest_btc": 1038.64,
+   "number_of_perpetual_pairs": 45
+  },
+  {
+   "id": "nado",
+   "name": "Nado",
+   "trade_volume_24h_btc": "3857.62",
+   "open_interest_btc": 977.4,
+   "number_of_perpetual_pairs": 75
+  }
+ ],
+ "llama_dexs_hits": [
+  [
+   "Lighter V1",
+   "lighter-v1",
+   "Dexs",
+   null
+  ],
+  [
+   "Nado Spot",
+   "nado-spot",
+   "Dexs",
+   182249
+  ],
+  [
+   "Lighter Spot",
+   "lighter-spot",
+   "Dexs",
+   6247830
+  ],
+  [
+   "Rise.rich",
+   "rise.rich",
+   "Launchpad",
+   12739
+  ],
+  [
+   "Arcus Spot",
+   "arcus-spot",
+   "Dexs",
+   3128192
   ]
- },
- "/summary/dexs/variational?dataType=dailyVolume": {
-  "ok": false,
-  "err": "HTTP Error 400: Bad Request"
- },
- "/summary/derivatives/variational": {
-  "ok": false,
-  "err": "HTTP Error 402: Payment Required"
- },
- "/overview/dexs?excludeTotalDataChart=true": {
-  "ok": true,
-  "keys": [
-   "totalDataChart",
-   "totalDataChartBreakdown",
-   "breakdown24h",
-   "breakdown30d",
-   "chain",
-   "allChains",
-   "total24h",
-   "total48hto24h",
-   "total7d",
-   "total14dto7d",
-   "total30d",
-   "total60dto30d",
-   "total1y",
-   "total7DaysAgo",
-   "total30DaysAgo",
-   "totalAllTime",
-   "change_1d",
-   "change_7d",
-   "change_1m",
-   "change_7dover7d",
-   "change_30dover30d",
-   "protocols"
-  ],
-  "sample": {},
-  "scalars": {
-   "total24h": 8399562519.750002,
-   "total48hto24h": 6024351704.230002,
-   "total7d": 54332760053.73997,
-   "total14dto7d": 58211368154.479965,
-   "total30d": 253250296221.9998,
-   "total60dto30d": 311841726301.9695,
-   "total1y": 3353475917514.0415,
-   "total7DaysAgo": 7599002684.15,
-   "total30DaysAgo": 7474749401.3600025,
-   "totalAllTime": 14321285768376.31,
-   "change_1d": 39.43,
-   "change_7d": 10.54,
-   "change_1m": 12.37,
-   "change_7dover7d": -6.66,
-   "change_30dover30d": -18.79
-  }
- },
- "/protocol/variational": {
-  "ok": true,
-  "keys": [
-   "id",
-   "name",
-   "address",
-   "symbol",
-   "url",
-   "referralUrl",
-   "description",
-   "chain",
-   "logo",
-   "audits",
-   "gecko_id",
-   "cmcId",
-   "category",
-   "chains",
-   "module",
-   "twitter",
-   "dimensions",
-   "github",
-   "tvlCodePath",
-   "chainTvls",
-   "tvl",
-   "tokensInUsd",
-   "tokens",
-   "currentChainTvls",
-   "raises",
-   "hacks",
-   "mcap"
-  ],
-  "sample": {},
-  "scalars": {
-   "id": "7194",
-   "name": "Variational",
-   "symbol": "-",
-   "url": "https://omni.variational.io",
-   "referralUrl": "https://omni.variational.io/?ref=OMNILLAMA",
-   "chain": "Off Chain",
-   "logo": "https://icons.llamao.fi/icons/protocols/variational",
-   "audits": "0",
-   "category": "Derivatives",
-   "module": "dummy.js",
-   "twitter": "variational_io"
-  }
- },
- "/summary/fees/variational?dataType=dailyFees": {
-  "ok": false,
-  "err": "HTTP Error 400: Bad Request"
- }
+ ]
 }
