@@ -29,7 +29,7 @@ jobs:
         run: python scripts/update_prices.py
       - name: Update volume from DefiLlama
         continue-on-error: true
-        run: python scripts/update_volume.py && python scripts/probe.py
+        run: python scripts/update_volume.py
       - name: Commit if changed
         run: |
           git config user.name "perp-maxing-bot"
