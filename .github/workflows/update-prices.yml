@@ -30,6 +30,9 @@ jobs:
       - name: Update volume from DefiLlama
         continue-on-error: true
         run: python scripts/update_volume.py
+      - name: Update arbitrage snapshot
+        continue-on-error: true
+        run: python scripts/update_arb.py
       - name: Commit if changed
         run: |
           git config user.name "perp-maxing-bot"
