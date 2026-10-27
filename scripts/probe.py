@@ -1,23 +1,19 @@
-import json,urllib.request
-API="https://api.llama.fi";UA={"User-Agent":"perp-maxing","Accept":"application/json"}
+import json,urllib.request,re
+UA={"User-Agent":"Mozilla/5.0 perp-maxing","Accept":"application/json"}
 res={}
-def t(path):
-    try:
-        with urllib.request.urlopen(urllib.request.Request(API+path,headers=UA),timeout=60) as r:
-            d=json.loads(r.read());res[path]={"ok":True,"keys":list(d.keys())[:30] if isinstance(d,dict) else type(d).__name__,
-              "sample":{k:d[k] for k in list(d)[:0]} if isinstance(d,dict) else None}
-            return d
-    except Exception as e: res[path]={"ok":False,"err":str(e)}
-oi=t("/overview/open-interest?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true")
-if oi:
-    row=[p for p in oi["protocols"] if p.get("slug")=="variational"][0]
-    res["oi_row_variational"]={k:v for k,v in row.items() if not isinstance(v,(list,dict))}
-for p in ["/summary/open-interest/variational","/summary/open-interest/variational?dataType=openInterestAtEnd",
-          "/summary/dexs/variational?dataType=dailyVolume","/summary/derivatives/variational",
-          "/overview/dexs?excludeTotalDataChart=true","/protocol/variational","/summary/fees/variational?dataType=dailyFees"]:
-    d=t(p)
-    if d and isinstance(d,dict):
-        res[p]["scalars"]={k:v for k,v in d.items() if isinstance(v,(int,float,str)) and len(str(v))<80}
-        ch=d.get("totalDataChart")
-        if ch: res[p]["chart_len"]=len(ch);res[p]["chart_tail"]=ch[-3:]
+def g(u):
+    with urllib.request.urlopen(urllib.request.Request(u,headers=UA),timeout=60) as r: return json.loads(r.read())
+try:
+    rows=[]
+    for page in (1,2):
+        rows+=g(f"https://api.coingecko.com/api/v3/derivatives/exchanges?per_page=100&page={page}")
+    rx=re.compile(r"variational|lighter|extended|rise|nado|entropy|arcus",re.I)
+    res["coingecko_total"]=len(rows)
+    res["coingecko_hits"]=[{k:r.get(k) for k in ("id","name","trade_volume_24h_btc","open_interest_btc","number_of_perpetual_pairs")} for r in rows if rx.search(r.get("name","")+" "+r.get("id",""))]
+except Exception as e: res["coingecko_err"]=str(e)
+try:
+    d=g("https://api.llama.fi/overview/dexs?excludeTotalDataChart=true&excludeTotalDataChartBreakdown=true")
+    rx=re.compile(r"variational|lighter|extended|rise|nado|entropy|arcus",re.I)
+    res["llama_dexs_hits"]=[(p.get("name"),p.get("slug"),p.get("category"),p.get("total24h")) for p in d.get("protocols",[]) if rx.search((p.get("name") or "")+" "+(p.get("slug") or ""))]
+except Exception as e: res["llama_dexs_err"]=str(e)
 json.dump(res,open("data/probe.json","w"),indent=1,default=str)
