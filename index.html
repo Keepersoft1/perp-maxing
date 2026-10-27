@@ -121,6 +121,28 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .ctitle{font-size:11px;color:var(--dim);text-transform:uppercase;letter-spacing:.08em;margin-top:22px}
 .ctitle+.chart{margin-top:8px}
 #dTabs{margin-top:18px}
+.arbbar{display:flex;gap:10px 14px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.arbq{flex:1;min-width:200px}
+.arbq input{width:100%;box-sizing:border-box;font:500 13px var(--mono);color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 12px}
+.arbq input:focus{outline:none;border-color:var(--cyan)}
+.arbt td{vertical-align:middle}
+.tok{font-family:var(--disp);font-weight:700;font-size:14px}
+.vs{display:flex;align-items:center}
+.vs .ic{width:24px;height:24px;margin-left:-6px;border-width:1.5px}
+.vs .ic:first-child{margin-left:0}
+.leg{display:flex;align-items:center;gap:8px}
+.leg .ic{width:24px;height:24px}
+.leg small{display:block;color:var(--dim);font-size:11px}
+.lg{color:var(--up)}.sh2{color:var(--down)}
+.big2{font-weight:700;font-size:15px}
+.arbx td{background:#07050f;padding:0}
+.arbx .in{padding:14px 16px}
+.vt{width:100%;border-collapse:collapse;min-width:0}
+.vt th,.vt td{padding:8px 10px;border-bottom:1px solid var(--line);font-size:13px}
+.vt tr:last-child td{border-bottom:0}
+.vt a{color:var(--cyan)}
+.bar{height:6px;border-radius:3px;background:linear-gradient(90deg,var(--up),var(--cyan));opacity:.8}
+.arbnote{font-size:11px;color:var(--dim);margin:10px 0 0;line-height:1.6}
 .calc{margin-top:20px;padding:16px;border:1px solid var(--line2);border-radius:14px;background:linear-gradient(135deg,rgba(255,43,214,.06),rgba(34,230,255,.04))}
 .crow{display:flex;align-items:flex-end;gap:10px;margin-top:10px}
 .crow label{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0}
@@ -148,7 +170,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 </head><body>
 <nav><div class="wrap">
   <a class="logo" href="#top"><img src="brand/mark.svg" alt="" width="38" height="38"><span>perp</span> <span class="m glow-p">maxing</span></a>
-  <div class="links"><a href="#radar"><span class="num">01</span>Radar</a><a href="#perps"><span class="num">02</span>Perps</a></div>
+  <div class="links"><a href="#radar"><span class="num">01</span>Radar</a><a href="#perps"><span class="num">02</span>Perps</a><a href="#arb"><span class="num">03</span>Arbitrage</a></div>
   <a class="xbtn" href="https://x.com/floppa_perp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></svg>Follow</a>
 </div></nav>
 
@@ -187,6 +209,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <thead><tr><th>Perp</th><th class="r">24h volume</th><th class="r">Open interest</th><th>OI · 90d</th><th class="r">Point price</th><th>Status</th></tr></thead>
     <tbody id="rows"></tbody>
   </table></div>
+</section>
+
+<section class="wrap" id="arb" style="margin-top:28px">
+  <div class="sh"><h2><span class="num">03</span>Arbitrage</h2><p id="arbSrc">same token · different venues</p></div>
+  <div class="arbbar">
+    <div class="ctl" id="arbSort" style="margin:0"><button type="button" data-s="price" class="on">Price spread</button><button type="button" data-s="fund">Funding spread</button></div>
+    <div class="ctl" id="arbMin" style="margin:0"><button type="button" data-n="2" class="on">2+ venues</button><button type="button" data-n="4">4+</button><button type="button" data-n="6">All 6</button></div>
+    <label class="arbq" for="arbQ"><input id="arbQ" placeholder="Search token: BTC, ETH, HYPE…" autocomplete="off"></label>
+  </div>
+  <div class="tbl"><table class="arbt">
+    <thead><tr><th>Token</th><th>Venues</th><th>Long (cheaper)</th><th>Short (richer)</th><th class="r">Price spread</th><th class="r">Funding Δ</th><th class="r">Open interest</th></tr></thead>
+    <tbody id="arbRows"></tbody>
+  </table></div>
+  <p class="arbnote">Snapshot from CoinGecko, refreshed hourly. Prices can lag the venues by minutes and funding intervals differ between venues, so check live books before you trade. Not financial advice.</p>
 </section>
 </main>
 
@@ -244,6 +280,7 @@ function mono(xs,ys){const n=xs.length;if(n===1)return()=>ys[0];const d=[],m=[];
  return x=>{if(x<=xs[0])return ys[0];if(x>=xs[n-1])return ys[n-1];let lo=0,hi=n-1;while(hi-lo>1){const md=(lo+hi)>>1;if(xs[md]<=x)lo=md;else hi=md}const i=lo,h=xs[i+1]-xs[i],t=(x-xs[i])/h,t2=t*t,t3=t2*t;
   return (2*t3-3*t2+1)*ys[i]+(t3-2*t2+t)*h*m[i]+(-2*t3+3*t2)*ys[i+1]+(t3-t2)*h*m[i+1]}}
 
+let ARB=null,arbSort='price',arbMin=2,arbOpen=null;
 let P=[],NOW=Date.now(),UPDATED=0,VOL={projects:{}},VUPD=0;
 const usd=v=>v==null?'—':v>=1e9?'$'+(v/1e9).toFixed(2)+'B':v>=1e6?'$'+(v/1e6).toFixed(1)+'M':v>=1e3?'$'+(v/1e3).toFixed(1)+'K':'$'+Math.round(v);
 function build(data){
@@ -267,7 +304,7 @@ function build(data){
  const sum=k=>P.reduce((a,p)=>a+(p[k]||0),0),topv=[...P].sort((a,b)=>(b.v24||0)-(a.v24||0))[0];
  $('stats').innerHTML=[['24h volume',usd(sum('v24')),`top: ${topv.name}`],['Open interest',usd(sum('oi')),P.length+' perps'],['Priced on OTC',P.filter(p=>p.price!=null).length+' / '+P.length,'points'],['Updated',VUPD?ago(VUPD):'—','every hour']]
   .map(([a,b,c])=>`<div class="stat"><span>${a}</span><b>${b}</b><small>${c}</small></div>`).join('');
- renderTable();initRadar();
+ renderTable();initRadar();if(ARB)renderArb();
  if(location.hash&&P.find(p=>'#'+p.id===location.hash))openP(location.hash.slice(1));
 }
 function icon(p){return `<div class="ic" style="border-color:${p.col};box-shadow:0 0 12px ${p.col}66;color:${p.col}">${p.img?`<img src="${p.img}" alt="">`:p.ab}</div>`}
@@ -279,6 +316,37 @@ function renderTable(){
  <td class="r"><b>${usd(p.v24)}</b></td><td class="r">${usd(p.oi)}<br><small class="${cls(p.vol.oi_ch1d)}">${pct(p.vol.oi_ch1d)} 24h</small></td><td>${spark(p)}</td><td class="r"><b style="${p.tba?'color:var(--mute)':''}">${p.label}</b></td><td>${p.live?'<span class="pill live">● live</span> ':''}<span class="pill">${p.status||''}</span></td></tr>`).join('');
  document.querySelectorAll('#rows tr').forEach(tr=>{tr.onclick=()=>openP(tr.dataset.id);tr.onkeydown=e=>{if(e.key==='Enter')openP(tr.dataset.id)}});
 }
+// ---- arbitrage ----
+const fpct=v=>v==null?'—':(v>=0?'+':'')+v.toFixed(3)+'%';
+const fmtP=v=>v==null?'—':v>=1000?'$'+v.toLocaleString('en-US',{maximumFractionDigits:1}):v>=1?'$'+v.toFixed(v>=100?2:3):'$'+v.toPrecision(3);
+function arbRows(){if(!ARB)return[];const out=[];
+ for(const [tok,vs] of Object.entries(ARB.assets||{})){const ent=Object.entries(vs).filter(([id])=>P.find(p=>p.id===id));if(ent.length<arbMin)continue;
+  const pr=ent.filter(([,x])=>x.price>0);const lo=pr.reduce((a,b)=>b[1].price<a[1].price?b:a),hi=pr.reduce((a,b)=>b[1].price>a[1].price?b:a);
+  const precise=lo[1].price>=1;const ps=precise?(hi[1].price-lo[1].price)/lo[1].price*100:null;
+  const fr=ent.filter(([,x])=>x.fund!=null);let fl=null,fh=null,fs=null;if(fr.length>=2){fl=fr.reduce((a,b)=>b[1].fund<a[1].fund?b:a);fh=fr.reduce((a,b)=>b[1].fund>a[1].fund?b:a);fs=fh[1].fund-fl[1].fund}
+  const oi=ent.reduce((a,[,x])=>a+(x.oi||0),0);out.push({tok,ent,lo,hi,ps,fl,fh,fs,oi})}
+ const q=($('arbQ').value||'').trim().toUpperCase();
+ return out.filter(r=>!q||r.tok.includes(q)).sort((a,b)=>arbSort==='price'?((b.ps??-1)-(a.ps??-1)):((b.fs??-1)-(a.fs??-1))).slice(0,40)}
+function vIcon(id){const p=P.find(p=>p.id===id);return p?icon(p):''}
+function vName(id){const p=P.find(p=>p.id===id);return p?p.name:id}
+function renderArb(){if(!ARB)return;const rows=arbRows();
+ $('arbSrc').innerHTML=`${Object.keys(ARB.assets||{}).length} shared tokens · updated ${ago(pdate(ARB.updated))}`;
+ $('arbRows').innerHTML=rows.map(r=>{const L=arbSort==='price'?r.lo:(r.fl||r.lo),S=arbSort==='price'?r.hi:(r.fh||r.hi);
+  const lv=arbSort==='price'?fmtP(L[1].price):fpct(L[1].fund),sv=arbSort==='price'?fmtP(S[1].price):fpct(S[1].fund);
+  let h=`<tr tabindex="0" data-t="${r.tok}"><td><span class="tok">${r.tok}</span></td><td><div class="vs">${r.ent.map(([id])=>vIcon(id)).join('')}</div></td>
+  <td><div class="leg">${vIcon(L[0])}<div><span class="lg">${vName(L[0])}</span><small>${lv}</small></div></div></td>
+  <td><div class="leg">${vIcon(S[0])}<div><span class="sh2">${vName(S[0])}</span><small>${sv}</small></div></div></td>
+  <td class="r big2 ${r.ps!=null&&arbSort==='price'?'glow-c':''}">${r.ps==null?'<span style="color:var(--dim)">—</span>':r.ps.toFixed(3)+'%'}</td>
+  <td class="r ${arbSort==='fund'?'glow-c big2':''}">${r.fs==null?'—':r.fs.toFixed(3)+'%'}</td><td class="r">${usd(r.oi)}</td></tr>`;
+  if(arbOpen===r.tok){const mn=r.lo[1].price;
+   h+=`<tr class="arbx"><td colspan="7"><div class="in"><table class="vt"><thead><tr><th>Venue</th><th class="r">Price</th><th class="r">vs cheapest</th><th class="r">Funding</th><th class="r">OI</th><th class="r">24h vol</th><th></th></tr></thead><tbody>`+
+   [...r.ent].sort((a,b)=>a[1].price-b[1].price).map(([id,x])=>{const p=P.find(p=>p.id===id),d=(x.price/mn-1)*100;
+    return `<tr><td><div class="leg">${vIcon(id)}<span>${vName(id)}</span></div></td><td class="r">${fmtP(x.price)}</td><td class="r">${mn>=1?'+'+d.toFixed(3)+'%':'—'}<div class="bar" style="width:${Math.min(100,d/(r.ps||1)*100)}%;margin-left:auto"></div></td><td class="r ${cls(x.fund)}">${fpct(x.fund)}</td><td class="r">${usd(x.oi)}</td><td class="r">${usd(x.vol)}</td><td class="r">${p&&p.trade?`<a href="${p.trade}" target="_blank" rel="noopener">Trade →</a>`:''}</td></tr>`}).join('')+`</tbody></table></div></td></tr>`}
+  return h}).join('')||`<tr><td colspan="7" style="color:var(--dim)">No tokens match.</td></tr>`;
+ document.querySelectorAll('#arbRows tr[data-t]').forEach(tr=>{const go=()=>{arbOpen=arbOpen===tr.dataset.t?null:tr.dataset.t;renderArb()};tr.onclick=go;tr.onkeydown=e=>{if(e.key==='Enter')go()}})}
+document.querySelectorAll('#arbSort button').forEach(b=>b.onclick=()=>{arbSort=b.dataset.s;document.querySelectorAll('#arbSort button').forEach(x=>x.classList.toggle('on',x===b));renderArb()});
+document.querySelectorAll('#arbMin button').forEach(b=>b.onclick=()=>{arbMin=+b.dataset.n;document.querySelectorAll('#arbMin button').forEach(x=>x.classList.toggle('on',x===b));renderArb()});
+$('arbQ').addEventListener('input',renderArb);
 // ---- radar ----
 const stage=$('stage'),rs=$('rsvg');let SW=0,SH=0,metric='vol',nodes=[],started=false;
 function initRadar(){nodes=P.map((p,i)=>({p,a:-Math.PI/2+i*2*Math.PI/P.length+0.3,x:0,y:0,drag:false,moved:false}));place();if(!started){started=true;requestAnimationFrame(loop)}
@@ -393,6 +461,7 @@ $('dChart').addEventListener('pointermove',e=>{if(!cur||!cur.hasHist)return;cons
 $('dChart').addEventListener('pointerleave',()=>{if(!cur||!cur.hasHist)return;drawChart(null);setHead(null)});
 // ---- load data ----
 const q='?t='+Math.floor(Date.now()/3e5);
+fetch('data/arb.json'+q,{cache:'no-store'}).then(r=>r.ok?r.json():null).then(a=>{ARB=a;if(P.length)renderArb()}).catch(()=>{});
 fetch('data/volume.json'+q,{cache:'no-store'}).then(r=>r.ok?r.json():{projects:{}}).catch(()=>({projects:{}})).then(v=>{VOL=v||{projects:{}};VUPD=VOL.updated?pdate(VOL.updated):0;
  return fetch('data/prices.json'+q,{cache:'no-store'}).then(r=>r.ok?r.json():Promise.reject())}).then(build).catch(()=>build(FALLBACK));
 </script>
