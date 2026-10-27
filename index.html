@@ -36,7 +36,7 @@ nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:rgba(
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:31;background:var(--bg)}
 nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
 .logo{display:inline-flex;align-items:center;gap:9px;font-family:var(--disp);font-weight:800;font-size:17px;letter-spacing:.02em;text-decoration:none;white-space:nowrap;text-transform:uppercase}
-.logo img{border-radius:8px;box-shadow:0 0 14px rgba(255,79,216,.25)}
+.logo img{border-radius:10px;box-shadow:0 0 14px rgba(255,79,216,.25)}
 .logo .m{animation:flick 6s infinite}
 @keyframes flick{0%,18%,20%,52%,54%,100%{opacity:1}19%,53%{opacity:.35}}
 .links{display:flex;gap:20px;font-size:12px;color:var(--mute);margin-left:auto;text-transform:uppercase;letter-spacing:.08em}
@@ -55,6 +55,10 @@ nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
 @keyframes floor{to{background-position:0 0,0 0,0 44px}}
 .sun{position:absolute;right:8%;top:16%;width:clamp(160px,22vw,320px);aspect-ratio:1;border-radius:50%;z-index:1;background:linear-gradient(180deg,#ffd166 0%,#ff2bd6 70%);opacity:.22;filter:blur(1px);
   mask-image:repeating-linear-gradient(180deg,#000 0 14px,transparent 14px 20px)}
+.sun{display:none}
+.heromark{position:absolute;right:9%;top:50%;width:clamp(180px,22vw,320px);aspect-ratio:1;z-index:2;transform:translateY(-58%);border-radius:24%;
+  box-shadow:0 0 0 1px rgba(255,79,216,.18),0 0 60px rgba(255,79,216,.22),0 0 120px rgba(77,232,255,.12);animation:bob 6s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-62%)}}
 .eyebrow{font-size:12px;color:var(--mute);letter-spacing:.1em;text-transform:uppercase}
 .live{display:inline-flex;align-items:center;gap:8px;margin-left:12px;color:var(--up)}
 .live i{width:8px;height:8px;border-radius:50%;background:var(--up);box-shadow:0 0 10px var(--up);animation:pulse 1.6s infinite}
@@ -126,19 +130,19 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .kv b{display:block;margin-top:5px;font-weight:700;font-variant-numeric:tabular-nums}
 .dcta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
 .note{font-size:11px;color:var(--dim);margin-top:auto;padding-top:18px}
-@media (max-width:760px){.links{display:none}.stats{grid-template-columns:repeat(2,1fr)}.kv{grid-template-columns:repeat(2,1fr)}.sun{display:none}}
-@media (prefers-reduced-motion:reduce){.gridfloor,.logo .m,.live i{animation:none}.drawer,.scrim{transition:none}}
+@media (max-width:760px){.heromark{display:none}.links{display:none}.stats{grid-template-columns:repeat(2,1fr)}.kv{grid-template-columns:repeat(2,1fr)}.sun{display:none}}
+@media (prefers-reduced-motion:reduce){.heromark,.gridfloor,.logo .m,.live i{animation:none}.drawer,.scrim{transition:none}}
 </style>
 </head><body>
 <nav><div class="wrap">
-  <a class="logo" href="#top"><img src="brand/mark.svg" alt="" width="30" height="30"><span>perp</span> <span class="m glow-p">maxing</span></a>
+  <a class="logo" href="#top"><img src="brand/mark.svg" alt="" width="38" height="38"><span>perp</span> <span class="m glow-p">maxing</span></a>
   <div class="links"><a href="#radar"><span class="num">01</span>Radar</a><a href="#perps"><span class="num">02</span>Perps</a></div>
   <a class="xbtn" href="https://x.com/floppa_perp" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.7 7.66L22 21h-6.17l-4.83-6.32L5.47 21H2.4l7.17-8.2L2 3h6.33l4.37 5.77L17.75 3Zm-1.08 16.17h1.7L7.4 4.74H5.58l11.09 14.43Z"/></svg>Follow</a>
 </div></nav>
 
 <main id="top">
 <section class="hero">
-  <div class="sun" aria-hidden="true"></div>
+  <div class="sun" aria-hidden="true"></div><img class="heromark" src="brand/mark.svg" alt="perp maxing logo">
   <div class="gridfloor" aria-hidden="true"></div>
   <div class="wrap">
     <div class="eyebrow"><span class="num">01</span>Community tool · No token<span class="live" id="liveTop"><i></i><span>live</span></span></div>
