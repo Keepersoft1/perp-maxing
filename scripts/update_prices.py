@@ -19,17 +19,21 @@ UA = {"User-Agent": "Mozilla/5.0 (perp-maxing price bot)"}
 # project id -> words that identify it in an OTC message
 ALIASES = {
     "variational": ["variational", "omni", "var points", "$var", "vari"],
-    "lighter": ["lighter", "lit points", "lighter points"],
+    "lighter": ["lighter rh", "lighter robinhood", "lighter"],
     "extended": ["extended", "x10"],
-    "risex": ["risex", "rise x", "rise points", "rise chain"],
-    "aster": ["aster"],
+    "risex": ["risex", "rise x", "rise points", "rise.trade"],
+    "nado": ["nado"],
+    "entropy": ["entropy"],
+    "arcus": ["arcus"],
 }
 LOGO_SRC = {
     "variational": "variational.io",
     "lighter": "lighter.xyz",
     "extended": "extended.exchange",
-    "risex": "risechain.com",
-    "aster": "asterdex.com",
+    "risex": "rise.trade",
+    "nado": "nado.xyz",
+    "entropy": "entropy.io",
+    "arcus": "arcus.xyz",
 }
 
 NUM = r"\d{1,4}(?:[.,]\d{1,3})?"
