@@ -1,0 +1,949 @@
+{
+ "variational_30d": 78210375652,
+ "peers": {
+  "Hyperliquid": {
+   "coin_candidates": [
+    [
+     "hyperliquid",
+     "HYPE",
+     11
+    ],
+    [
+     "hyperliquid-strategies-ondo-tokenized",
+     "PURRON",
+     6095
+    ],
+    [
+     "hyperliquid-strategies-inc-rstock",
+     "RPURR",
+     6769
+    ],
+    [
+     "cz-on-hyperliquid",
+     "CZ",
+     12819
+    ],
+    [
+     "hyperliquid-strategies-backpack-securities",
+     "PURR",
+     null
+    ]
+   ],
+   "ex_candidates": [
+    [
+     "hyperliquid",
+     "Hyperliquid (Futures)",
+     "119167.35"
+    ]
+   ],
+   "markets": {
+    "hyperliquid": {
+     "fdv": 74904371099,
+     "mcap": 18845922837,
+     "price": 78.7,
+     "sym": "hype"
+    },
+    "hyperliquid-strategies-ondo-tokenized": {
+     "fdv": 112164,
+     "mcap": 112164,
+     "price": 9.99,
+     "sym": "purron"
+    },
+    "hyperliquid-strategies-inc-rstock": {
+     "fdv": 79210,
+     "mcap": 79210,
+     "price": 9.58,
+     "sym": "rpurr"
+    }
+   },
+   "vol30": {
+    "hyperliquid": {
+     "usd30d": 228495622985,
+     "n": 30
+    }
+   }
+  },
+  "Lighter": {
+   "coin_candidates": [
+    [
+     "lighter",
+     "LIT",
+     86
+    ],
+    [
+     "the-lighter-liger",
+     "LIGER",
+     5594
+    ]
+   ],
+   "ex_candidates": [
+    [
+     "lighter",
+     "Lighter",
+     "25040.98"
+    ],
+    [
+     "robinhood-chain-lighter-futures",
+     "Robinhood Chain Lighter (Futures)",
+     "8717.71"
+    ]
+   ],
+   "markets": {
+    "lighter": {
+     "fdv": 2785124447,
+     "mcap": 709109411,
+     "price": 2.84,
+     "sym": "lit"
+    },
+    "the-lighter-liger": {
+     "fdv": 152067,
+     "mcap": 152067,
+     "price": 0.00018129,
+     "sym": "liger"
+    }
+   },
+   "vol30": {
+    "lighter": {
+     "usd30d": 48893876137,
+     "n": 30
+    },
+    "robinhood-chain-lighter-futures": {
+     "usd30d": 17524899824,
+     "n": 30
+    }
+   }
+  },
+  "Aster": {
+   "coin_candidates": [
+    [
+     "aster-2",
+     "ASTER",
+     55
+    ],
+    [
+     "astherus-usdf",
+     "USDF",
+     261
+    ],
+    [
+     "public-meme-token",
+     "PMT",
+     921
+    ],
+    [
+     "asteroid-shiba",
+     "ASTEROID",
+     2015
+    ],
+    [
+     "asteroid-2",
+     "ASTEROID",
+     2750
+    ]
+   ],
+   "ex_candidates": [
+    [
+     "aster",
+     "Aster (Futures)",
+     "22814.08"
+    ]
+   ],
+   "markets": {
+    "aster-2": {
+     "fdv": 5446824115,
+     "mcap": 1753966705,
+     "price": 0.699255,
+     "sym": "aster"
+    },
+    "astherus-usdf": {
+     "fdv": 112021053,
+     "mcap": 112021053,
+     "price": 0.997362,
+     "sym": "usdf"
+    },
+    "public-meme-token": {
+     "fdv": 35106840,
+     "mcap": 17852066,
+     "price": 0.097279,
+     "sym": "pmt"
+    }
+   },
+   "vol30": {
+    "aster": {
+     "usd30d": 46872878808,
+     "n": 30
+    }
+   }
+  },
+  "edgeX": {
+   "coin_candidates": [
+    [
+     "edgex",
+     "EDGE",
+     247
+    ]
+   ],
+   "ex_candidates": [
+    [
+     "edgex",
+     "edgeX",
+     "6431.43"
+    ]
+   ],
+   "markets": {
+    "edgex": {
+     "fdv": 337342190,
+     "mcap": 118069766,
+     "price": 0.337542,
+     "sym": "edge"
+    }
+   },
+   "vol30": {
+    "edgex": {
+     "usd30d": 19945974756,
+     "n": 30
+    }
+   }
+  },
+  "Grvt": {
+   "coin_candidates": [
+    [
+     "grvt",
+     "GRVT",
+     732
+    ]
+   ],
+   "ex_candidates": [
+    [
+     "grvt_futures",
+     "GRVT",
+     "7194.11"
+    ]
+   ],
+   "markets": {
+    "grvt": {
+     "fdv": 225836515,
+     "mcap": 25815898,
+     "price": 0.225925,
+     "sym": "grvt"
+    }
+   },
+   "vol30": {
+    "grvt_futures": {
+     "usd30d": 14582953326,
+     "n": 30
+    }
+   }
+  },
+  "ApeX": {
+   "coin_candidates": [
+    [
+     "apex-4",
+     "AP3X",
+     365
+    ],
+    [
+     "apex-token-2",
+     "APEX",
+     612
+    ],
+    [
+     "apex-5",
+     "SN1",
+     1405
+    ],
+    [
+     "apex-gold-ledger",
+     "AGL",
+     1619
+    ],
+    [
+     "apex-ai",
+     "APEX",
+     7624
+    ]
+   ],
+   "ex_candidates": [
+    [
+     "apex-omni",
+     "ApeX Omni",
+     "4359.64"
+    ]
+   ],
+   "markets": {
+    "apex-4": {
+     "fdv": 112535713,
+     "mcap": 68954672,
+     "price": 0.03751059,
+     "sym": "ap3x"
+    },
+    "apex-token-2": {
+     "fdv": 108451415,
+     "mcap": 34251780,
+     "price": 0.216607,
+     "sym": "apex"
+    },
+    "apex-5": {
+     "fdv": 8033332,
+     "mcap": 8033332,
+     "price": 1.52,
+     "sym": "sn1"
+    }
+   },
+   "vol30": {
+    "apex-omni": {
+     "usd30d": 11335860007,
+     "n": 30
+    }
+   }
+  },
+  "GMX": {
+   "coin_candidates": [
+    [
+     "gmx",
+     "GMX",
+     299
+    ],
+    [
+     "generative-market-explorer",
+     "AIGMX",
+     10567
+    ],
+    [
+     "general-motors-xstock",
+     "GMX",
+     null
+    ],
+    [
+     "mgm-resorts-international-xstock",
+     "MGMX",
+     null
+    ]
+   ],
+   "ex_candidates": [
+    [
+     "gmx-perpetuals-v2-solana",
+     "GMX Perpetuals V2 (Solana)",
+     "2990.07"
+    ],
+    [
+     "gmx-perpetuals-v2-arbitrum",
+     "GMX Perpetuals V2 (Arbitrum)",
+     "1110.83"
+    ],
+    [
+     "gmx-perpetuals-v2-avalanche",
+     "GMX Perpetuals V2 (Avalanche)",
+     "56.07"
+    ]
+   ],
+   "markets": {
+    "gmx": {
+     "fdv": 91328620,
+     "mcap": 91328620,
+     "price": 8.53,
+     "sym": "gmx"
+    },
+    "generative-market-explorer": {
+     "fdv": 15036.34,
+     "mcap": 15036.34,
+     "price": 1.504e-05,
+     "sym": "aigmx"
+    },
+    "general-motors-xstock": {
+     "fdv": null,
+     "mcap": null,
+     "price": null,
+     "sym": "gmx"
+    }
+   },
+   "vol30": {
+    "gmx-perpetuals-v2-solana": {
+     "usd30d": 23721838385,
+     "n": 30
+    },
+    "gmx-perpetuals-v2-arbitrum": {
+     "usd30d": 1440701491,
+     "n": 30
+    },
+    "gmx-perpetuals-v2-avalanche": {
+     "usd30d": 101806107,
+     "n": 30
+    }
+   }
+  },
+  "Paradex": {
+   "coin_candidates": [
+    [
+     "paradex",
+     "DIME",
+     1416
+    ]
+   ],
+   "ex_candidates": [
+    [
+     "paradex",
+     "Paradex",
+     "62.37"
+    ]
+   ],
+   "markets": {
+    "paradex": {
+     "fdv": 43544904,
+     "mcap": 7884442,
+     "price": 0.04354527,
+     "sym": "dime"
+    }
+   },
+   "vol30": {
+    "paradex": {
+     "usd30d": 295483822,
+     "n": 30
+    }
+   }
+  },
+  "dYdX": {
+   "coin_candidates": [
+    [
+     "dydx-chain",
+     "DYDX",
+     296
+    ],
+    [
+     "dydx",
+     "ETHDYDX",
+     1679
+    ],
+    [
+     "dydx-wormhole",
+     "DYDX",
+     null
+    ],
+    [
+     "pstake-staked-dydx",
+     "STKDYDX",
+     null
+    ]
+   ],
+   "ex_candidates": [
+    [
+     "dydx_chain",
+     "dYdX Chain",
+     "653.99"
+    ]
+   ],
+   "markets": {
+    "dydx-chain": {
+     "fdv": 102777459,
+     "mcap": 90739366,
+     "price": 0.107205,
+     "sym": "dydx"
+    },
+    "dydx": {
+     "fdv": 83638465,
+     "mcap": 5214481,
+     "price": 0.107151,
+     "sym": "ethdydx"
+    },
+    "dydx-wormhole": {
+     "fdv": 972.06,
+     "mcap": 0.0,
+     "price": 0.02618127,
+     "sym": "dydx"
+    }
+   },
+   "vol30": {
+    "dydx_chain": {
+     "usd30d": 1170882159,
+     "n": 30
+    }
+   }
+  },
+  "Drift": {
+   "coin_candidates": [
+    [
+     "drift-protocol",
+     "DRIFT",
+     1261
+    ],
+    [
+     "drift-staked-sol",
+     "DSOL",
+     null
+    ]
+   ],
+   "ex_candidates": [],
+   "markets": {
+    "drift-protocol": {
+     "fdv": 13597742,
+     "mcap": 10106031,
+     "price": 0.01359313,
+     "sym": "drift"
+    },
+    "drift-staked-sol": {
+     "fdv": 294395677,
+     "mcap": 294395677,
+     "price": 128.92,
+     "sym": "dsol"
+    }
+   },
+   "vol30": {}
+  }
+ },
+ "log": {
+  "exchanges": [
+   [
+    "binance_futures",
+    "Binance (Futures)"
+   ],
+   [
+    "hyperliquid",
+    "Hyperliquid (Futures)"
+   ],
+   [
+    "bybit",
+    "Bybit (Futures)"
+   ],
+   [
+    "gate_futures",
+    "Gate (Futures)"
+   ],
+   [
+    "mxc_futures",
+    "MEXC (Futures)"
+   ],
+   [
+    "weex-futures",
+    "WEEX (Futures)"
+   ],
+   [
+    "coinw_futures",
+    "CoinW (Futures)"
+   ],
+   [
+    "tapbit-futures",
+    "Tapbit (Futures)"
+   ],
+   [
+    "orangex_futures",
+    "OrangeX Futures"
+   ],
+   [
+    "bitget_futures",
+    "Bitget Futures"
+   ],
+   [
+    "okex_swap",
+    "OKX (Futures)"
+   ],
+   [
+    "xt_derivatives",
+    "XT.COM (Derivatives)"
+   ],
+   [
+    "toobit_derivatives",
+    "Toobit Futures"
+   ],
+   [
+    "whitebit_futures",
+    "WhiteBIT Futures"
+   ],
+   [
+    "coinup-futures",
+    "CoinUp.io (Futures)"
+   ],
+   [
+    "kumex",
+    "KuCoin Futures"
+   ],
+   [
+    "bingx_futures",
+    "BingX (Futures)"
+   ],
+   [
+    "deribit",
+    "Deribit"
+   ],
+   [
+    "phemex_futures",
+    "Phemex (Futures)"
+   ],
+   [
+    "ourbit-futures",
+    "Ourbit (Futures)"
+   ],
+   [
+    "bitrue_futures",
+    "Bitrue (Futures)"
+   ],
+   [
+    "lbank-futures",
+    "LBank (Futures)"
+   ],
+   [
+    "variational-omni",
+    "Variational Omni"
+   ],
+   [
+    "huobi_dm",
+    "HTX Futures"
+   ],
+   [
+    "btse_futures",
+    "BTSE (Futures)"
+   ],
+   [
+    "evedex",
+    "EVEDEX"
+   ],
+   [
+    "bitunix_futures",
+    "Bitunix Futures"
+   ],
+   [
+    "bitkan-futures",
+    "BitKan (Futures)"
+   ],
+   [
+    "aster",
+    "Aster (Futures)"
+   ],
+   [
+    "deepcoin_derivatives",
+    "Deepcoin (Derivatives)"
+   ],
+   [
+    "prime_xbt",
+    "PrimeXBT"
+   ],
+   [
+    "blofin",
+    "BloFin (Futures)"
+   ],
+   [
+    "lighter",
+    "Lighter"
+   ],
+   [
+    "crypto_com_futures",
+    "Crypto.com Exchange (Futures)"
+   ],
+   [
+    "bitvenus",
+    "BVOX (Futures)"
+   ],
+   [
+    "bitfinex_futures",
+    "Bitfinex (Futures)"
+   ],
+   [
+    "hotcoin-futures",
+    "Hotcoin (Futures)"
+   ],
+   [
+    "zoomex-futures",
+    "Zoomex (Futures)"
+   ],
+   [
+    "kcex-futures",
+    "KCEX (Futures)"
+   ],
+   [
+    "kraken_futures",
+    "Kraken (Futures)"
+   ],
+   [
+    "alphax-futures",
+    "AlphaX (Futures)"
+   ],
+   [
+    "robinhood-chain-lighter-futures",
+    "Robinhood Chain Lighter (Futures)"
+   ],
+   [
+    "grvt_futures",
+    "GRVT"
+   ],
+   [
+    "biconomy-futures",
+    "Biconomy (Futures)"
+   ],
+   [
+    "qfex",
+    "QFEX"
+   ],
+   [
+    "antarctic",
+    "Antarctic "
+   ],
+   [
+    "sodex-futures",
+    "SoDEX (Futures)"
+   ],
+   [
+    "levex-futures",
+    "LeveX (Futures)"
+   ],
+   [
+    "edgex",
+    "edgeX"
+   ],
+   [
+    "arcus-futures",
+    "Arcus (Futures)"
+   ],
+   [
+    "extended",
+    "Extended"
+   ],
+   [
+    "gmx-perpetuals-v2-solana",
+    "GMX Perpetuals V2 (Solana)"
+   ],
+   [
+    "derive-futures",
+    "Derive (Futures)"
+   ],
+   [
+    "apex-omni",
+    "ApeX Omni"
+   ],
+   [
+    "bbx",
+    "BBX"
+   ],
+   [
+    "kalshi",
+    "Kalshi"
+   ],
+   [
+    "pacifica",
+    "Pacifica"
+   ],
+   [
+    "backpack-futures",
+    "Backpack (Futures)"
+   ],
+   [
+    "polymarket-perps",
+    "Polymarket Perps"
+   ],
+   [
+    "ondo-perps",
+    "Ondo Perps"
+   ],
+   [
+    "bydfi-futures",
+    "BYDFi (Futures)"
+   ],
+   [
+    "orderly_network_derivatives_evm",
+    "Orderly (Derivatives)"
+   ],
+   [
+    "niza-fun-futures",
+    "Niza.fun (Futures)"
+   ],
+   [
+    "io-trader",
+    "IO Trader"
+   ],
+   [
+    "risex",
+    "RISEx"
+   ],
+   [
+    "nado",
+    "Nado"
+   ],
+   [
+    "vest-exchange-futures",
+    "Vest Exchange"
+   ],
+   [
+    "bullish-futures",
+    "Bullish (Futures)"
+   ],
+   [
+    "gmx-perpetuals-v2-arbitrum",
+    "GMX Perpetuals V2 (Arbitrum)"
+   ],
+   [
+    "globe_exchange_derivatives",
+    "Globe (Derivatives)"
+   ],
+   [
+    "dydx_chain",
+    "dYdX Chain"
+   ],
+   [
+    "aqx_derivatives",
+    "Flipster"
+   ],
+   [
+    "woo_network_futures",
+    "WOO X (Futures)"
+   ],
+   [
+    "bitstamp-futures",
+    "Bitstamp by Robinhood (Futures)"
+   ],
+   [
+    "aevo",
+    "Aevo"
+   ],
+   [
+    "astros",
+    "Astros"
+   ],
+   [
+    "paradex",
+    "Paradex"
+   ],
+   [
+    "bulk",
+    "BULK"
+   ],
+   [
+    "gate-perp-dex",
+    "Gate DEX"
+   ],
+   [
+    "decibel",
+    "Decibel"
+   ],
+   [
+    "hashkey-global-futures",
+    "HashKey Global (Futures)"
+   ],
+   [
+    "bigone_futures",
+    "BigONE Futures"
+   ],
+   [
+    "injective_futures",
+    "Helix (Futures)"
+   ],
+   [
+    "standx",
+    "StandX"
+   ],
+   [
+    "gemini_derivatives",
+    "Gemini Derivatives"
+   ],
+   [
+    "delta_futures",
+    "Delta Exchange (Futures)"
+   ],
+   [
+    "valr-futures",
+    "VALR Futures"
+   ],
+   [
+    "gmx-perpetuals-v2-avalanche",
+    "GMX Perpetuals V2 (Avalanche)"
+   ],
+   [
+    "synfutures",
+    "SynFutures"
+   ],
+   [
+    "gtrade-arbitrum",
+    "gTrade (Arbitrum)"
+   ],
+   [
+    "strike-finance",
+    "Strike Finance"
+   ],
+   [
+    "katana-perps",
+    "Katana Perps"
+   ],
+   [
+    "storm-trade",
+    "Storm Trade"
+   ],
+   [
+    "turboflow",
+    "TurboFlow"
+   ],
+   [
+    "gtrade-base",
+    "gTrade (Base)"
+   ],
+   [
+    "dipcoin-futures",
+    "Dipcoin (Futures)"
+   ],
+   [
+    "hitbtc_derivatives",
+    "HitBTC (Derivatives)"
+   ],
+   [
+    "kiloex-bsc",
+    "KiloEx (BSC)"
+   ],
+   [
+    "synthetix-perps",
+    "Synthetix"
+   ],
+   [
+    "sparkdex-perps",
+    "SparkDEX Perps"
+   ],
+   [
+    "kiloex-base",
+    "KiloEx (Base)"
+   ],
+   [
+    "gtrade-polygon",
+    "gTrade (Polygon)"
+   ],
+   [
+    "kiloex-opbnb",
+    "KiloEx (opBnb)"
+   ],
+   [
+    "margin-trade-futures",
+    "Margin Trade (Futures)"
+   ],
+   [
+    "deriw",
+    "DeriW"
+   ],
+   [
+    "bitflyer_futures",
+    "Bitflyer (Futures)"
+   ],
+   [
+    "gmo_japan_futures",
+    "GMO Coin Japan (Futures)"
+   ],
+   [
+    "coincall",
+    "Coincall"
+   ],
+   [
+    "bitmex",
+    "BitMEX (Derivative)"
+   ],
+   [
+    "bitmart_futures",
+    "Bitmart Futures"
+   ],
+   [
+    "coinex_futures",
+    "CoinEx (Futures)"
+   ],
+   [
+    "kiloex-manta-pacific",
+    "KiloEx (Manta Pacific)"
+   ],
+   [
+    "overlay-protocol",
+    "Overlay Protocol "
+   ]
+  ]
+ }
+}
