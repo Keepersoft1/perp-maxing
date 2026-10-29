@@ -31,7 +31,7 @@ for pid, ids in CG.items():
                 pts = []
                 for t, v in d:
                     day = int(float(t) // 86400000); p = bp.get(day) or bp.get(day - 1)
-                    if p: pts.append([day * 86400, round(float(v) * p)])
+                    if p and v is not None: pts.append([day * 86400, round(float(v) * p)])
                 out[pid] = {"cg": i, "chart": pts}; break
             except Exception as e:
                 log[u] = f"parse: {e} {str(d)[:200]}"
