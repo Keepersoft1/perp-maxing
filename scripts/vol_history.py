@@ -27,10 +27,14 @@ for pid, ids in CG.items():
         u = f"https://api.coingecko.com/api/v3/exchanges/{i}/volume_chart?days=365"
         c, d = get(u); log[u] = c
         if d:
-            pts = []
-            for t, v in d:
-                day = int(t // 86400000); p = bp.get(day) or bp.get(day - 1)
-                if p: pts.append([day * 86400, round(float(v) * p)])
-            out[pid] = {"cg": i, "chart": pts}; break
+            try:
+                pts = []
+                for t, v in d:
+                    day = int(float(t) // 86400000); p = bp.get(day) or bp.get(day - 1)
+                    if p: pts.append([day * 86400, round(float(v) * p)])
+                out[pid] = {"cg": i, "chart": pts}; break
+            except Exception as e:
+                log[u] = f"parse: {e} {str(d)[:200]}"
+log["btc_days"] = len(bp)
 json.dump({"projects": out, "log": log}, open(os.path.join(ROOT, "data", "vol_history.json"), "w"))
 print(json.dumps(log, indent=1)); print({k: len(v["chart"]) for k, v in out.items()})
