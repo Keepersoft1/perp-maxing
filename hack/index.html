@@ -26,6 +26,18 @@ body{font-family:var(--body);font-size:15px;line-height:1.5;padding-left:max(16p
   background:radial-gradient(900px 500px at 85% -10%,rgba(255,61,94,.14),transparent 70%),radial-gradient(700px 500px at -10% 110%,rgba(127,212,255,.08),transparent 70%),var(--bg);background-attachment:fixed}
 a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto}
+.site{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.pm{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.01em}
+.pm img{width:30px;height:30px;border-radius:8px;box-shadow:0 0 16px rgba(255,43,214,.35)}
+.pm b{color:#ff2bd6;text-shadow:0 0 14px rgba(255,43,214,.6)}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs a{font-family:var(--mono);font-size:12px;text-decoration:none;color:var(--mute);padding:7px 12px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
+.tabs a:hover{color:var(--fg);border-color:#22e6ff;box-shadow:0 0 12px rgba(34,230,255,.3)}
+.tabs a.cta{color:var(--fg);border-color:#ff2bd6;background:rgba(255,43,214,.1);box-shadow:0 0 14px rgba(255,43,214,.35),inset 0 0 10px rgba(255,43,214,.15)}
+.tabs a.on{color:var(--red);border-color:rgba(255,61,94,.5);background:var(--red-d)}
+.tabs a.on::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-right:7px;vertical-align:1px}
+.tabs a:focus-visible,.pm:focus-visible{outline:2px solid #22e6ff;outline-offset:2px}
+@media (max-width:560px){.site{justify-content:center}.tabs{justify-content:center}}
 header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
 .brand{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
 .dot{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(255,61,94,.6);animation:pulse 1.6s infinite}
@@ -96,6 +108,15 @@ footer a{color:var(--fg)}
 </head>
 <body>
 <div class="wrap">
+<nav class="site" aria-label="perp maxing">
+  <a class="pm" href="/"><img src="/brand/mark.svg" alt="">perp <b>maxing</b></a>
+  <div class="tabs">
+    <a class="cta" href="/#perps">Perp DEX list</a>
+    <a href="/#radar">Radar</a>
+    <a href="/#arb">Arbitrage</a>
+    <a class="on" href="/hack/" aria-current="page">Hack tracker</a>
+  </div>
+</nav>
 <header class="top">
   <div class="brand"><span class="dot" aria-hidden="true"></span>BINANCE HACK TRACKER</div>
   <div class="upd"><span id="upd">loading on-chain data…</span><button id="refresh" type="button">Refresh</button></div>
