@@ -1,5 +1,5 @@
 {
- "run": "2026-10-30T12:44Z",
+ "run": "2026-10-30T18:34Z",
  "messages": 0,
  "debug": {
   "telegram": "no secrets set",
@@ -7,7 +7,7 @@
    "bytes": 11496,
    "title": "Telegram: View @PointsOTC",
    "wraps": 0,
-   "head": " Telegram: View @PointsOTC location.hash='' try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/PointsOTC\"}}),'https://web.telegram.org');}}catch(e){} window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches&&document.documentElement&&document.documentElement.classList&&document.documentElement.classList.add('theme_dark'); Download POTC 3 668 members, 719 online Community, Variational and Extended based. Buying/Selling Points, owner @Rijk0x . Admins / co-signers : @Sigma_square"
+   "head": " Telegram: View @PointsOTC location.hash='' try{if(window.parent!=null&&window!=window.parent){window.parent.postMessage(JSON.stringify({eventType:'web_app_open_tg_link',eventData:{path_full:\"\\/PointsOTC\"}}),'https://web.telegram.org');}}catch(e){} window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches&&document.documentElement&&document.documentElement.classList&&document.documentElement.classList.add('theme_dark'); Download POTC 3 668 members, 574 online Community, Variational and Extended based. Buying/Selling Points, owner @Rijk0x . Admins / co-signers : @Sigma_square"
   }
  },
  "latest": []
