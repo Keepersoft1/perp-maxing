@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Binance Hack Tracker</title>
+<meta name="description" content="Live tracker of the $6.36B Binance hack: hacker wallets, coins, frozen funds and where the money moves.">
+<meta property="og:title" content="Binance Hack Tracker · live">
+<meta property="og:description" content="Where the $6.36B stolen from Binance is right now. Live hacker wallets, frozen funds, transfers.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@floppa_perp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@600;800;900&family=JetBrains+Mono:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* layout: forensic terminal; one hero ledger, then wallets, coins, live transfer feed */
+:root{
+  --bg:#07060a; --panel:#100d14; --line:#241d2b; --fg:#f2eef6; --mute:#8e86a0; --dim:#5d5670;
+  --red:#ff3d5e; --red-d:rgba(255,61,94,.14); --ice:#7fd4ff; --ice-d:rgba(127,212,255,.12); --ok:#5effb4;
+  --display:'Unbounded',system-ui,sans-serif; --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,Menlo,monospace;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--fg)}
+body{font-family:var(--body);font-size:15px;line-height:1.5;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 40px;
+  background:radial-gradient(900px 500px at 85% -10%,rgba(255,61,94,.14),transparent 70%),radial-gradient(700px 500px at -10% 110%,rgba(127,212,255,.08),transparent 70%),var(--bg);background-attachment:fixed}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
+.brand{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(255,61,94,.6);animation:pulse 1.6s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,61,94,.55)}70%{box-shadow:0 0 0 10px rgba(255,61,94,0)}100%{box-shadow:0 0 0 0 rgba(255,61,94,0)}}
+@media (prefers-reduced-motion:reduce){.dot{animation:none}}
+.upd{font-family:var(--mono);font-size:12px;color:var(--mute);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.upd button{font:inherit;color:var(--fg);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer}
+.upd button:focus-visible{outline:2px solid var(--ice);outline-offset:2px}
+.hero{padding:34px 0 10px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+h1{font-family:var(--display);font-weight:900;font-size:clamp(34px,7vw,76px);line-height:.95;letter-spacing:-.02em;margin:12px 0 10px;text-wrap:balance}
+h1 .r{color:var(--red);text-shadow:0 0 40px rgba(255,61,94,.45)}
+.lede{color:var(--mute);max-width:64ch;margin:0}
+.ledger{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:26px}
+.cell{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
+.cell .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.cell .v{font-family:var(--display);font-weight:800;font-size:clamp(22px,3vw,32px);margin-top:6px;font-variant-numeric:tabular-nums;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cell .s{font-size:12.5px;color:var(--dim);margin-top:4px}
+.cell.red{border-color:rgba(255,61,94,.45);background:linear-gradient(160deg,var(--red-d),var(--panel) 70%)}
+.cell.red .v{color:var(--red)}
+.cell.ice{border-color:rgba(127,212,255,.35);background:linear-gradient(160deg,var(--ice-d),var(--panel) 70%)}
+.cell.ice .v{color:var(--ice)}
+.split{margin-top:14px;height:14px;border-radius:7px;overflow:hidden;display:flex;background:var(--line)}
+.split i{display:block;height:100%}
+.legend{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px;font-family:var(--mono);font-size:12px;color:var(--mute)}
+.legend b{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+h2{font-family:var(--display);font-weight:800;font-size:20px;margin:40px 0 14px;letter-spacing:-.01em}
+h2 small{font-family:var(--mono);font-weight:400;font-size:12px;color:var(--mute);margin-left:8px;letter-spacing:0}
+.wallets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.wallet{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px 18px;min-width:0}
+.wallet .row1{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap}
+.tag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:3px 8px;border-radius:6px;background:var(--red-d);color:var(--red)}
+.addr{font-family:var(--mono);font-size:13px;color:var(--mute);word-break:break-all;margin-top:8px}
+.wv{font-family:var(--display);font-weight:800;font-size:26px;margin-top:10px;font-variant-numeric:tabular-nums}
+.links{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.links a{font-family:var(--mono);font-size:12px;text-decoration:none;border:1px solid var(--line);border-radius:8px;padding:5px 9px;color:var(--mute)}
+.links a:hover{color:var(--fg);border-color:var(--dim)}
+.tbl{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;min-width:640px}
+th,td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-family:var(--mono);font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute)}
+td.n{text-align:right;font-family:var(--mono)}th.n{text-align:right}
+tr:last-child td{border-bottom:0}
+.sym{font-weight:700}td small{color:var(--dim);font-weight:400;margin-left:8px}
+.pill{font-family:var(--mono);font-size:11px;padding:3px 8px;border-radius:999px;border:1px solid}
+.pill.fz{color:var(--ice);border-color:rgba(127,212,255,.45);background:var(--ice-d)}
+.pill.lv{color:var(--red);border-color:rgba(255,61,94,.45);background:var(--red-d)}
+.pill.sp{color:var(--dim);border-color:var(--line)}
+.bar{height:6px;border-radius:3px;background:var(--line);min-width:80px;overflow:hidden}.bar i{display:block;height:100%;background:var(--red)}
+.feed{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ev{display:grid;grid-template-columns:92px 54px minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 14px;border-bottom:1px solid var(--line);font-size:13.5px}
+.ev:last-child{border-bottom:0}
+.ev .t{font-family:var(--mono);font-size:12px;color:var(--mute)}
+.ev .dir{font-family:var(--mono);font-size:11px;font-weight:700;text-align:center;padding:3px 0;border-radius:6px}
+.ev .dir.out{color:var(--red);background:var(--red-d)}.ev .dir.in{color:var(--ok);background:rgba(94,255,180,.1)}
+.ev .what{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ev .what a{font-family:var(--mono);color:var(--mute);text-decoration:none}.ev .what a:hover{color:var(--fg)}
+.ev .amt{font-family:var(--mono);text-align:right;white-space:nowrap}
+.ctrl{display:flex;gap:8px;align-items:center;font-family:var(--mono);font-size:12px;color:var(--mute);margin:-4px 0 10px}
+.ctrl input{accent-color:var(--red)}
+.note{font-size:12.5px;color:var(--dim);max-width:80ch;margin-top:10px}
+.err{color:var(--red);font-family:var(--mono);font-size:12px}
+footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-family:var(--mono);font-size:12px;color:var(--mute)}
+footer a{color:var(--fg)}
+@media (max-width:820px){.ledger{grid-template-columns:repeat(2,minmax(0,1fr))}.wallets{grid-template-columns:1fr}}
+@media (max-width:480px){.ev{grid-template-columns:64px 44px minmax(0,1fr);}.ev .amt{grid-column:2 / -1;text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand"><span class="dot" aria-hidden="true"></span>BINANCE HACK TRACKER</div>
+  <div class="upd"><span id="upd">loading on-chain data…</span><button id="refresh" type="button">Refresh</button></div>
+</header>
+
+<section class="hero">
+  <div class="eyebrow">Oct 29, 2026 · 20:05 UTC · attributed to TraderTraitor (DPRK)</div>
+  <h1>Where is the <span class="r">$6.36B</span><br>right now?</h1>
+  <p class="lede">Live balances of the known hacker wallets on Ethereum, read straight from the chain every 60 seconds. Frozen stablecoins are checked against the Tether and Circle blacklists on every refresh.</p>
+  <div class="ledger">
+    <div class="cell red"><div class="k">Stolen</div><div class="v">$6.36B</div><div class="s">TRM Labs estimate, at time of theft</div></div>
+    <div class="cell ice"><div class="k">Frozen in tracked wallets</div><div class="v" id="vFrozen">…</div><div class="s" id="sFrozen">USDT + USDC blacklisted</div></div>
+    <div class="cell"><div class="k">Still movable (ETH wallets)</div><div class="v" id="vLive">…</div><div class="s">ETH and unfrozen tokens</div></div>
+    <div class="cell"><div class="k">BTC side</div><div class="v">18,270 BTC</div><div class="s" id="sBtc">TRM count, address not public here</div></div>
+  </div>
+  <div class="split" id="split" aria-hidden="true"></div>
+  <div class="legend" id="legend"></div>
+</section>
+
+<h2>Hacker wallets <small>Ethereum mainnet</small></h2>
+<div class="wallets" id="wallets"></div>
+
+<h2>Coins in hacker wallets <small id="coinsNote"></small></h2>
+<div class="ctrl"><input type="checkbox" id="showDust"><label for="showDust">show dust and spam tokens (under $10K)</label></div>
+<div class="tbl"><table>
+  <thead><tr><th>Coin</th><th>Status</th><th class="n">Amount</th><th class="n">Price</th><th class="n">Value</th><th>Share</th></tr></thead>
+  <tbody id="coins"><tr><td colspan="6" style="color:var(--mute)">Reading balances…</td></tr></tbody>
+</table></div>
+<p class="note">Most tiny tokens here were sent to the hacker by spammers and dusters after the address went public. They are hidden by default.</p>
+
+<h2>Live transfers <small>latest moves in and out</small></h2>
+<div class="ctrl"><input type="checkbox" id="hideSpam" checked><label for="hideSpam">hide zero-value and dust transfers</label></div>
+<div class="feed" id="feed"><div class="ev"><span class="t">—</span><span></span><span class="what" style="color:var(--mute)">Loading transfers…</span><span></span></div></div>
+
+<p class="note">Sources: balances and transfers from Blockscout and a public Ethereum RPC, prices from Blockscout. Headline numbers (stolen total, BTC count) from TRM Labs and Binance statements. Not financial advice.</p>
+
+<footer>
+  <span>made by <a href="https://x.com/floppa_perp" target="_blank" rel="noopener">@floppa_perp</a> · <a href="https://perpmaxing.com" target="_blank" rel="noopener">perpmaxing.com</a></span>
+  <span id="foot"></span>
+</footer>
+</div>
+
+<script>
+const WALLETS=[
+  {addr:'0x5227f603c1ee34ce3c06efe6477003bdfccb2f8c',label:'Main receiving wallet',role:'stablecoins + tokens'},
+  {addr:'0x8532fa14acaf483729c449b8458aeddb900543d4',label:'ETH consolidation wallet',role:'all ETH moved here'}
+];
+const BS='https://eth.blockscout.com/api/v2';
+const RPCS=['https://ethereum-rpc.publicnode.com','https://eth.llamarpc.com','https://cloudflare-eth.com'];
+const USDT='0xdac17f958d2ee523a2206206994597c13d831ec7', USDC='0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48';
+const $=id=>document.getElementById(id);
+const short=a=>a?a.slice(0,6)+'…'+a.slice(-4):'';
+const isW=a=>a&&WALLETS.some(w=>w.addr===a.toLowerCase());
+function usd(v){if(v==null||isNaN(v))return'—';const a=Math.abs(v);if(a>=1e9)return'$'+(v/1e9).toFixed(2)+'B';if(a>=1e6)return'$'+(v/1e6).toFixed(1)+'M';if(a>=1e3)return'$'+(v/1e3).toFixed(1)+'K';return'$'+v.toFixed(2)}
+function num(v){const a=Math.abs(v);if(a>=1e9)return(v/1e9).toFixed(2)+'B';if(a>=1e6)return(v/1e6).toFixed(2)+'M';if(a>=1e3)return(v/1e3).toFixed(1)+'K';if(a>=1)return v.toFixed(2);return v.toPrecision(3)}
+function ago(ts){const s=(Date.now()-new Date(ts))/1000;if(s<60)return Math.round(s)+'s ago';if(s<3600)return Math.round(s/60)+'m ago';if(s<86400)return Math.round(s/3600)+'h ago';return Math.round(s/86400)+'d ago'}
+async function j(url,opt){const r=await fetch(url,opt);if(!r.ok)throw new Error(r.status);return r.json()}
+async function rpc(method,params){let last;for(const u of RPCS){try{const r=await j(u,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({jsonrpc:'2.0',id:1,method,params})});if(r.result!==undefined)return r.result;last=r.error}catch(e){last=e}}throw last||new Error('rpc')}
+const pad=a=>a.toLowerCase().replace('0x','').padStart(64,'0');
+async function blacklisted(token,addr){
+  const sel=token===USDT?'0xe47d6060':'0xfe575a87';// isBlackListed / isBlacklisted
+  try{const r=await rpc('eth_call',[{to:token,data:sel+pad(addr)},'latest']);return BigInt(r)!==0n}catch(e){return null}
+}
+let state={coins:[],events:[],ethPrice:null};
+
+async function loadWallet(w){
+  const out={...w,eth:0,tokens:[],err:null};
+  try{out.eth=Number(BigInt(await rpc('eth_getBalance',[w.addr,'latest'])))/1e18}catch(e){out.err='balance'}
+  try{const a=await j(`${BS}/addresses/${w.addr}`);if(a.exchange_rate)state.ethPrice=+a.exchange_rate}catch(e){}
+  try{const t=await j(`${BS}/addresses/${w.addr}/token-balances`);
+    out.tokens=(Array.isArray(t)?t:[]).filter(x=>x.token&&x.token.type==='ERC-20').map(x=>{const d=+(x.token.decimals||0);const amt=Number(x.value)/10**d;const px=x.token.exchange_rate!=null?+x.token.exchange_rate:null;
+      return{sym:x.token.symbol||'?',name:x.token.name||'',addr:(x.token.address_hash||x.token.address||'').toLowerCase(),amt,px,val:px!=null?amt*px:null}})}catch(e){}
+  for(const tk of out.tokens){if(tk.addr===USDT||tk.addr===USDC)tk.frozen=await blacklisted(tk.addr,w.addr)}
+  try{const tr=await j(`${BS}/addresses/${w.addr}/token-transfers`);for(const i of tr.items||[]){const d=+(i.total?.decimals||i.token?.decimals||0);const amt=Number(i.total?.value||0)/10**d;const px=i.token?.exchange_rate!=null?+i.token.exchange_rate:null;
+    state.events.push({ts:i.timestamp,hash:i.transaction_hash||i.tx_hash,from:i.from?.hash,to:i.to?.hash,sym:i.token?.symbol||'?',amt,val:px!=null?amt*px:null,w:w.addr})}}catch(e){}
+  try{const tx=await j(`${BS}/addresses/${w.addr}/transactions`);for(const i of tx.items||[]){const amt=Number(i.value||0)/1e18;if(!amt)continue;
+    state.events.push({ts:i.timestamp,hash:i.hash,from:i.from?.hash,to:i.to?.hash,sym:'ETH',amt,val:null,w:w.addr})}}catch(e){}
+  return out;
+}
+
+function render(ws){
+  const ep=state.ethPrice;
+  // coins merged
+  const m={};
+  for(const w of ws){
+    if(w.eth>0){const k='ETH';m[k]=m[k]||{sym:'ETH',name:'Ether',amt:0,px:ep,val:0,status:'live'};m[k].amt+=w.eth;m[k].val=ep?m[k].amt*ep:null}
+    for(const t of w.tokens){const k=t.addr||t.sym;m[k]=m[k]||{...t,amt:0,val:0,status:'live'};m[k].amt+=t.amt;m[k].val=t.px!=null?m[k].amt*t.px:null;
+      if(t.frozen===true)m[k].status='frozen';else if(t.frozen===null&&m[k].status!=='frozen')m[k].status='unknown'}
+  }
+  const coins=Object.values(m).sort((a,b)=>(b.val||0)-(a.val||0));
+  const frozen=coins.filter(c=>c.status==='frozen').reduce((s,c)=>s+(c.val||0),0);
+  const real=c=>(c.val||0)>=1e4;
+  const live=coins.filter(c=>c.status!=='frozen'&&real(c)).reduce((s,c)=>s+(c.val||0),0);
+  const total=frozen+live;
+  $('vFrozen').textContent=usd(frozen);
+  $('vLive').textContent=usd(live);
+  const fz=coins.filter(c=>c.status==='frozen').map(c=>c.sym).join(' + ');$('sFrozen').textContent=fz?fz+' blacklisted on-chain':'no blacklisted balances found';
+  const stolen=6.36e9, other=Math.max(0,stolen-total);
+  $('split').innerHTML=`<i style="width:${frozen/stolen*100}%;background:var(--ice)"></i><i style="width:${live/stolen*100}%;background:var(--red)"></i><i style="width:${other/stolen*100}%;background:#3a3146"></i>`;
+  $('legend').innerHTML=`<span><b style="background:var(--ice)"></b>frozen ${usd(frozen)}</span><span><b style="background:var(--red)"></b>movable in ETH wallets ${usd(live)}</span><span><b style="background:#3a3146"></b>BTC side, sold, bridged or untracked ${usd(other)}</span>`;
+  // wallets
+  $('wallets').innerHTML=ws.map(w=>{const v=(w.eth*(ep||0))+w.tokens.filter(t=>(t.val||0)>=1e4).reduce((s,t)=>s+(t.val||0),0);
+    return`<div class="wallet"><div class="row1"><b>${w.label}</b><span class="tag">${w.role}</span></div>
+    <div class="addr">${w.addr}</div><div class="wv">${usd(v)}</div>
+    <div style="color:var(--mute);font-size:13px;font-family:var(--mono)">${num(w.eth)} ETH${w.err?' · <span class="err">balance read failed</span>':''}</div>
+    <div class="links"><a href="https://etherscan.io/address/${w.addr}" target="_blank" rel="noopener">Etherscan</a><a href="https://debank.com/profile/${w.addr}" target="_blank" rel="noopener">DeBank</a><a href="https://eth.blockscout.com/address/${w.addr}" target="_blank" rel="noopener">Blockscout</a></div></div>`}).join('');
+  // coin table
+  const show=$('showDust').checked?coins:coins.filter(real);
+  $('coinsNote').textContent=`${coins.filter(real).length} real · ${coins.length-coins.filter(real).length} dust/spam`;
+  const max=Math.max(...coins.map(c=>c.val||0),1);
+  $('coins').innerHTML=show.length?show.map(c=>`<tr><td><span class="sym">${c.sym}</span><small>${(c.name||'').slice(0,22)}</small></td>
+    <td>${c.status==='frozen'?'<span class="pill fz">frozen</span>':real(c)?'<span class="pill lv">movable</span>':'<span class="pill sp">dust</span>'}</td>
+    <td class="n">${num(c.amt)}</td><td class="n">${c.px!=null?(c.px>=1?'$'+c.px.toLocaleString(undefined,{maximumFractionDigits:2}):'$'+c.px.toPrecision(3)):'—'}</td>
+    <td class="n">${usd(c.val)}</td><td><div class="bar"><i style="width:${(c.val||0)/max*100}%;${c.status==='frozen'?'background:var(--ice)':''}"></i></div></td></tr>`).join(''):'<tr><td colspan="6" style="color:var(--mute)">No balances returned yet.</td></tr>';
+  renderFeed();
+  $('upd').textContent='updated '+new Date().toLocaleTimeString()+' · auto every 60s';
+  $('foot').textContent=ep?'ETH $'+ep.toLocaleString():'';
+}
+function renderFeed(){
+  const ep=state.ethPrice;const seen=new Set();
+  let ev=state.events.filter(e=>{const k=e.hash+e.sym+e.amt+e.w;if(seen.has(k))return false;seen.add(k);return true})
+    .map(e=>({...e,val:e.val!=null?e.val:(e.sym==='ETH'&&ep?e.amt*ep:null)}));
+  if($('hideSpam').checked)ev=ev.filter(e=>(e.val||0)>=1e4);
+  ev.sort((a,b)=>new Date(b.ts)-new Date(a.ts));ev=ev.slice(0,40);
+  $('feed').innerHTML=ev.length?ev.map(e=>{const out=isW(e.from)&&!isW(e.to);const inn=!isW(e.from)&&isW(e.to);const d=out?'out':inn?'in':'move';
+    const other=out?e.to:e.from;
+    return`<div class="ev"><span class="t">${ago(e.ts)}</span><span class="dir ${d==='out'?'out':'in'}">${d.toUpperCase()}</span>
+    <span class="what">${e.sym} ${d==='out'?'to':d==='in'?'from':'between'} <a href="https://etherscan.io/address/${other}" target="_blank" rel="noopener">${short(other)}</a> · <a href="https://etherscan.io/tx/${e.hash}" target="_blank" rel="noopener">tx</a></span>
+    <span class="amt">${num(e.amt)} ${e.sym}${e.val!=null?' · '+usd(e.val):''}</span></div>`}).join(''):'<div class="ev"><span class="t">—</span><span></span><span class="what" style="color:var(--mute)">No transfers above $10K in the latest page. Untick the filter to see everything.</span><span></span></div>';
+}
+let busy=false,last=null;
+async function load(){if(busy)return;busy=true;$('upd').textContent='refreshing…';state.events=[];
+  try{const ws=[];for(const w of WALLETS)ws.push(await loadWallet(w));last=ws;render(ws)}catch(e){$('upd').innerHTML='<span class="err">could not reach the chain, retrying in 60s</span>'}
+  busy=false}
+$('refresh').addEventListener('click',load);
+$('showDust').addEventListener('change',()=>last&&render(last));
+$('hideSpam').addEventListener('change',renderFeed);
+load();setInterval(load,60000);
+</script>
+</body>
+</html>
