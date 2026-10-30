@@ -38,6 +38,8 @@ a{color:inherit}
 .tabs a.on::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--red);margin-right:7px;vertical-align:1px}
 .tabs a:focus-visible,.pm:focus-visible{outline:2px solid #22e6ff;outline-offset:2px}
 @media (max-width:560px){.site{justify-content:center}.tabs{justify-content:center}}
+.by{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:13px;font-weight:700;text-decoration:none;color:var(--fg);padding:7px 14px;border-radius:999px;border:1px solid #22e6ff;box-shadow:0 0 12px rgba(34,230,255,.35),inset 0 0 10px rgba(34,230,255,.12)}.by svg{width:14px;height:14px;fill:currentColor}.by:hover{background:rgba(34,230,255,.08)}.by:focus-visible{outline:2px solid #22e6ff;outline-offset:2px}
+@media (max-width:700px){header.top{flex-wrap:wrap;justify-content:center}}
 header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0;border-bottom:1px solid var(--line)}
 .brand{font-family:var(--display);font-weight:800;font-size:15px;letter-spacing:.02em;display:flex;align-items:center;gap:10px}
 .dot{width:10px;height:10px;border-radius:50%;background:var(--red);box-shadow:0 0 0 0 rgba(255,61,94,.6);animation:pulse 1.6s infinite}
@@ -119,6 +121,7 @@ footer a{color:var(--fg)}
 </nav>
 <header class="top">
   <div class="brand"><span class="dot" aria-hidden="true"></span>BINANCE HACK TRACKER</div>
+  <a class="by" href="https://x.com/Keeperssd" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-6.4L6.4 22H3.3l7.3-8.3L1 2h6.4l4.4 5.8L18.9 2zm-1.1 18h1.7L6.3 3.9H4.5L17.8 20z"/></svg>by @keeperssd</a>
   <div class="upd"><span id="upd">loading on-chain data…</span><button id="refresh" type="button">Refresh</button></div>
 </header>
 
