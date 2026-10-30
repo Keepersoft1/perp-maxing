@@ -1,0 +1,21 @@
+HTTP/2 200 
+date: Fri, 30 Oct 2026 08:00:20 GMT
+content-type: application/json; charset=utf-8
+content-length: 632
+access-control-allow-credentials: true
+access-control-allow-origin: *
+access-control-expose-headers: bypass-429-option,x-ratelimit-reset,x-ratelimit-limit,x-ratelimit-remaining,api-v2-temp-token
+bypass-429-option: temporary_token
+cache-control: max-age=0, private, must-revalidate
+x-ratelimit-limit: 180
+x-ratelimit-remaining: 179
+x-ratelimit-reset: 45519
+x-request-id: 54053229e0cea7a5522d6a62f83e7d36
+strict-transport-security: max-age=31536000; includeSubDomains
+cf-cache-status: DYNAMIC
+report-to: {"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=qsl1J2LpVFqSJDzY2eEH0%2Fv8Ck1WRl1hkFBPKZAvc0hskMBNnQ68rkPjOkMq0ScLXGNujr53O%2BTkLmnVQEg8rDBHbMRXOI2G04usrV5UQpiEQIvq9q0zN5Fck2cOMRcGwXiA4g%3D%3D"}]}
+nel: {"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}
+server: cloudflare
+cf-ray: a528e29a2fba9007-MSP
+alt-svc: h3=":443"; ma=86400
+
