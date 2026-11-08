@@ -1,0 +1,3270 @@
+{
+ "chain_names": [
+  "Arc",
+  "Archway",
+  "Starcoin",
+  "Elysium"
+ ],
+ "Arc": {
+  "total": [
+   [
+    "2026-09-10",
+    1141395.99
+   ],
+   [
+    "2026-09-11",
+    1857580
+   ],
+   [
+    "2026-09-12",
+    944918.08
+   ],
+   [
+    "2026-09-13",
+    1056006.05
+   ],
+   [
+    "2026-09-14",
+    2213675.11
+   ],
+   [
+    "2026-09-15",
+    17093925
+   ],
+   [
+    "2026-09-16",
+    123872521.36
+   ],
+   [
+    "2026-09-17",
+    133554557
+   ],
+   [
+    "2026-09-18",
+    80088687.51
+   ],
+   [
+    "2026-09-19",
+    52392617.01
+   ],
+   [
+    "2026-09-20",
+    41156657.129999995
+   ],
+   [
+    "2026-09-21",
+    48513164.65
+   ],
+   [
+    "2026-09-22",
+    45790664.5
+   ],
+   [
+    "2026-09-23",
+    65987619.339999996
+   ],
+   [
+    "2026-09-24",
+    41656463.739999995
+   ],
+   [
+    "2026-09-25",
+    50548204.400000006
+   ],
+   [
+    "2026-09-26",
+    39222718.42
+   ],
+   [
+    "2026-09-27",
+    41552769.94
+   ],
+   [
+    "2026-09-28",
+    41414123.339999996
+   ],
+   [
+    "2026-09-29",
+    42906762.81999999
+   ],
+   [
+    "2026-09-30",
+    36229571.93
+   ],
+   [
+    "2026-10-01",
+    37205051.29
+   ],
+   [
+    "2026-10-02",
+    39637825.059999995
+   ],
+   [
+    "2026-10-03",
+    26682314.01
+   ],
+   [
+    "2026-10-04",
+    27156124.86
+   ],
+   [
+    "2026-10-05",
+    32628711.740000002
+   ],
+   [
+    "2026-10-06",
+    31751027.130000003
+   ],
+   [
+    "2026-10-07",
+    40434439.35000001
+   ],
+   [
+    "2026-10-08",
+    35347465.17
+   ],
+   [
+    "2026-10-09",
+    29854131.919999998
+   ],
+   [
+    "2026-10-10",
+    25217401.4
+   ],
+   [
+    "2026-10-11",
+    30203925.52
+   ],
+   [
+    "2026-10-12",
+    35055300.11
+   ],
+   [
+    "2026-10-13",
+    39308853.89000001
+   ],
+   [
+    "2026-10-14",
+    37422802.32999999
+   ],
+   [
+    "2026-10-15",
+    21428803.3
+   ],
+   [
+    "2026-10-16",
+    14610042
+   ],
+   [
+    "2026-10-17",
+    9197451.200000001
+   ],
+   [
+    "2026-10-18",
+    12546235.57
+   ],
+   [
+    "2026-10-19",
+    15098987.720000003
+   ],
+   [
+    "2026-10-20",
+    16859560.83
+   ],
+   [
+    "2026-10-21",
+    15514500.909999998
+   ],
+   [
+    "2026-10-22",
+    17188467.009999998
+   ],
+   [
+    "2026-10-23",
+    16825162.430000003
+   ],
+   [
+    "2026-10-24",
+    16614897.42
+   ],
+   [
+    "2026-10-25",
+    15780970.510000002
+   ],
+   [
+    "2026-10-26",
+    20694958.080000002
+   ],
+   [
+    "2026-10-27",
+    19308873.450000003
+   ],
+   [
+    "2026-10-28",
+    20914756.18
+   ],
+   [
+    "2026-10-29",
+    30970321.42
+   ],
+   [
+    "2026-10-30",
+    22689102.860000003
+   ],
+   [
+    "2026-10-31",
+    11686352.33
+   ],
+   [
+    "2026-11-01",
+    12447062.47
+   ],
+   [
+    "2026-11-02",
+    18385303.689999998
+   ],
+   [
+    "2026-11-03",
+    14034447.41
+   ],
+   [
+    "2026-11-04",
+    28906832.72
+   ],
+   [
+    "2026-11-05",
+    22791188.67
+   ],
+   [
+    "2026-11-06",
+    20772504.22
+   ],
+   [
+    "2026-11-07",
+    14146446.48
+   ],
+   [
+    "2026-11-08",
+    13624667.48
+   ]
+  ],
+  "protocols": [
+   [
+    "SushiSwap",
+    0,
+    0
+   ],
+   [
+    "Uniswap V2",
+    322,
+    11476
+   ],
+   [
+    "Uniswap V3",
+    609990,
+    29848098
+   ],
+   [
+    "SushiSwap V3",
+    0,
+    22.91
+   ],
+   [
+    "GMGN",
+    18062,
+    236855
+   ],
+   [
+    "Virtuals Protocol",
+    0,
+    0.28
+   ],
+   [
+    "Uniswap V4",
+    10343874,
+    69555507
+   ],
+   [
+    "Bloom Trading Bot",
+    0,
+    0
+   ],
+   [
+    "Axiom",
+    199,
+    199
+   ],
+   [
+    "x402",
+    957389,
+    1258933
+   ],
+   [
+    "Topaz CL",
+    15133,
+    109402
+   ],
+   [
+    "basedbid",
+    0,
+    0
+   ],
+   [
+    "Topaz AMM",
+    0,
+    0
+   ],
+   [
+    "1inch Aqua",
+    0,
+    0
+   ],
+   [
+    "SolonPad",
+    0,
+    0
+   ],
+   [
+    "Lunya DEX",
+    0,
+    0
+   ],
+   [
+    "Lunya Launchpad",
+    0,
+    0
+   ],
+   [
+    "Synthra V3",
+    2012,
+    16947
+   ],
+   [
+    "Surged",
+    0,
+    0
+   ],
+   [
+    "Peach Launchpad",
+    73730,
+    595629
+   ],
+   [
+    "Sashimi.fun",
+    0,
+    0
+   ],
+   [
+    "CircleWarp",
+    0,
+    79.07
+   ],
+   [
+    "ARK Launch",
+    81,
+    392.62
+   ],
+   [
+    "Wonk Fun",
+    0,
+    0
+   ],
+   [
+    "Aero Slipstream",
+    695015,
+    25554430
+   ],
+   [
+    "Foci",
+    0,
+    0
+   ],
+   [
+    "Load",
+    0,
+    0
+   ],
+   [
+    "Arctide DEX",
+    0,
+    3231.43
+   ],
+   [
+    "Archery V3",
+    41119,
+    3560318
+   ],
+   [
+    "Ellipse DEX",
+    84.5,
+    294.48
+   ],
+   [
+    "Synthra Core",
+    2089,
+    17736
+   ],
+   [
+    "Archery V2",
+    0,
+    0
+   ],
+   [
+    "frenlaunch",
+    0,
+    0
+   ],
+   [
+    "Peddles",
+    0,
+    0
+   ],
+   [
+    "FAZE",
+    0,
+    22.59
+   ],
+   [
+    "Unitflow Finance V3",
+    331,
+    2824
+   ],
+   [
+    "Mercurifi Launchpad",
+    6.57,
+    6.57
+   ],
+   [
+    "Kaleido Swap",
+    0,
+    65.81
+   ],
+   [
+    "Ryntra Trading App",
+    0,
+    0
+   ],
+   [
+    "Central City",
+    957377,
+    1544686
+   ]
+  ],
+  "breakdown": [
+   [
+    "2026-09-10",
+    {
+     "Uniswap V2": 0.99,
+     "Uniswap V3": 521025,
+     "Uniswap V4": 620370
+    }
+   ],
+   [
+    "2026-09-11",
+    {
+     "Uniswap V2": 13076,
+     "Uniswap V3": 1037581,
+     "Uniswap V4": 806923
+    }
+   ],
+   [
+    "2026-09-12",
+    {
+     "Uniswap V2": 57.08,
+     "Uniswap V3": 703314,
+     "Uniswap V4": 241547
+    }
+   ],
+   [
+    "2026-09-13",
+    {
+     "Uniswap V3": 716300,
+     "Uniswap V4": 339701,
+     "FAZE": 5.05
+    }
+   ],
+   [
+    "2026-09-14",
+    {
+     "Uniswap V3": 1256249,
+     "Uniswap V4": 956436,
+     "Synthra Core": 990,
+     "FAZE": 0.11
+    }
+   ],
+   [
+    "2026-09-15",
+    {
+     "Uniswap V3": 7906741,
+     "Uniswap V4": 8848158,
+     "Synthra Core": 336174,
+     "FAZE": 2852
+    }
+   ],
+   [
+    "2026-09-16",
+    {
+     "Uniswap V2": 6337690,
+     "Uniswap V3": 107463150,
+     "Virtuals Protocol": 1.2,
+     "SolonPad": 188,
+     "Lunya Launchpad": 65069,
+     "Synthra V3": 4428478,
+     "Surged": 84100,
+     "CircleWarp": 155301,
+     "Arctide DEX": 401237,
+     "Synthra Core": 4552322,
+     "FAZE": 384968,
+     "Unitflow Finance V3": 17.16
+    }
+   ],
+   [
+    "2026-09-17",
+    {
+     "Uniswap V2": 11207704,
+     "Uniswap V3": 24109598,
+     "SushiSwap V3": 4523,
+     "Virtuals Protocol": 311017,
+     "Uniswap V4": 84692229,
+     "Lunya Launchpad": 1671,
+     "Synthra V3": 6000460,
+     "Surged": 39557,
+     "Sashimi.fun": 33406,
+     "CircleWarp": 211,
+     "Aero Slipstream": 1042395,
+     "Load": 220,
+     "Arctide DEX": 42757,
+     "Synthra Core": 6041865,
+     "FAZE": 26944
+    }
+   ],
+   [
+    "2026-09-18",
+    {
+     "Uniswap V2": 7285222,
+     "Uniswap V3": 17085395,
+     "SushiSwap V3": 1557,
+     "Virtuals Protocol": 3912,
+     "Uniswap V4": 52805096,
+     "SolonPad": 3.98,
+     "Lunya DEX": 2337,
+     "Lunya Launchpad": 370,
+     "Synthra V3": 303584,
+     "Surged": 16.53,
+     "Sashimi.fun": 214,
+     "CircleWarp": 259,
+     "Aero Slipstream": 2273340,
+     "Foci": 11587,
+     "Load": 1463,
+     "Arctide DEX": 5763,
+     "Synthra Core": 304687,
+     "FAZE": 3881
+    }
+   ],
+   [
+    "2026-09-19",
+    {
+     "Uniswap V2": 124104,
+     "Uniswap V3": 14029207,
+     "SushiSwap V3": 1,
+     "Virtuals Protocol": 880,
+     "Uniswap V4": 36728628,
+     "Lunya DEX": 4327,
+     "Lunya Launchpad": 255,
+     "Synthra V3": 183554,
+     "Sashimi.fun": 117,
+     "CircleWarp": 14.01,
+     "Aero Slipstream": 1131238,
+     "Foci": 431,
+     "Load": 551,
+     "Arctide DEX": 4072,
+     "Synthra Core": 184588,
+     "FAZE": 650
+    }
+   ],
+   [
+    "2026-09-20",
+    {
+     "Uniswap V2": 120051,
+     "Uniswap V3": 9921078,
+     "SushiSwap V3": 18,
+     "Virtuals Protocol": 9100,
+     "Uniswap V4": 28888605,
+     "Lunya DEX": 1044,
+     "Lunya Launchpad": 10.29,
+     "Synthra V3": 140392,
+     "Sashimi.fun": 50,
+     "CircleWarp": 8.83,
+     "Aero Slipstream": 1827762,
+     "Foci": 414,
+     "Load": 52476,
+     "Arctide DEX": 54856,
+     "Synthra Core": 140512,
+     "FAZE": 280,
+     "Kaleido Swap": 0.01
+    }
+   ],
+   [
+    "2026-09-21",
+    {
+     "Uniswap V2": 556934,
+     "Uniswap V3": 14337560,
+     "SushiSwap V3": 235646,
+     "Virtuals Protocol": 1144,
+     "Uniswap V4": 29911342,
+     "Lunya DEX": 3453,
+     "Lunya Launchpad": 4.67,
+     "Synthra V3": 123663,
+     "Sashimi.fun": 6.97,
+     "CircleWarp": 4.87,
+     "Aero Slipstream": 3045189,
+     "Foci": 73902,
+     "Arctide DEX": 96102,
+     "Synthra Core": 123563,
+     "FAZE": 4640,
+     "Mercurifi Launchpad": 10,
+     "Kaleido Swap": 0.14
+    }
+   ],
+   [
+    "2026-09-22",
+    {
+     "Uniswap V2": 57614,
+     "Uniswap V3": 12920393,
+     "SushiSwap V3": 2375,
+     "Virtuals Protocol": 104,
+     "Uniswap V4": 30863302,
+     "Lunya DEX": 5806,
+     "Lunya Launchpad": 6.54,
+     "Synthra V3": 62234,
+     "Sashimi.fun": 5.44,
+     "Aero Slipstream": 1708763,
+     "Foci": 39061,
+     "Load": 649,
+     "Arctide DEX": 64262,
+     "Synthra Core": 62836,
+     "FAZE": 2644,
+     "Mercurifi Launchpad": 609,
+     "Kaleido Swap": 0.52
+    }
+   ],
+   [
+    "2026-09-23",
+    {
+     "Uniswap V2": 76011,
+     "Uniswap V3": 23097714,
+     "SushiSwap V3": 1030,
+     "Uniswap V4": 39890457,
+     "Lunya DEX": 3160,
+     "Lunya Launchpad": 152,
+     "Synthra V3": 73829,
+     "Sashimi.fun": 2.97,
+     "CircleWarp": 3.96,
+     "Aero Slipstream": 2677242,
+     "Foci": 34782,
+     "Arctide DEX": 13984,
+     "Synthra Core": 73754,
+     "FAZE": 578,
+     "Mercurifi Launchpad": 44865,
+     "Kaleido Swap": 54.41
+    }
+   ],
+   [
+    "2026-09-24",
+    {
+     "Uniswap V2": 53993,
+     "Uniswap V3": 8302119,
+     "SushiSwap V3": 134,
+     "Virtuals Protocol": 74,
+     "Uniswap V4": 30703753,
+     "Lunya DEX": 3054,
+     "Lunya Launchpad": 0.16,
+     "Synthra V3": 70762,
+     "Surged": 0.25,
+     "CircleWarp": 0.97,
+     "Aero Slipstream": 1903750,
+     "Foci": 3019,
+     "Load": 33767,
+     "Arctide DEX": 13070,
+     "Archery V3": 483765,
+     "Synthra Core": 70757,
+     "FAZE": 4943,
+     "Mercurifi Launchpad": 9496,
+     "Kaleido Swap": 6.36
+    }
+   ],
+   [
+    "2026-09-25",
+    {
+     "Uniswap V2": 49262,
+     "Uniswap V3": 6856488,
+     "SushiSwap V3": 956,
+     "Virtuals Protocol": 238,
+     "Uniswap V4": 40420761,
+     "Lunya DEX": 2053,
+     "Synthra V3": 228944,
+     "Surged": 5.17,
+     "CircleWarp": 13.39,
+     "Aero Slipstream": 1750116,
+     "Foci": 2800,
+     "Load": 115772,
+     "Arctide DEX": 8290,
+     "Archery V3": 853027,
+     "Synthra Core": 247459,
+     "FAZE": 9470,
+     "Mercurifi Launchpad": 2465,
+     "Kaleido Swap": 84.84
+    }
+   ],
+   [
+    "2026-09-26",
+    {
+     "Uniswap V2": 21152,
+     "Uniswap V3": 2970654,
+     "SushiSwap V3": 0.71,
+     "Virtuals Protocol": 105,
+     "Uniswap V4": 35052623,
+     "Lunya DEX": 510,
+     "Lunya Launchpad": 178,
+     "Synthra V3": 154237,
+     "Sashimi.fun": 29,
+     "CircleWarp": 19.71,
+     "Aero Slipstream": 611902,
+     "Foci": 2934,
+     "Load": 71797,
+     "Arctide DEX": 35739,
+     "Archery V3": 135313,
+     "Synthra Core": 158214,
+     "FAZE": 5552,
+     "Mercurifi Launchpad": 1759
+    }
+   ],
+   [
+    "2026-09-27",
+    {
+     "Uniswap V2": 44427,
+     "Uniswap V3": 3757652,
+     "SushiSwap V3": 87,
+     "Uniswap V4": 35618901,
+     "1inch Aqua": 0.23,
+     "Lunya DEX": 789,
+     "Lunya Launchpad": 61.5,
+     "Synthra V3": 104980,
+     "CircleWarp": 21.21,
+     "Aero Slipstream": 912898,
+     "Foci": 892,
+     "Arctide DEX": 30557,
+     "Archery V3": 969168,
+     "Synthra Core": 109427,
+     "FAZE": 1788,
+     "Mercurifi Launchpad": 1121
+    }
+   ],
+   [
+    "2026-09-28",
+    {
+     "Uniswap V2": 121710,
+     "Uniswap V3": 6209995,
+     "SushiSwap V3": 10.41,
+     "Virtuals Protocol": 7.25,
+     "Uniswap V4": 31623103,
+     "1inch Aqua": 0.11,
+     "Lunya DEX": 2580,
+     "Lunya Launchpad": 0.01,
+     "Synthra V3": 70340,
+     "CircleWarp": 1.6,
+     "Aero Slipstream": 2368570,
+     "Foci": 559,
+     "Load": 7.96,
+     "Arctide DEX": 5453,
+     "Archery V3": 934340,
+     "Synthra Core": 72685,
+     "FAZE": 3932,
+     "Mercurifi Launchpad": 829
+    }
+   ],
+   [
+    "2026-09-29",
+    {
+     "Uniswap V2": 1897419,
+     "Uniswap V3": 4899042,
+     "SushiSwap V3": 49,
+     "Virtuals Protocol": 0.27,
+     "Uniswap V4": 32951684,
+     "Topaz CL": 28613,
+     "Lunya DEX": 1755,
+     "Lunya Launchpad": 12.16,
+     "Synthra V3": 99286,
+     "Aero Slipstream": 2052477,
+     "Foci": 366,
+     "Arctide DEX": 4095,
+     "Archery V3": 868338,
+     "Synthra Core": 103341,
+     "FAZE": 86,
+     "Mercurifi Launchpad": 187,
+     "Kaleido Swap": 12.39
+    }
+   ],
+   [
+    "2026-09-30",
+    {
+     "Uniswap V2": 53926,
+     "Uniswap V3": 7000826,
+     "SushiSwap V3": 120,
+     "Virtuals Protocol": 52,
+     "Uniswap V4": 26295745,
+     "Topaz CL": 31811,
+     "Lunya DEX": 2553,
+     "Lunya Launchpad": 0.31,
+     "Synthra V3": 64402,
+     "CircleWarp": 8.62,
+     "Aero Slipstream": 1667474,
+     "Foci": 181,
+     "Arctide DEX": 972,
+     "Archery V3": 1041988,
+     "Synthra Core": 67264,
+     "FAZE": 733,
+     "Unitflow Finance V3": 1321,
+     "Mercurifi Launchpad": 195
+    }
+   ],
+   [
+    "2026-10-01",
+    {
+     "Uniswap V2": 46445,
+     "Uniswap V3": 5865535,
+     "SushiSwap V3": 5.42,
+     "Virtuals Protocol": 320,
+     "Uniswap V4": 28709976,
+     "Topaz CL": 65080,
+     "Lunya DEX": 2423,
+     "Lunya Launchpad": 34.98,
+     "Synthra V3": 42569,
+     "Surged": 0.59,
+     "Aero Slipstream": 1350721,
+     "Foci": 11.66,
+     "Arctide DEX": 9583,
+     "Archery V3": 1064855,
+     "Synthra Core": 45570,
+     "FAZE": 797,
+     "Unitflow Finance V3": 805,
+     "Mercurifi Launchpad": 319,
+     "Kaleido Swap": 0.64
+    }
+   ],
+   [
+    "2026-10-02",
+    {
+     "Uniswap V2": 51816,
+     "Uniswap V3": 6707544,
+     "Virtuals Protocol": 2.69,
+     "Uniswap V4": 30157573,
+     "Topaz CL": 65064,
+     "Lunya DEX": 3027,
+     "Synthra V3": 42002,
+     "Aero Slipstream": 1510322,
+     "Foci": 69.22,
+     "Arctide DEX": 3403,
+     "Archery V3": 1050428,
+     "Synthra Core": 43703,
+     "FAZE": 1.15,
+     "Unitflow Finance V3": 749,
+     "Mercurifi Launchpad": 2119,
+     "Kaleido Swap": 2
+    }
+   ],
+   [
+    "2026-10-03",
+    {
+     "Uniswap V2": 20288,
+     "Uniswap V3": 1327016,
+     "Uniswap V4": 24589545,
+     "Topaz CL": 33778,
+     "Lunya DEX": 206,
+     "Synthra V3": 49497,
+     "CircleWarp": 13,
+     "Aero Slipstream": 454318,
+     "Foci": 5.82,
+     "Arctide DEX": 2559,
+     "Archery V3": 148414,
+     "Synthra Core": 51559,
+     "FAZE": 314,
+     "Unitflow Finance V3": 778,
+     "Mercurifi Launchpad": 3999,
+     "Kaleido Swap": 24.19
+    }
+   ],
+   [
+    "2026-10-04",
+    {
+     "Uniswap V2": 35892,
+     "Uniswap V3": 1975309,
+     "SushiSwap V3": 115,
+     "Virtuals Protocol": 0.52,
+     "Uniswap V4": 24132543,
+     "Topaz CL": 30070,
+     "Lunya DEX": 653,
+     "Synthra V3": 13230,
+     "CircleWarp": 1.94,
+     "Aero Slipstream": 628858,
+     "Arctide DEX": 3520,
+     "Archery V3": 319399,
+     "Synthra Core": 13674,
+     "Unitflow Finance V3": 666,
+     "Mercurifi Launchpad": 2143,
+     "Kaleido Swap": 50.4
+    }
+   ],
+   [
+    "2026-10-05",
+    {
+     "Uniswap V2": 36373,
+     "Uniswap V3": 5820919,
+     "SushiSwap V3": 191,
+     "Virtuals Protocol": 0.12,
+     "Uniswap V4": 24110578,
+     "Topaz CL": 94148,
+     "Lunya DEX": 2232,
+     "Synthra V3": 27473,
+     "CircleWarp": 0.34,
+     "Aero Slipstream": 1739793,
+     "Foci": 14.22,
+     "Arctide DEX": 7121,
+     "Archery V3": 760372,
+     "Synthra Core": 28790,
+     "FAZE": 2.07,
+     "Unitflow Finance V3": 691,
+     "Mercurifi Launchpad": 8.53,
+     "Kaleido Swap": 5.46
+    }
+   ],
+   [
+    "2026-10-06",
+    {
+     "Uniswap V2": 22031,
+     "Uniswap V3": 4266590,
+     "Virtuals Protocol": 1.2,
+     "Uniswap V4": 25150360,
+     "Topaz CL": 73867,
+     "basedbid": 48,
+     "Lunya DEX": 1614,
+     "Lunya Launchpad": 6.86,
+     "Synthra V3": 30809,
+     "Aero Slipstream": 1553754,
+     "Foci": 6.1,
+     "Arctide DEX": 1224,
+     "Archery V3": 618102,
+     "Synthra Core": 31776,
+     "Unitflow Finance V3": 827,
+     "Mercurifi Launchpad": 5.53,
+     "Kaleido Swap": 5.44
+    }
+   ],
+   [
+    "2026-10-07",
+    {
+     "Uniswap V2": 25827,
+     "Uniswap V3": 8847560,
+     "SushiSwap V3": 11,
+     "Virtuals Protocol": 1194,
+     "Uniswap V4": 28413534,
+     "Topaz CL": 70542,
+     "Lunya DEX": 1595,
+     "Lunya Launchpad": 0.2,
+     "Synthra V3": 264337,
+     "Aero Slipstream": 1886926,
+     "Foci": 8.68,
+     "Arctide DEX": 1783,
+     "Archery V3": 642797,
+     "Synthra Core": 276400,
+     "FAZE": 244,
+     "Unitflow Finance V3": 1578,
+     "Mercurifi Launchpad": 89.95,
+     "Kaleido Swap": 12.52
+    }
+   ],
+   [
+    "2026-10-08",
+    {
+     "Uniswap V2": 46968,
+     "Uniswap V3": 7317844,
+     "SushiSwap V3": 5,
+     "Uniswap V4": 24179081,
+     "Topaz CL": 104665,
+     "Lunya DEX": 2400,
+     "Synthra V3": 67139,
+     "CircleWarp": 17,
+     "Aero Slipstream": 2547397,
+     "Foci": 2.1,
+     "Arctide DEX": 519,
+     "Archery V3": 1009143,
+     "Synthra Core": 70059,
+     "FAZE": 1286,
+     "Unitflow Finance V3": 895,
+     "Mercurifi Launchpad": 38.4,
+     "Kaleido Swap": 6.67
+    }
+   ],
+   [
+    "2026-10-09",
+    {
+     "Uniswap V2": 19534,
+     "Uniswap V3": 3506249,
+     "Uniswap V4": 23362972,
+     "Topaz CL": 64625,
+     "Lunya DEX": 1236,
+     "Synthra V3": 57152,
+     "Aero Slipstream": 2215450,
+     "Arctide DEX": 4188,
+     "Archery V3": 561510,
+     "Synthra Core": 60383,
+     "FAZE": 175,
+     "Unitflow Finance V3": 647,
+     "Mercurifi Launchpad": 8.02,
+     "Kaleido Swap": 2.9
+    }
+   ],
+   [
+    "2026-10-10",
+    {
+     "Uniswap V2": 15011,
+     "Uniswap V3": 1110959,
+     "SushiSwap V3": 0.02,
+     "Virtuals Protocol": 0.05,
+     "Uniswap V4": 23189552,
+     "Topaz CL": 19274,
+     "Lunya DEX": 174,
+     "Synthra V3": 17096,
+     "Aero Slipstream": 731546,
+     "Foci": 113,
+     "Arctide DEX": 760,
+     "Archery V3": 113759,
+     "Synthra Core": 17849,
+     "FAZE": 294,
+     "Unitflow Finance V3": 984,
+     "Mercurifi Launchpad": 21.58,
+     "Kaleido Swap": 8.75
+    }
+   ],
+   [
+    "2026-10-11",
+    {
+     "Uniswap V2": 13951,
+     "Uniswap V3": 1529525,
+     "Virtuals Protocol": 19,
+     "Uniswap V4": 26939238,
+     "Topaz CL": 31767,
+     "Lunya DEX": 641,
+     "Lunya Launchpad": 0.99,
+     "Synthra V3": 26159,
+     "Aero Slipstream": 1349398,
+     "Foci": 0.12,
+     "Arctide DEX": 1614,
+     "Archery V3": 282846,
+     "Synthra Core": 27967,
+     "FAZE": 189,
+     "Unitflow Finance V3": 607,
+     "Mercurifi Launchpad": 0.01,
+     "Kaleido Swap": 3.4
+    }
+   ],
+   [
+    "2026-10-12",
+    {
+     "Uniswap V2": 24757,
+     "Uniswap V3": 3546704,
+     "SushiSwap V3": 6.83,
+     "Uniswap V4": 28160979,
+     "Topaz CL": 57877,
+     "Lunya DEX": 1827,
+     "Synthra V3": 8960,
+     "Aero Slipstream": 2534301,
+     "Foci": 4.91,
+     "Arctide DEX": 11506,
+     "Archery V3": 698137,
+     "Synthra Core": 9353,
+     "FAZE": 241,
+     "Unitflow Finance V3": 588,
+     "Mercurifi Launchpad": 56.74,
+     "Kaleido Swap": 1.63
+    }
+   ],
+   [
+    "2026-10-13",
+    {
+     "Uniswap V2": 38144,
+     "Uniswap V3": 5452712,
+     "Virtuals Protocol": 116,
+     "Uniswap V4": 29516850,
+     "Topaz CL": 74599,
+     "Lunya DEX": 2547,
+     "Synthra V3": 16212,
+     "Aero Slipstream": 3144432,
+     "Foci": 0.95,
+     "Arctide DEX": 6322,
+     "Archery V3": 1038135,
+     "Synthra Core": 17224,
+     "FAZE": 822,
+     "Unitflow Finance V3": 732,
+     "Mercurifi Launchpad": 5.45,
+     "Kaleido Swap": 0.49
+    }
+   ],
+   [
+    "2026-10-14",
+    {
+     "Uniswap V2": 25164,
+     "Uniswap V3": 5362223,
+     "Virtuals Protocol": 204,
+     "Uniswap V4": 28014637,
+     "Topaz CL": 87387,
+     "Lunya DEX": 2374,
+     "Synthra V3": 13717,
+     "Aero Slipstream": 2691804,
+     "Foci": 2.55,
+     "Arctide DEX": 703,
+     "Archery V3": 1208988,
+     "Synthra Core": 14524,
+     "FAZE": 375,
+     "Unitflow Finance V3": 663,
+     "Mercurifi Launchpad": 34.12,
+     "Kaleido Swap": 2.66
+    }
+   ],
+   [
+    "2026-10-15",
+    {
+     "Uniswap V2": 34188,
+     "Uniswap V3": 8230534,
+     "SushiSwap V3": 366,
+     "Virtuals Protocol": 1.23,
+     "Uniswap V4": 8316770,
+     "Topaz CL": 143510,
+     "Lunya DEX": 4161,
+     "Synthra V3": 9817,
+     "Aero Slipstream": 3358800,
+     "Foci": 242,
+     "Arctide DEX": 1348,
+     "Archery V3": 1317868,
+     "Synthra Core": 10384,
+     "FAZE": 50,
+     "Unitflow Finance V3": 758,
+     "Mercurifi Launchpad": 2.71,
+     "Kaleido Swap": 3.36
+    }
+   ],
+   [
+    "2026-10-16",
+    {
+     "Uniswap V2": 19894,
+     "Uniswap V3": 4785793,
+     "Uniswap V4": 6059274,
+     "Topaz CL": 69589,
+     "Lunya DEX": 2377,
+     "Synthra V3": 9661,
+     "Aero Slipstream": 2556239,
+     "Arctide DEX": 435,
+     "Archery V3": 1094562,
+     "Synthra Core": 10298,
+     "FAZE": 1132,
+     "Unitflow Finance V3": 788
+    }
+   ],
+   [
+    "2026-10-17",
+    {
+     "Uniswap V2": 12094,
+     "Uniswap V3": 1275409,
+     "Virtuals Protocol": 34,
+     "Uniswap V4": 6015934,
+     "Topaz CL": 18068,
+     "1inch Aqua": 0.4,
+     "Lunya DEX": 566,
+     "Synthra V3": 6722,
+     "Aero Slipstream": 1530103,
+     "Arctide DEX": 4846,
+     "Archery V3": 324995,
+     "Synthra Core": 6940,
+     "FAZE": 1190,
+     "Unitflow Finance V3": 544,
+     "Mercurifi Launchpad": 5.42,
+     "Kaleido Swap": 0.38
+    }
+   ],
+   [
+    "2026-10-18",
+    {
+     "Uniswap V2": 18879,
+     "Uniswap V3": 4263866,
+     "SushiSwap V3": 3.96,
+     "Virtuals Protocol": 14,
+     "Uniswap V4": 5495005,
+     "Topaz CL": 39434,
+     "1inch Aqua": 3.65,
+     "Lunya DEX": 1089,
+     "Synthra V3": 10977,
+     "Aero Slipstream": 2156505,
+     "Foci": 0.69,
+     "Arctide DEX": 1996,
+     "Archery V3": 546414,
+     "Synthra Core": 11404,
+     "FAZE": 291,
+     "Unitflow Finance V3": 350,
+     "Mercurifi Launchpad": 0.99,
+     "Kaleido Swap": 2.28
+    }
+   ],
+   [
+    "2026-10-19",
+    {
+     "Uniswap V2": 14644,
+     "Uniswap V3": 4857521,
+     "SushiSwap V3": 9.47,
+     "Virtuals Protocol": 51,
+     "Uniswap V4": 6097200,
+     "Topaz CL": 54442,
+     "Lunya DEX": 1911,
+     "Synthra V3": 7268,
+     "CircleWarp": 3.48,
+     "Aero Slipstream": 3129957,
+     "Foci": 5.21,
+     "Arctide DEX": 141,
+     "Archery V3": 927732,
+     "Synthra Core": 7676,
+     "FAZE": 22.96,
+     "Unitflow Finance V3": 402,
+     "Mercurifi Launchpad": 1.14,
+     "Kaleido Swap": 0.46
+    }
+   ],
+   [
+    "2026-10-20",
+    {
+     "Uniswap V2": 16856,
+     "Uniswap V3": 5720271,
+     "SushiSwap V3": 0.93,
+     "Virtuals Protocol": 50,
+     "Uniswap V4": 5979357,
+     "Topaz CL": 56271,
+     "Lunya DEX": 2587,
+     "Synthra V3": 12210,
+     "Surged": 0.65,
+     "Aero Slipstream": 3959612,
+     "Arctide DEX": 732,
+     "Archery V3": 1093015,
+     "Synthra Core": 15524,
+     "FAZE": 2095,
+     "Unitflow Finance V3": 976,
+     "Mercurifi Launchpad": 1.14,
+     "Kaleido Swap": 2.11
+    }
+   ],
+   [
+    "2026-10-21",
+    {
+     "Uniswap V2": 15663,
+     "Uniswap V3": 5612021,
+     "Virtuals Protocol": 0.81,
+     "Uniswap V4": 6078652,
+     "Topaz CL": 47819,
+     "Lunya DEX": 2142,
+     "Synthra V3": 7226,
+     "Aero Slipstream": 2779262,
+     "Foci": 0.73,
+     "Arctide DEX": 325,
+     "Archery V3": 959332,
+     "Synthra Core": 8173,
+     "FAZE": 784,
+     "Unitflow Finance V3": 3081,
+     "Mercurifi Launchpad": 19,
+     "Kaleido Swap": 0.37
+    }
+   ],
+   [
+    "2026-10-22",
+    {
+     "Uniswap V2": 16789,
+     "Uniswap V3": 5407426,
+     "SushiSwap V3": 22,
+     "Virtuals Protocol": 512,
+     "Uniswap V4": 5865386,
+     "Topaz CL": 67542,
+     "Topaz AMM": 0.01,
+     "Lunya DEX": 1971,
+     "Synthra V3": 11337,
+     "Aero Slipstream": 4476025,
+     "Foci": 73,
+     "Arctide DEX": 644,
+     "Archery V3": 1322027,
+     "Synthra Core": 12184,
+     "FAZE": 432,
+     "Unitflow Finance V3": 6006,
+     "Mercurifi Launchpad": 91
+    }
+   ],
+   [
+    "2026-10-23",
+    {
+     "Uniswap V2": 15901,
+     "Uniswap V3": 4444205,
+     "Virtuals Protocol": 12,
+     "Uniswap V4": 5832471,
+     "Topaz CL": 66356,
+     "Lunya DEX": 1969,
+     "Synthra V3": 10906,
+     "CircleWarp": 268,
+     "Aero Slipstream": 5394960,
+     "Foci": 4.78,
+     "Arctide DEX": 392,
+     "Archery V3": 1043535,
+     "Synthra Core": 11772,
+     "FAZE": 148,
+     "Unitflow Finance V3": 2255,
+     "Mercurifi Launchpad": 4.03,
+     "Kaleido Swap": 1.85,
+     "Aero Basic": 1.77
+    }
+   ],
+   [
+    "2026-10-24",
+    {
+     "Uniswap V2": 15170,
+     "Uniswap V3": 3119194,
+     "Uniswap V4": 9502746,
+     "Topaz CL": 16352,
+     "1inch Aqua": 7.54,
+     "Lunya DEX": 1104,
+     "Synthra V3": 7187,
+     "Aero Slipstream": 3526515,
+     "Arctide DEX": 910,
+     "Archery V3": 416131,
+     "Synthra Core": 7835,
+     "FAZE": 168,
+     "Unitflow Finance V3": 1577,
+     "Kaleido Swap": 0.88
+    }
+   ],
+   [
+    "2026-10-25",
+    {
+     "Uniswap V2": 10326,
+     "Uniswap V3": 1921166,
+     "Uniswap V4": 10465561,
+     "Topaz CL": 26883,
+     "Lunya DEX": 1001,
+     "Synthra V3": 4412,
+     "Aero Slipstream": 2894033,
+     "Arctide DEX": 3.3,
+     "Archery V3": 450645,
+     "Synthra Core": 4791,
+     "Unitflow Finance V3": 2135,
+     "Mercurifi Launchpad": 12,
+     "Kaleido Swap": 2.21
+    }
+   ],
+   [
+    "2026-10-26",
+    {
+     "Uniswap V2": 17626,
+     "Uniswap V3": 4596657,
+     "Virtuals Protocol": 0.05,
+     "Uniswap V4": 10449536,
+     "Topaz CL": 55749,
+     "Lunya DEX": 2250,
+     "Synthra V3": 12471,
+     "Surged": 58,
+     "Aero Slipstream": 4909490,
+     "Arctide DEX": 3173,
+     "Archery V3": 630015,
+     "Synthra Core": 13614,
+     "FAZE": 0.7,
+     "Unitflow Finance V3": 4318,
+     "Mercurifi Launchpad": 0.3,
+     "Aero Basic": 0.03
+    }
+   ],
+   [
+    "2026-10-27",
+    {
+     "Uniswap V2": 11656,
+     "Uniswap V3": 3565288,
+     "Virtuals Protocol": 0.78,
+     "Uniswap V4": 11218178,
+     "Topaz CL": 42441,
+     "Lunya DEX": 1580,
+     "Synthra V3": 5219,
+     "Aero Slipstream": 3933377,
+     "Arctide DEX": 818,
+     "Archery V3": 520452,
+     "Synthra Core": 5661,
+     "FAZE": 367,
+     "Unitflow Finance V3": 3798,
+     "Mercurifi Launchpad": 36,
+     "Kaleido Swap": 1.67
+    }
+   ],
+   [
+    "2026-10-28",
+    {
+     "Uniswap V2": 14046,
+     "Uniswap V3": 3946269,
+     "Uniswap V4": 11143931,
+     "Topaz CL": 55618,
+     "Lunya DEX": 219,
+     "Synthra V3": 11492,
+     "Aero Slipstream": 4966656,
+     "Arctide DEX": 308,
+     "Archery V3": 762045,
+     "Synthra Core": 12328,
+     "FAZE": 5.4,
+     "Unitflow Finance V3": 1837,
+     "Kaleido Swap": 1.78
+    }
+   ],
+   [
+    "2026-10-29",
+    {
+     "Uniswap V2": 25590,
+     "Uniswap V3": 8207126,
+     "Virtuals Protocol": 223,
+     "Uniswap V4": 11077012,
+     "Topaz CL": 33005,
+     "Synthra V3": 11071,
+     "Aero Slipstream": 10357532,
+     "Arctide DEX": 1297,
+     "Archery V3": 1243178,
+     "Synthra Core": 13371,
+     "FAZE": 61.05,
+     "Unitflow Finance V3": 853,
+     "Kaleido Swap": 2.37
+    }
+   ],
+   [
+    "2026-10-30",
+    {
+     "Uniswap V2": 13649,
+     "Uniswap V3": 5555230,
+     "SushiSwap V3": 12,
+     "Uniswap V4": 11310054,
+     "Topaz CL": 19894,
+     "basedbid": 0.21,
+     "Synthra V3": 13053,
+     "Aero Slipstream": 5174067,
+     "Foci": 6.6,
+     "Arctide DEX": 865,
+     "Archery V3": 587725,
+     "Synthra Core": 13735,
+     "FAZE": 11,
+     "Unitflow Finance V3": 800,
+     "Kaleido Swap": 1.05
+    }
+   ],
+   [
+    "2026-10-31",
+    {
+     "Uniswap V2": 1648,
+     "Uniswap V3": 1608183,
+     "Virtuals Protocol": 69,
+     "Uniswap V4": 8064176,
+     "Topaz CL": 11189,
+     "Synthra V3": 6695,
+     "Aero Slipstream": 1903104,
+     "Arctide DEX": 27.99,
+     "Archery V3": 83329,
+     "Synthra Core": 7021,
+     "FAZE": 69.34,
+     "Unitflow Finance V3": 682,
+     "Mercurifi Launchpad": 159
+    }
+   ],
+   [
+    "2026-11-01",
+    {
+     "Uniswap V2": 1841,
+     "Uniswap V3": 1527666,
+     "Uniswap V4": 9015566,
+     "Topaz CL": 4934,
+     "Synthra V3": 1306,
+     "Aero Slipstream": 1727879,
+     "Arctide DEX": 102,
+     "Archery V3": 165808,
+     "Synthra Core": 1356,
+     "FAZE": 7.47,
+     "Unitflow Finance V3": 597
+    }
+   ],
+   [
+    "2026-11-02",
+    {
+     "Uniswap V2": 1127,
+     "Uniswap V3": 3652480,
+     "Virtuals Protocol": 0.13,
+     "Uniswap V4": 10672014,
+     "Topaz CL": 11984,
+     "Synthra V3": 3480,
+     "Aero Slipstream": 3305808,
+     "Arctide DEX": 27.2,
+     "Archery V3": 448510,
+     "Synthra Core": 3589,
+     "FAZE": 2.71,
+     "Unitflow Finance V3": 498,
+     "Kaleido Swap": 1.65,
+     "Central City": 285782
+    }
+   ],
+   [
+    "2026-11-03",
+    {
+     "Uniswap V2": 995,
+     "Uniswap V3": 3027984,
+     "Uniswap V4": 7518731,
+     "x402": 1115,
+     "Topaz CL": 7227,
+     "Synthra V3": 2557,
+     "Aero Slipstream": 3109075,
+     "Arctide DEX": 2922,
+     "Archery V3": 359701,
+     "Synthra Core": 2712,
+     "FAZE": 9.84,
+     "Unitflow Finance V3": 290,
+     "Kaleido Swap": 14.57,
+     "Central City": 1114
+    }
+   ],
+   [
+    "2026-11-04",
+    {
+     "Uniswap V2": 2838,
+     "Uniswap V3": 10180504,
+     "SushiSwap V3": 17,
+     "Uniswap V4": 11112770,
+     "x402": 1172,
+     "Topaz CL": 18245,
+     "Synthra V3": 2575,
+     "Aero Slipstream": 6422740,
+     "Arctide DEX": 158,
+     "Archery V3": 1161474,
+     "Synthra Core": 2750,
+     "FAZE": 1.07,
+     "Unitflow Finance V3": 388,
+     "Kaleido Swap": 27.65,
+     "Central City": 1173
+    }
+   ],
+   [
+    "2026-11-05",
+    {
+     "Uniswap V2": 2172,
+     "Uniswap V3": 6249155,
+     "SushiSwap V3": 5.91,
+     "Virtuals Protocol": 0.15,
+     "Uniswap V4": 9558464,
+     "x402": 117,
+     "Topaz CL": 22953,
+     "Synthra V3": 2967,
+     "CircleWarp": 79,
+     "Aero Slipstream": 6043200,
+     "Arctide DEX": 8.57,
+     "Archery V3": 908483,
+     "Synthra Core": 3091,
+     "FAZE": 1.5,
+     "Unitflow Finance V3": 367,
+     "Kaleido Swap": 6.54,
+     "Central City": 118
+    }
+   ],
+   [
+    "2026-11-06",
+    {
+     "Uniswap V2": 1730,
+     "Uniswap V3": 4365917,
+     "Uniswap V4": 11235797,
+     "x402": 299140,
+     "Topaz CL": 26518,
+     "Synthra V3": 2749,
+     "Aero Slipstream": 4077201,
+     "Arctide DEX": 4,
+     "Archery V3": 461119,
+     "Synthra Core": 2867,
+     "Unitflow Finance V3": 298,
+     "Kaleido Swap": 15.22,
+     "Central City": 299149
+    }
+   ],
+   [
+    "2026-11-07",
+    {
+     "Uniswap V2": 773,
+     "Uniswap V3": 844392,
+     "Uniswap V4": 10442165,
+     "x402": 957389,
+     "Topaz CL": 17541,
+     "Synthra V3": 1313,
+     "CircleWarp": 0.07,
+     "Aero Slipstream": 868527,
+     "Arctide DEX": 9.66,
+     "Archery V3": 55223,
+     "Synthra Core": 1371,
+     "Unitflow Finance V3": 386,
+     "Mercurifi Launchpad": 6.57,
+     "Kaleido Swap": 0.18,
+     "Central City": 957350
+    }
+   ],
+   [
+    "2026-11-08",
+    {
+     "Uniswap V2": 322,
+     "Uniswap V3": 609990,
+     "Uniswap V4": 10343874,
+     "Topaz CL": 15133,
+     "Synthra V3": 2012,
+     "Aero Slipstream": 695015,
+     "Archery V3": 41119,
+     "Synthra Core": 2089,
+     "Unitflow Finance V3": 331,
+     "Mercurifi Launchpad": 6.57,
+     "Central City": 957377,
+     "x402": 957389,
+     "CircleWarp": 0.07,
+     "Arctide DEX": 9.66,
+     "Kaleido Swap": 0.18
+    }
+   ]
+  ]
+ },
+ "arc": {
+  "total": [
+   [
+    "2026-09-10",
+    1141395.99
+   ],
+   [
+    "2026-09-11",
+    1857580
+   ],
+   [
+    "2026-09-12",
+    944918.08
+   ],
+   [
+    "2026-09-13",
+    1056006.05
+   ],
+   [
+    "2026-09-14",
+    2213675.11
+   ],
+   [
+    "2026-09-15",
+    17093925
+   ],
+   [
+    "2026-09-16",
+    123872521.36
+   ],
+   [
+    "2026-09-17",
+    133554557
+   ],
+   [
+    "2026-09-18",
+    80088687.51
+   ],
+   [
+    "2026-09-19",
+    52392617.01
+   ],
+   [
+    "2026-09-20",
+    41156657.129999995
+   ],
+   [
+    "2026-09-21",
+    48513164.65
+   ],
+   [
+    "2026-09-22",
+    45790664.5
+   ],
+   [
+    "2026-09-23",
+    65987619.339999996
+   ],
+   [
+    "2026-09-24",
+    41656463.739999995
+   ],
+   [
+    "2026-09-25",
+    50548204.400000006
+   ],
+   [
+    "2026-09-26",
+    39222718.42
+   ],
+   [
+    "2026-09-27",
+    41552769.94
+   ],
+   [
+    "2026-09-28",
+    41414123.339999996
+   ],
+   [
+    "2026-09-29",
+    42906762.81999999
+   ],
+   [
+    "2026-09-30",
+    36229571.93
+   ],
+   [
+    "2026-10-01",
+    37205051.29
+   ],
+   [
+    "2026-10-02",
+    39637825.059999995
+   ],
+   [
+    "2026-10-03",
+    26682314.01
+   ],
+   [
+    "2026-10-04",
+    27156124.86
+   ],
+   [
+    "2026-10-05",
+    32628711.740000002
+   ],
+   [
+    "2026-10-06",
+    31751027.130000003
+   ],
+   [
+    "2026-10-07",
+    40434439.35000001
+   ],
+   [
+    "2026-10-08",
+    35347465.17
+   ],
+   [
+    "2026-10-09",
+    29854131.919999998
+   ],
+   [
+    "2026-10-10",
+    25217401.4
+   ],
+   [
+    "2026-10-11",
+    30203925.52
+   ],
+   [
+    "2026-10-12",
+    35055300.11
+   ],
+   [
+    "2026-10-13",
+    39308853.89000001
+   ],
+   [
+    "2026-10-14",
+    37422802.32999999
+   ],
+   [
+    "2026-10-15",
+    21428803.3
+   ],
+   [
+    "2026-10-16",
+    14610042
+   ],
+   [
+    "2026-10-17",
+    9197451.200000001
+   ],
+   [
+    "2026-10-18",
+    12546235.57
+   ],
+   [
+    "2026-10-19",
+    15098987.720000003
+   ],
+   [
+    "2026-10-20",
+    16859560.83
+   ],
+   [
+    "2026-10-21",
+    15514500.909999998
+   ],
+   [
+    "2026-10-22",
+    17188467.009999998
+   ],
+   [
+    "2026-10-23",
+    16825162.430000003
+   ],
+   [
+    "2026-10-24",
+    16614897.42
+   ],
+   [
+    "2026-10-25",
+    15780970.510000002
+   ],
+   [
+    "2026-10-26",
+    20694958.080000002
+   ],
+   [
+    "2026-10-27",
+    19308873.450000003
+   ],
+   [
+    "2026-10-28",
+    20914756.18
+   ],
+   [
+    "2026-10-29",
+    30970321.42
+   ],
+   [
+    "2026-10-30",
+    22689102.860000003
+   ],
+   [
+    "2026-10-31",
+    11686352.33
+   ],
+   [
+    "2026-11-01",
+    12447062.47
+   ],
+   [
+    "2026-11-02",
+    18385303.689999998
+   ],
+   [
+    "2026-11-03",
+    14034447.41
+   ],
+   [
+    "2026-11-04",
+    28906832.72
+   ],
+   [
+    "2026-11-05",
+    22791188.67
+   ],
+   [
+    "2026-11-06",
+    20772504.22
+   ],
+   [
+    "2026-11-07",
+    14146446.48
+   ],
+   [
+    "2026-11-08",
+    13624667.48
+   ]
+  ],
+  "protocols": [
+   [
+    "SushiSwap",
+    0,
+    0
+   ],
+   [
+    "Uniswap V2",
+    322,
+    11476
+   ],
+   [
+    "Uniswap V3",
+    609990,
+    29848098
+   ],
+   [
+    "SushiSwap V3",
+    0,
+    22.91
+   ],
+   [
+    "GMGN",
+    18062,
+    236855
+   ],
+   [
+    "Virtuals Protocol",
+    0,
+    0.28
+   ],
+   [
+    "Uniswap V4",
+    10343874,
+    69555507
+   ],
+   [
+    "Bloom Trading Bot",
+    0,
+    0
+   ],
+   [
+    "Axiom",
+    199,
+    199
+   ],
+   [
+    "x402",
+    957389,
+    1258933
+   ],
+   [
+    "Topaz CL",
+    15133,
+    109402
+   ],
+   [
+    "basedbid",
+    0,
+    0
+   ],
+   [
+    "Topaz AMM",
+    0,
+    0
+   ],
+   [
+    "1inch Aqua",
+    0,
+    0
+   ],
+   [
+    "SolonPad",
+    0,
+    0
+   ],
+   [
+    "Lunya DEX",
+    0,
+    0
+   ],
+   [
+    "Lunya Launchpad",
+    0,
+    0
+   ],
+   [
+    "Synthra V3",
+    2012,
+    16947
+   ],
+   [
+    "Surged",
+    0,
+    0
+   ],
+   [
+    "Peach Launchpad",
+    73730,
+    595629
+   ],
+   [
+    "Sashimi.fun",
+    0,
+    0
+   ],
+   [
+    "CircleWarp",
+    0,
+    79.07
+   ],
+   [
+    "ARK Launch",
+    81,
+    392.62
+   ],
+   [
+    "Wonk Fun",
+    0,
+    0
+   ],
+   [
+    "Aero Slipstream",
+    695015,
+    25554430
+   ],
+   [
+    "Foci",
+    0,
+    0
+   ],
+   [
+    "Load",
+    0,
+    0
+   ],
+   [
+    "Arctide DEX",
+    0,
+    3231.43
+   ],
+   [
+    "Archery V3",
+    41119,
+    3560318
+   ],
+   [
+    "Ellipse DEX",
+    84.5,
+    294.48
+   ],
+   [
+    "Synthra Core",
+    2089,
+    17736
+   ],
+   [
+    "Archery V2",
+    0,
+    0
+   ],
+   [
+    "frenlaunch",
+    0,
+    0
+   ],
+   [
+    "Peddles",
+    0,
+    0
+   ],
+   [
+    "FAZE",
+    0,
+    22.59
+   ],
+   [
+    "Unitflow Finance V3",
+    331,
+    2824
+   ],
+   [
+    "Mercurifi Launchpad",
+    6.57,
+    6.57
+   ],
+   [
+    "Kaleido Swap",
+    0,
+    65.81
+   ],
+   [
+    "Ryntra Trading App",
+    0,
+    0
+   ],
+   [
+    "Central City",
+    957377,
+    1544686
+   ]
+  ],
+  "breakdown": [
+   [
+    "2026-09-10",
+    {
+     "Uniswap V2": 0.99,
+     "Uniswap V3": 521025,
+     "Uniswap V4": 620370
+    }
+   ],
+   [
+    "2026-09-11",
+    {
+     "Uniswap V2": 13076,
+     "Uniswap V3": 1037581,
+     "Uniswap V4": 806923
+    }
+   ],
+   [
+    "2026-09-12",
+    {
+     "Uniswap V2": 57.08,
+     "Uniswap V3": 703314,
+     "Uniswap V4": 241547
+    }
+   ],
+   [
+    "2026-09-13",
+    {
+     "Uniswap V3": 716300,
+     "Uniswap V4": 339701,
+     "FAZE": 5.05
+    }
+   ],
+   [
+    "2026-09-14",
+    {
+     "Uniswap V3": 1256249,
+     "Uniswap V4": 956436,
+     "Synthra Core": 990,
+     "FAZE": 0.11
+    }
+   ],
+   [
+    "2026-09-15",
+    {
+     "Uniswap V3": 7906741,
+     "Uniswap V4": 8848158,
+     "Synthra Core": 336174,
+     "FAZE": 2852
+    }
+   ],
+   [
+    "2026-09-16",
+    {
+     "Uniswap V2": 6337690,
+     "Uniswap V3": 107463150,
+     "Virtuals Protocol": 1.2,
+     "SolonPad": 188,
+     "Lunya Launchpad": 65069,
+     "Synthra V3": 4428478,
+     "Surged": 84100,
+     "CircleWarp": 155301,
+     "Arctide DEX": 401237,
+     "Synthra Core": 4552322,
+     "FAZE": 384968,
+     "Unitflow Finance V3": 17.16
+    }
+   ],
+   [
+    "2026-09-17",
+    {
+     "Uniswap V2": 11207704,
+     "Uniswap V3": 24109598,
+     "SushiSwap V3": 4523,
+     "Virtuals Protocol": 311017,
+     "Uniswap V4": 84692229,
+     "Lunya Launchpad": 1671,
+     "Synthra V3": 6000460,
+     "Surged": 39557,
+     "Sashimi.fun": 33406,
+     "CircleWarp": 211,
+     "Aero Slipstream": 1042395,
+     "Load": 220,
+     "Arctide DEX": 42757,
+     "Synthra Core": 6041865,
+     "FAZE": 26944
+    }
+   ],
+   [
+    "2026-09-18",
+    {
+     "Uniswap V2": 7285222,
+     "Uniswap V3": 17085395,
+     "SushiSwap V3": 1557,
+     "Virtuals Protocol": 3912,
+     "Uniswap V4": 52805096,
+     "SolonPad": 3.98,
+     "Lunya DEX": 2337,
+     "Lunya Launchpad": 370,
+     "Synthra V3": 303584,
+     "Surged": 16.53,
+     "Sashimi.fun": 214,
+     "CircleWarp": 259,
+     "Aero Slipstream": 2273340,
+     "Foci": 11587,
+     "Load": 1463,
+     "Arctide DEX": 5763,
+     "Synthra Core": 304687,
+     "FAZE": 3881
+    }
+   ],
+   [
+    "2026-09-19",
+    {
+     "Uniswap V2": 124104,
+     "Uniswap V3": 14029207,
+     "SushiSwap V3": 1,
+     "Virtuals Protocol": 880,
+     "Uniswap V4": 36728628,
+     "Lunya DEX": 4327,
+     "Lunya Launchpad": 255,
+     "Synthra V3": 183554,
+     "Sashimi.fun": 117,
+     "CircleWarp": 14.01,
+     "Aero Slipstream": 1131238,
+     "Foci": 431,
+     "Load": 551,
+     "Arctide DEX": 4072,
+     "Synthra Core": 184588,
+     "FAZE": 650
+    }
+   ],
+   [
+    "2026-09-20",
+    {
+     "Uniswap V2": 120051,
+     "Uniswap V3": 9921078,
+     "SushiSwap V3": 18,
+     "Virtuals Protocol": 9100,
+     "Uniswap V4": 28888605,
+     "Lunya DEX": 1044,
+     "Lunya Launchpad": 10.29,
+     "Synthra V3": 140392,
+     "Sashimi.fun": 50,
+     "CircleWarp": 8.83,
+     "Aero Slipstream": 1827762,
+     "Foci": 414,
+     "Load": 52476,
+     "Arctide DEX": 54856,
+     "Synthra Core": 140512,
+     "FAZE": 280,
+     "Kaleido Swap": 0.01
+    }
+   ],
+   [
+    "2026-09-21",
+    {
+     "Uniswap V2": 556934,
+     "Uniswap V3": 14337560,
+     "SushiSwap V3": 235646,
+     "Virtuals Protocol": 1144,
+     "Uniswap V4": 29911342,
+     "Lunya DEX": 3453,
+     "Lunya Launchpad": 4.67,
+     "Synthra V3": 123663,
+     "Sashimi.fun": 6.97,
+     "CircleWarp": 4.87,
+     "Aero Slipstream": 3045189,
+     "Foci": 73902,
+     "Arctide DEX": 96102,
+     "Synthra Core": 123563,
+     "FAZE": 4640,
+     "Mercurifi Launchpad": 10,
+     "Kaleido Swap": 0.14
+    }
+   ],
+   [
+    "2026-09-22",
+    {
+     "Uniswap V2": 57614,
+     "Uniswap V3": 12920393,
+     "SushiSwap V3": 2375,
+     "Virtuals Protocol": 104,
+     "Uniswap V4": 30863302,
+     "Lunya DEX": 5806,
+     "Lunya Launchpad": 6.54,
+     "Synthra V3": 62234,
+     "Sashimi.fun": 5.44,
+     "Aero Slipstream": 1708763,
+     "Foci": 39061,
+     "Load": 649,
+     "Arctide DEX": 64262,
+     "Synthra Core": 62836,
+     "FAZE": 2644,
+     "Mercurifi Launchpad": 609,
+     "Kaleido Swap": 0.52
+    }
+   ],
+   [
+    "2026-09-23",
+    {
+     "Uniswap V2": 76011,
+     "Uniswap V3": 23097714,
+     "SushiSwap V3": 1030,
+     "Uniswap V4": 39890457,
+     "Lunya DEX": 3160,
+     "Lunya Launchpad": 152,
+     "Synthra V3": 73829,
+     "Sashimi.fun": 2.97,
+     "CircleWarp": 3.96,
+     "Aero Slipstream": 2677242,
+     "Foci": 34782,
+     "Arctide DEX": 13984,
+     "Synthra Core": 73754,
+     "FAZE": 578,
+     "Mercurifi Launchpad": 44865,
+     "Kaleido Swap": 54.41
+    }
+   ],
+   [
+    "2026-09-24",
+    {
+     "Uniswap V2": 53993,
+     "Uniswap V3": 8302119,
+     "SushiSwap V3": 134,
+     "Virtuals Protocol": 74,
+     "Uniswap V4": 30703753,
+     "Lunya DEX": 3054,
+     "Lunya Launchpad": 0.16,
+     "Synthra V3": 70762,
+     "Surged": 0.25,
+     "CircleWarp": 0.97,
+     "Aero Slipstream": 1903750,
+     "Foci": 3019,
+     "Load": 33767,
+     "Arctide DEX": 13070,
+     "Archery V3": 483765,
+     "Synthra Core": 70757,
+     "FAZE": 4943,
+     "Mercurifi Launchpad": 9496,
+     "Kaleido Swap": 6.36
+    }
+   ],
+   [
+    "2026-09-25",
+    {
+     "Uniswap V2": 49262,
+     "Uniswap V3": 6856488,
+     "SushiSwap V3": 956,
+     "Virtuals Protocol": 238,
+     "Uniswap V4": 40420761,
+     "Lunya DEX": 2053,
+     "Synthra V3": 228944,
+     "Surged": 5.17,
+     "CircleWarp": 13.39,
+     "Aero Slipstream": 1750116,
+     "Foci": 2800,
+     "Load": 115772,
+     "Arctide DEX": 8290,
+     "Archery V3": 853027,
+     "Synthra Core": 247459,
+     "FAZE": 9470,
+     "Mercurifi Launchpad": 2465,
+     "Kaleido Swap": 84.84
+    }
+   ],
+   [
+    "2026-09-26",
+    {
+     "Uniswap V2": 21152,
+     "Uniswap V3": 2970654,
+     "SushiSwap V3": 0.71,
+     "Virtuals Protocol": 105,
+     "Uniswap V4": 35052623,
+     "Lunya DEX": 510,
+     "Lunya Launchpad": 178,
+     "Synthra V3": 154237,
+     "Sashimi.fun": 29,
+     "CircleWarp": 19.71,
+     "Aero Slipstream": 611902,
+     "Foci": 2934,
+     "Load": 71797,
+     "Arctide DEX": 35739,
+     "Archery V3": 135313,
+     "Synthra Core": 158214,
+     "FAZE": 5552,
+     "Mercurifi Launchpad": 1759
+    }
+   ],
+   [
+    "2026-09-27",
+    {
+     "Uniswap V2": 44427,
+     "Uniswap V3": 3757652,
+     "SushiSwap V3": 87,
+     "Uniswap V4": 35618901,
+     "1inch Aqua": 0.23,
+     "Lunya DEX": 789,
+     "Lunya Launchpad": 61.5,
+     "Synthra V3": 104980,
+     "CircleWarp": 21.21,
+     "Aero Slipstream": 912898,
+     "Foci": 892,
+     "Arctide DEX": 30557,
+     "Archery V3": 969168,
+     "Synthra Core": 109427,
+     "FAZE": 1788,
+     "Mercurifi Launchpad": 1121
+    }
+   ],
+   [
+    "2026-09-28",
+    {
+     "Uniswap V2": 121710,
+     "Uniswap V3": 6209995,
+     "SushiSwap V3": 10.41,
+     "Virtuals Protocol": 7.25,
+     "Uniswap V4": 31623103,
+     "1inch Aqua": 0.11,
+     "Lunya DEX": 2580,
+     "Lunya Launchpad": 0.01,
+     "Synthra V3": 70340,
+     "CircleWarp": 1.6,
+     "Aero Slipstream": 2368570,
+     "Foci": 559,
+     "Load": 7.96,
+     "Arctide DEX": 5453,
+     "Archery V3": 934340,
+     "Synthra Core": 72685,
+     "FAZE": 3932,
+     "Mercurifi Launchpad": 829
+    }
+   ],
+   [
+    "2026-09-29",
+    {
+     "Uniswap V2": 1897419,
+     "Uniswap V3": 4899042,
+     "SushiSwap V3": 49,
+     "Virtuals Protocol": 0.27,
+     "Uniswap V4": 32951684,
+     "Topaz CL": 28613,
+     "Lunya DEX": 1755,
+     "Lunya Launchpad": 12.16,
+     "Synthra V3": 99286,
+     "Aero Slipstream": 2052477,
+     "Foci": 366,
+     "Arctide DEX": 4095,
+     "Archery V3": 868338,
+     "Synthra Core": 103341,
+     "FAZE": 86,
+     "Mercurifi Launchpad": 187,
+     "Kaleido Swap": 12.39
+    }
+   ],
+   [
+    "2026-09-30",
+    {
+     "Uniswap V2": 53926,
+     "Uniswap V3": 7000826,
+     "SushiSwap V3": 120,
+     "Virtuals Protocol": 52,
+     "Uniswap V4": 26295745,
+     "Topaz CL": 31811,
+     "Lunya DEX": 2553,
+     "Lunya Launchpad": 0.31,
+     "Synthra V3": 64402,
+     "CircleWarp": 8.62,
+     "Aero Slipstream": 1667474,
+     "Foci": 181,
+     "Arctide DEX": 972,
+     "Archery V3": 1041988,
+     "Synthra Core": 67264,
+     "FAZE": 733,
+     "Unitflow Finance V3": 1321,
+     "Mercurifi Launchpad": 195
+    }
+   ],
+   [
+    "2026-10-01",
+    {
+     "Uniswap V2": 46445,
+     "Uniswap V3": 5865535,
+     "SushiSwap V3": 5.42,
+     "Virtuals Protocol": 320,
+     "Uniswap V4": 28709976,
+     "Topaz CL": 65080,
+     "Lunya DEX": 2423,
+     "Lunya Launchpad": 34.98,
+     "Synthra V3": 42569,
+     "Surged": 0.59,
+     "Aero Slipstream": 1350721,
+     "Foci": 11.66,
+     "Arctide DEX": 9583,
+     "Archery V3": 1064855,
+     "Synthra Core": 45570,
+     "FAZE": 797,
+     "Unitflow Finance V3": 805,
+     "Mercurifi Launchpad": 319,
+     "Kaleido Swap": 0.64
+    }
+   ],
+   [
+    "2026-10-02",
+    {
+     "Uniswap V2": 51816,
+     "Uniswap V3": 6707544,
+     "Virtuals Protocol": 2.69,
+     "Uniswap V4": 30157573,
+     "Topaz CL": 65064,
+     "Lunya DEX": 3027,
+     "Synthra V3": 42002,
+     "Aero Slipstream": 1510322,
+     "Foci": 69.22,
+     "Arctide DEX": 3403,
+     "Archery V3": 1050428,
+     "Synthra Core": 43703,
+     "FAZE": 1.15,
+     "Unitflow Finance V3": 749,
+     "Mercurifi Launchpad": 2119,
+     "Kaleido Swap": 2
+    }
+   ],
+   [
+    "2026-10-03",
+    {
+     "Uniswap V2": 20288,
+     "Uniswap V3": 1327016,
+     "Uniswap V4": 24589545,
+     "Topaz CL": 33778,
+     "Lunya DEX": 206,
+     "Synthra V3": 49497,
+     "CircleWarp": 13,
+     "Aero Slipstream": 454318,
+     "Foci": 5.82,
+     "Arctide DEX": 2559,
+     "Archery V3": 148414,
+     "Synthra Core": 51559,
+     "FAZE": 314,
+     "Unitflow Finance V3": 778,
+     "Mercurifi Launchpad": 3999,
+     "Kaleido Swap": 24.19
+    }
+   ],
+   [
+    "2026-10-04",
+    {
+     "Uniswap V2": 35892,
+     "Uniswap V3": 1975309,
+     "SushiSwap V3": 115,
+     "Virtuals Protocol": 0.52,
+     "Uniswap V4": 24132543,
+     "Topaz CL": 30070,
+     "Lunya DEX": 653,
+     "Synthra V3": 13230,
+     "CircleWarp": 1.94,
+     "Aero Slipstream": 628858,
+     "Arctide DEX": 3520,
+     "Archery V3": 319399,
+     "Synthra Core": 13674,
+     "Unitflow Finance V3": 666,
+     "Mercurifi Launchpad": 2143,
+     "Kaleido Swap": 50.4
+    }
+   ],
+   [
+    "2026-10-05",
+    {
+     "Uniswap V2": 36373,
+     "Uniswap V3": 5820919,
+     "SushiSwap V3": 191,
+     "Virtuals Protocol": 0.12,
+     "Uniswap V4": 24110578,
+     "Topaz CL": 94148,
+     "Lunya DEX": 2232,
+     "Synthra V3": 27473,
+     "CircleWarp": 0.34,
+     "Aero Slipstream": 1739793,
+     "Foci": 14.22,
+     "Arctide DEX": 7121,
+     "Archery V3": 760372,
+     "Synthra Core": 28790,
+     "FAZE": 2.07,
+     "Unitflow Finance V3": 691,
+     "Mercurifi Launchpad": 8.53,
+     "Kaleido Swap": 5.46
+    }
+   ],
+   [
+    "2026-10-06",
+    {
+     "Uniswap V2": 22031,
+     "Uniswap V3": 4266590,
+     "Virtuals Protocol": 1.2,
+     "Uniswap V4": 25150360,
+     "Topaz CL": 73867,
+     "basedbid": 48,
+     "Lunya DEX": 1614,
+     "Lunya Launchpad": 6.86,
+     "Synthra V3": 30809,
+     "Aero Slipstream": 1553754,
+     "Foci": 6.1,
+     "Arctide DEX": 1224,
+     "Archery V3": 618102,
+     "Synthra Core": 31776,
+     "Unitflow Finance V3": 827,
+     "Mercurifi Launchpad": 5.53,
+     "Kaleido Swap": 5.44
+    }
+   ],
+   [
+    "2026-10-07",
+    {
+     "Uniswap V2": 25827,
+     "Uniswap V3": 8847560,
+     "SushiSwap V3": 11,
+     "Virtuals Protocol": 1194,
+     "Uniswap V4": 28413534,
+     "Topaz CL": 70542,
+     "Lunya DEX": 1595,
+     "Lunya Launchpad": 0.2,
+     "Synthra V3": 264337,
+     "Aero Slipstream": 1886926,
+     "Foci": 8.68,
+     "Arctide DEX": 1783,
+     "Archery V3": 642797,
+     "Synthra Core": 276400,
+     "FAZE": 244,
+     "Unitflow Finance V3": 1578,
+     "Mercurifi Launchpad": 89.95,
+     "Kaleido Swap": 12.52
+    }
+   ],
+   [
+    "2026-10-08",
+    {
+     "Uniswap V2": 46968,
+     "Uniswap V3": 7317844,
+     "SushiSwap V3": 5,
+     "Uniswap V4": 24179081,
+     "Topaz CL": 104665,
+     "Lunya DEX": 2400,
+     "Synthra V3": 67139,
+     "CircleWarp": 17,
+     "Aero Slipstream": 2547397,
+     "Foci": 2.1,
+     "Arctide DEX": 519,
+     "Archery V3": 1009143,
+     "Synthra Core": 70059,
+     "FAZE": 1286,
+     "Unitflow Finance V3": 895,
+     "Mercurifi Launchpad": 38.4,
+     "Kaleido Swap": 6.67
+    }
+   ],
+   [
+    "2026-10-09",
+    {
+     "Uniswap V2": 19534,
+     "Uniswap V3": 3506249,
+     "Uniswap V4": 23362972,
+     "Topaz CL": 64625,
+     "Lunya DEX": 1236,
+     "Synthra V3": 57152,
+     "Aero Slipstream": 2215450,
+     "Arctide DEX": 4188,
+     "Archery V3": 561510,
+     "Synthra Core": 60383,
+     "FAZE": 175,
+     "Unitflow Finance V3": 647,
+     "Mercurifi Launchpad": 8.02,
+     "Kaleido Swap": 2.9
+    }
+   ],
+   [
+    "2026-10-10",
+    {
+     "Uniswap V2": 15011,
+     "Uniswap V3": 1110959,
+     "SushiSwap V3": 0.02,
+     "Virtuals Protocol": 0.05,
+     "Uniswap V4": 23189552,
+     "Topaz CL": 19274,
+     "Lunya DEX": 174,
+     "Synthra V3": 17096,
+     "Aero Slipstream": 731546,
+     "Foci": 113,
+     "Arctide DEX": 760,
+     "Archery V3": 113759,
+     "Synthra Core": 17849,
+     "FAZE": 294,
+     "Unitflow Finance V3": 984,
+     "Mercurifi Launchpad": 21.58,
+     "Kaleido Swap": 8.75
+    }
+   ],
+   [
+    "2026-10-11",
+    {
+     "Uniswap V2": 13951,
+     "Uniswap V3": 1529525,
+     "Virtuals Protocol": 19,
+     "Uniswap V4": 26939238,
+     "Topaz CL": 31767,
+     "Lunya DEX": 641,
+     "Lunya Launchpad": 0.99,
+     "Synthra V3": 26159,
+     "Aero Slipstream": 1349398,
+     "Foci": 0.12,
+     "Arctide DEX": 1614,
+     "Archery V3": 282846,
+     "Synthra Core": 27967,
+     "FAZE": 189,
+     "Unitflow Finance V3": 607,
+     "Mercurifi Launchpad": 0.01,
+     "Kaleido Swap": 3.4
+    }
+   ],
+   [
+    "2026-10-12",
+    {
+     "Uniswap V2": 24757,
+     "Uniswap V3": 3546704,
+     "SushiSwap V3": 6.83,
+     "Uniswap V4": 28160979,
+     "Topaz CL": 57877,
+     "Lunya DEX": 1827,
+     "Synthra V3": 8960,
+     "Aero Slipstream": 2534301,
+     "Foci": 4.91,
+     "Arctide DEX": 11506,
+     "Archery V3": 698137,
+     "Synthra Core": 9353,
+     "FAZE": 241,
+     "Unitflow Finance V3": 588,
+     "Mercurifi Launchpad": 56.74,
+     "Kaleido Swap": 1.63
+    }
+   ],
+   [
+    "2026-10-13",
+    {
+     "Uniswap V2": 38144,
+     "Uniswap V3": 5452712,
+     "Virtuals Protocol": 116,
+     "Uniswap V4": 29516850,
+     "Topaz CL": 74599,
+     "Lunya DEX": 2547,
+     "Synthra V3": 16212,
+     "Aero Slipstream": 3144432,
+     "Foci": 0.95,
+     "Arctide DEX": 6322,
+     "Archery V3": 1038135,
+     "Synthra Core": 17224,
+     "FAZE": 822,
+     "Unitflow Finance V3": 732,
+     "Mercurifi Launchpad": 5.45,
+     "Kaleido Swap": 0.49
+    }
+   ],
+   [
+    "2026-10-14",
+    {
+     "Uniswap V2": 25164,
+     "Uniswap V3": 5362223,
+     "Virtuals Protocol": 204,
+     "Uniswap V4": 28014637,
+     "Topaz CL": 87387,
+     "Lunya DEX": 2374,
+     "Synthra V3": 13717,
+     "Aero Slipstream": 2691804,
+     "Foci": 2.55,
+     "Arctide DEX": 703,
+     "Archery V3": 1208988,
+     "Synthra Core": 14524,
+     "FAZE": 375,
+     "Unitflow Finance V3": 663,
+     "Mercurifi Launchpad": 34.12,
+     "Kaleido Swap": 2.66
+    }
+   ],
+   [
+    "2026-10-15",
+    {
+     "Uniswap V2": 34188,
+     "Uniswap V3": 8230534,
+     "SushiSwap V3": 366,
+     "Virtuals Protocol": 1.23,
+     "Uniswap V4": 8316770,
+     "Topaz CL": 143510,
+     "Lunya DEX": 4161,
+     "Synthra V3": 9817,
+     "Aero Slipstream": 3358800,
+     "Foci": 242,
+     "Arctide DEX": 1348,
+     "Archery V3": 1317868,
+     "Synthra Core": 10384,
+     "FAZE": 50,
+     "Unitflow Finance V3": 758,
+     "Mercurifi Launchpad": 2.71,
+     "Kaleido Swap": 3.36
+    }
+   ],
+   [
+    "2026-10-16",
+    {
+     "Uniswap V2": 19894,
+     "Uniswap V3": 4785793,
+     "Uniswap V4": 6059274,
+     "Topaz CL": 69589,
+     "Lunya DEX": 2377,
+     "Synthra V3": 9661,
+     "Aero Slipstream": 2556239,
+     "Arctide DEX": 435,
+     "Archery V3": 1094562,
+     "Synthra Core": 10298,
+     "FAZE": 1132,
+     "Unitflow Finance V3": 788
+    }
+   ],
+   [
+    "2026-10-17",
+    {
+     "Uniswap V2": 12094,
+     "Uniswap V3": 1275409,
+     "Virtuals Protocol": 34,
+     "Uniswap V4": 6015934,
+     "Topaz CL": 18068,
+     "1inch Aqua": 0.4,
+     "Lunya DEX": 566,
+     "Synthra V3": 6722,
+     "Aero Slipstream": 1530103,
+     "Arctide DEX": 4846,
+     "Archery V3": 324995,
+     "Synthra Core": 6940,
+     "FAZE": 1190,
+     "Unitflow Finance V3": 544,
+     "Mercurifi Launchpad": 5.42,
+     "Kaleido Swap": 0.38
+    }
+   ],
+   [
+    "2026-10-18",
+    {
+     "Uniswap V2": 18879,
+     "Uniswap V3": 4263866,
+     "SushiSwap V3": 3.96,
+     "Virtuals Protocol": 14,
+     "Uniswap V4": 5495005,
+     "Topaz CL": 39434,
+     "1inch Aqua": 3.65,
+     "Lunya DEX": 1089,
+     "Synthra V3": 10977,
+     "Aero Slipstream": 2156505,
+     "Foci": 0.69,
+     "Arctide DEX": 1996,
+     "Archery V3": 546414,
+     "Synthra Core": 11404,
+     "FAZE": 291,
+     "Unitflow Finance V3": 350,
+     "Mercurifi Launchpad": 0.99,
+     "Kaleido Swap": 2.28
+    }
+   ],
+   [
+    "2026-10-19",
+    {
+     "Uniswap V2": 14644,
+     "Uniswap V3": 4857521,
+     "SushiSwap V3": 9.47,
+     "Virtuals Protocol": 51,
+     "Uniswap V4": 6097200,
+     "Topaz CL": 54442,
+     "Lunya DEX": 1911,
+     "Synthra V3": 7268,
+     "CircleWarp": 3.48,
+     "Aero Slipstream": 3129957,
+     "Foci": 5.21,
+     "Arctide DEX": 141,
+     "Archery V3": 927732,
+     "Synthra Core": 7676,
+     "FAZE": 22.96,
+     "Unitflow Finance V3": 402,
+     "Mercurifi Launchpad": 1.14,
+     "Kaleido Swap": 0.46
+    }
+   ],
+   [
+    "2026-10-20",
+    {
+     "Uniswap V2": 16856,
+     "Uniswap V3": 5720271,
+     "SushiSwap V3": 0.93,
+     "Virtuals Protocol": 50,
+     "Uniswap V4": 5979357,
+     "Topaz CL": 56271,
+     "Lunya DEX": 2587,
+     "Synthra V3": 12210,
+     "Surged": 0.65,
+     "Aero Slipstream": 3959612,
+     "Arctide DEX": 732,
+     "Archery V3": 1093015,
+     "Synthra Core": 15524,
+     "FAZE": 2095,
+     "Unitflow Finance V3": 976,
+     "Mercurifi Launchpad": 1.14,
+     "Kaleido Swap": 2.11
+    }
+   ],
+   [
+    "2026-10-21",
+    {
+     "Uniswap V2": 15663,
+     "Uniswap V3": 5612021,
+     "Virtuals Protocol": 0.81,
+     "Uniswap V4": 6078652,
+     "Topaz CL": 47819,
+     "Lunya DEX": 2142,
+     "Synthra V3": 7226,
+     "Aero Slipstream": 2779262,
+     "Foci": 0.73,
+     "Arctide DEX": 325,
+     "Archery V3": 959332,
+     "Synthra Core": 8173,
+     "FAZE": 784,
+     "Unitflow Finance V3": 3081,
+     "Mercurifi Launchpad": 19,
+     "Kaleido Swap": 0.37
+    }
+   ],
+   [
+    "2026-10-22",
+    {
+     "Uniswap V2": 16789,
+     "Uniswap V3": 5407426,
+     "SushiSwap V3": 22,
+     "Virtuals Protocol": 512,
+     "Uniswap V4": 5865386,
+     "Topaz CL": 67542,
+     "Topaz AMM": 0.01,
+     "Lunya DEX": 1971,
+     "Synthra V3": 11337,
+     "Aero Slipstream": 4476025,
+     "Foci": 73,
+     "Arctide DEX": 644,
+     "Archery V3": 1322027,
+     "Synthra Core": 12184,
+     "FAZE": 432,
+     "Unitflow Finance V3": 6006,
+     "Mercurifi Launchpad": 91
+    }
+   ],
+   [
+    "2026-10-23",
+    {
+     "Uniswap V2": 15901,
+     "Uniswap V3": 4444205,
+     "Virtuals Protocol": 12,
+     "Uniswap V4": 5832471,
+     "Topaz CL": 66356,
+     "Lunya DEX": 1969,
+     "Synthra V3": 10906,
+     "CircleWarp": 268,
+     "Aero Slipstream": 5394960,
+     "Foci": 4.78,
+     "Arctide DEX": 392,
+     "Archery V3": 1043535,
+     "Synthra Core": 11772,
+     "FAZE": 148,
+     "Unitflow Finance V3": 2255,
+     "Mercurifi Launchpad": 4.03,
+     "Kaleido Swap": 1.85,
+     "Aero Basic": 1.77
+    }
+   ],
+   [
+    "2026-10-24",
+    {
+     "Uniswap V2": 15170,
+     "Uniswap V3": 3119194,
+     "Uniswap V4": 9502746,
+     "Topaz CL": 16352,
+     "1inch Aqua": 7.54,
+     "Lunya DEX": 1104,
+     "Synthra V3": 7187,
+     "Aero Slipstream": 3526515,
+     "Arctide DEX": 910,
+     "Archery V3": 416131,
+     "Synthra Core": 7835,
+     "FAZE": 168,
+     "Unitflow Finance V3": 1577,
+     "Kaleido Swap": 0.88
+    }
+   ],
+   [
+    "2026-10-25",
+    {
+     "Uniswap V2": 10326,
+     "Uniswap V3": 1921166,
+     "Uniswap V4": 10465561,
+     "Topaz CL": 26883,
+     "Lunya DEX": 1001,
+     "Synthra V3": 4412,
+     "Aero Slipstream": 2894033,
+     "Arctide DEX": 3.3,
+     "Archery V3": 450645,
+     "Synthra Core": 4791,
+     "Unitflow Finance V3": 2135,
+     "Mercurifi Launchpad": 12,
+     "Kaleido Swap": 2.21
+    }
+   ],
+   [
+    "2026-10-26",
+    {
+     "Uniswap V2": 17626,
+     "Uniswap V3": 4596657,
+     "Virtuals Protocol": 0.05,
+     "Uniswap V4": 10449536,
+     "Topaz CL": 55749,
+     "Lunya DEX": 2250,
+     "Synthra V3": 12471,
+     "Surged": 58,
+     "Aero Slipstream": 4909490,
+     "Arctide DEX": 3173,
+     "Archery V3": 630015,
+     "Synthra Core": 13614,
+     "FAZE": 0.7,
+     "Unitflow Finance V3": 4318,
+     "Mercurifi Launchpad": 0.3,
+     "Aero Basic": 0.03
+    }
+   ],
+   [
+    "2026-10-27",
+    {
+     "Uniswap V2": 11656,
+     "Uniswap V3": 3565288,
+     "Virtuals Protocol": 0.78,
+     "Uniswap V4": 11218178,
+     "Topaz CL": 42441,
+     "Lunya DEX": 1580,
+     "Synthra V3": 5219,
+     "Aero Slipstream": 3933377,
+     "Arctide DEX": 818,
+     "Archery V3": 520452,
+     "Synthra Core": 5661,
+     "FAZE": 367,
+     "Unitflow Finance V3": 3798,
+     "Mercurifi Launchpad": 36,
+     "Kaleido Swap": 1.67
+    }
+   ],
+   [
+    "2026-10-28",
+    {
+     "Uniswap V2": 14046,
+     "Uniswap V3": 3946269,
+     "Uniswap V4": 11143931,
+     "Topaz CL": 55618,
+     "Lunya DEX": 219,
+     "Synthra V3": 11492,
+     "Aero Slipstream": 4966656,
+     "Arctide DEX": 308,
+     "Archery V3": 762045,
+     "Synthra Core": 12328,
+     "FAZE": 5.4,
+     "Unitflow Finance V3": 1837,
+     "Kaleido Swap": 1.78
+    }
+   ],
+   [
+    "2026-10-29",
+    {
+     "Uniswap V2": 25590,
+     "Uniswap V3": 8207126,
+     "Virtuals Protocol": 223,
+     "Uniswap V4": 11077012,
+     "Topaz CL": 33005,
+     "Synthra V3": 11071,
+     "Aero Slipstream": 10357532,
+     "Arctide DEX": 1297,
+     "Archery V3": 1243178,
+     "Synthra Core": 13371,
+     "FAZE": 61.05,
+     "Unitflow Finance V3": 853,
+     "Kaleido Swap": 2.37
+    }
+   ],
+   [
+    "2026-10-30",
+    {
+     "Uniswap V2": 13649,
+     "Uniswap V3": 5555230,
+     "SushiSwap V3": 12,
+     "Uniswap V4": 11310054,
+     "Topaz CL": 19894,
+     "basedbid": 0.21,
+     "Synthra V3": 13053,
+     "Aero Slipstream": 5174067,
+     "Foci": 6.6,
+     "Arctide DEX": 865,
+     "Archery V3": 587725,
+     "Synthra Core": 13735,
+     "FAZE": 11,
+     "Unitflow Finance V3": 800,
+     "Kaleido Swap": 1.05
+    }
+   ],
+   [
+    "2026-10-31",
+    {
+     "Uniswap V2": 1648,
+     "Uniswap V3": 1608183,
+     "Virtuals Protocol": 69,
+     "Uniswap V4": 8064176,
+     "Topaz CL": 11189,
+     "Synthra V3": 6695,
+     "Aero Slipstream": 1903104,
+     "Arctide DEX": 27.99,
+     "Archery V3": 83329,
+     "Synthra Core": 7021,
+     "FAZE": 69.34,
+     "Unitflow Finance V3": 682,
+     "Mercurifi Launchpad": 159
+    }
+   ],
+   [
+    "2026-11-01",
+    {
+     "Uniswap V2": 1841,
+     "Uniswap V3": 1527666,
+     "Uniswap V4": 9015566,
+     "Topaz CL": 4934,
+     "Synthra V3": 1306,
+     "Aero Slipstream": 1727879,
+     "Arctide DEX": 102,
+     "Archery V3": 165808,
+     "Synthra Core": 1356,
+     "FAZE": 7.47,
+     "Unitflow Finance V3": 597
+    }
+   ],
+   [
+    "2026-11-02",
+    {
+     "Uniswap V2": 1127,
+     "Uniswap V3": 3652480,
+     "Virtuals Protocol": 0.13,
+     "Uniswap V4": 10672014,
+     "Topaz CL": 11984,
+     "Synthra V3": 3480,
+     "Aero Slipstream": 3305808,
+     "Arctide DEX": 27.2,
+     "Archery V3": 448510,
+     "Synthra Core": 3589,
+     "FAZE": 2.71,
+     "Unitflow Finance V3": 498,
+     "Kaleido Swap": 1.65,
+     "Central City": 285782
+    }
+   ],
+   [
+    "2026-11-03",
+    {
+     "Uniswap V2": 995,
+     "Uniswap V3": 3027984,
+     "Uniswap V4": 7518731,
+     "x402": 1115,
+     "Topaz CL": 7227,
+     "Synthra V3": 2557,
+     "Aero Slipstream": 3109075,
+     "Arctide DEX": 2922,
+     "Archery V3": 359701,
+     "Synthra Core": 2712,
+     "FAZE": 9.84,
+     "Unitflow Finance V3": 290,
+     "Kaleido Swap": 14.57,
+     "Central City": 1114
+    }
+   ],
+   [
+    "2026-11-04",
+    {
+     "Uniswap V2": 2838,
+     "Uniswap V3": 10180504,
+     "SushiSwap V3": 17,
+     "Uniswap V4": 11112770,
+     "x402": 1172,
+     "Topaz CL": 18245,
+     "Synthra V3": 2575,
+     "Aero Slipstream": 6422740,
+     "Arctide DEX": 158,
+     "Archery V3": 1161474,
+     "Synthra Core": 2750,
+     "FAZE": 1.07,
+     "Unitflow Finance V3": 388,
+     "Kaleido Swap": 27.65,
+     "Central City": 1173
+    }
+   ],
+   [
+    "2026-11-05",
+    {
+     "Uniswap V2": 2172,
+     "Uniswap V3": 6249155,
+     "SushiSwap V3": 5.91,
+     "Virtuals Protocol": 0.15,
+     "Uniswap V4": 9558464,
+     "x402": 117,
+     "Topaz CL": 22953,
+     "Synthra V3": 2967,
+     "CircleWarp": 79,
+     "Aero Slipstream": 6043200,
+     "Arctide DEX": 8.57,
+     "Archery V3": 908483,
+     "Synthra Core": 3091,
+     "FAZE": 1.5,
+     "Unitflow Finance V3": 367,
+     "Kaleido Swap": 6.54,
+     "Central City": 118
+    }
+   ],
+   [
+    "2026-11-06",
+    {
+     "Uniswap V2": 1730,
+     "Uniswap V3": 4365917,
+     "Uniswap V4": 11235797,
+     "x402": 299140,
+     "Topaz CL": 26518,
+     "Synthra V3": 2749,
+     "Aero Slipstream": 4077201,
+     "Arctide DEX": 4,
+     "Archery V3": 461119,
+     "Synthra Core": 2867,
+     "Unitflow Finance V3": 298,
+     "Kaleido Swap": 15.22,
+     "Central City": 299149
+    }
+   ],
+   [
+    "2026-11-07",
+    {
+     "Uniswap V2": 773,
+     "Uniswap V3": 844392,
+     "Uniswap V4": 10442165,
+     "x402": 957389,
+     "Topaz CL": 17541,
+     "Synthra V3": 1313,
+     "CircleWarp": 0.07,
+     "Aero Slipstream": 868527,
+     "Arctide DEX": 9.66,
+     "Archery V3": 55223,
+     "Synthra Core": 1371,
+     "Unitflow Finance V3": 386,
+     "Mercurifi Launchpad": 6.57,
+     "Kaleido Swap": 0.18,
+     "Central City": 957350
+    }
+   ],
+   [
+    "2026-11-08",
+    {
+     "Uniswap V2": 322,
+     "Uniswap V3": 609990,
+     "Uniswap V4": 10343874,
+     "Topaz CL": 15133,
+     "Synthra V3": 2012,
+     "Aero Slipstream": 695015,
+     "Archery V3": 41119,
+     "Synthra Core": 2089,
+     "Unitflow Finance V3": 331,
+     "Mercurifi Launchpad": 6.57,
+     "Central City": 957377,
+     "x402": 957389,
+     "CircleWarp": 0.07,
+     "Arctide DEX": 9.66,
+     "Kaleido Swap": 0.18
+    }
+   ]
+  ]
+ },
+ "Elysium": {
+  "error": "HTTP Error 500: Internal Server Error"
+ },
+ "elysium": {
+  "error": "HTTP Error 500: Internal Server Error"
+ }
+}
