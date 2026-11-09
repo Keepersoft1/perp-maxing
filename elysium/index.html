@@ -86,6 +86,8 @@ tbody tr:hover{background:rgba(61,255,160,.04)}
 .dc{display:flex;align-items:center;gap:11px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px;transition:.15s}
 .dc:hover{border-color:rgba(61,255,160,.4);transform:translateY(-2px)}
 .dc b{font-weight:700;font-size:14px}.dc small{display:block;color:var(--dim);font-size:11px;font-family:'JetBrains Mono';margin-top:2px}
+.lpg{grid-template-columns:340px 1fr!important;align-items:start}
+#lpt{min-width:600px}
 .swap{display:grid;grid-template-columns:1fr 420px;gap:24px;align-items:center;background:linear-gradient(140deg,rgba(61,255,160,.10),var(--card));border:1px solid rgba(61,255,160,.25);border-radius:22px;padding:34px}
 .swap ul{list-style:none;margin-top:18px;display:grid;gap:10px}
 .swap li{color:var(--mut);display:flex;gap:10px}.swap li:before{content:"→";color:var(--g)}
@@ -97,7 +99,7 @@ footer{border-top:1px solid var(--line);margin-top:30px;padding:28px 0 40px;colo
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 footer a{color:var(--mut)}footer a:hover{color:var(--g)}
 .err{padding:30px;text-align:center;color:var(--mut)}
-@media(max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.charts,.swap{grid-template-columns:1fr}.tabs{display:none}.kpi b{font-size:21px}.live{display:none}}
+@media(max-width:900px){.lpg{grid-template-columns:1fr!important}.kpis{grid-template-columns:repeat(2,1fr)}.charts,.swap{grid-template-columns:1fr}.tabs{display:none}.kpi b{font-size:21px}.live{display:none}}
 </style>
 </head>
 <body>
@@ -127,7 +129,7 @@ footer a{color:var(--mut)}footer a:hover{color:var(--g)}
 
 <section id="launchpads">
  <div class="sh"><h2>Launchpads<small>Ranked by 7 day volume</small></h2><div class="seg" id="lpseg"><button data-c="Launchpad" class="on">Launchpads</button><button data-c="all">All projects</button></div></div>
- <div class="charts" style="grid-template-columns:1fr 1.4fr">
+ <div class="charts lpg">
   <div class="cc"><h3><span>Volume share · 7d</span><b id="lptot"></b></h3><div class="cv" style="height:300px"><canvas id="c3"></canvas></div></div>
   <div class="tbl"><div class="tscroll"><table id="lpt"><thead><tr><th>#</th><th data-s="name">Project</th><th class="r" data-s="vol7d">Volume 7d</th><th class="r" data-s="share">Share</th><th class="r" data-s="wallets7d">Wallets 7d</th><th></th></tr></thead><tbody></tbody></table></div></div>
  </div>
@@ -164,7 +166,7 @@ const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const slug=s=>s.toLowerCase().replace(/[^a-z0-9]/g,'');
 const KNOWN=new Set(['akafun','apogee','arkhampad','ascend','boxa','chainzy','corepad','eleos','elixirpad','elyne','elyra','elyspump','elyxa','hesperia','kleos','liquidfi','mesa','montra','nectar','obol','perpme','quoted','rons','stockium','stonkspad','torusfi','volta','wormpad','zyora']);
 const ALIAS={elyramarkets:'elyra',akafun:'akafun',stocksocial:'',standssocial:''};
-const logo=n=>{let s=slug(n);s=ALIAS[s]!==undefined&&ALIAS[s]?ALIAS[s]:s;if(KNOWN.has(s))return `<img class="av" src="logos/${s}.${s==='elyra'?'png':'jpg'}" alt="" loading="lazy">`;return `<span class="av">${esc(n[0]||'?')}</span>`};
+const logo=n=>{let s=slug(n);const pl=(D&&D.projects||[]).find(p=>slug(p.name)===s&&p.logo);if(pl)return `<img class="av" src="${pl.logo}" alt="" loading="lazy">`;s=ALIAS[s]!==undefined&&ALIAS[s]?ALIAS[s]:s;if(KNOWN.has(s))return `<img class="av" src="logos/${s}.${s==='elyra'?'png':'jpg'}" alt="" loading="lazy">`;return `<span class="av">${esc(n[0]||'?')}</span>`};
 let D,charts={},lpSort={k:'vol7d',d:-1},tkSort={k:'vol24h',d:-1},lpCat='Launchpad';
 Chart.defaults.color='#7f9c8c';Chart.defaults.font.family='Inter';Chart.defaults.borderColor='rgba(255,255,255,.05)';
 function home(name){const t=D.trade||{};const k=Object.keys(t).find(x=>slug(x)===slug(name)||slug(x).startsWith(slug(name)));if(!k)return null;try{return new URL(t[k].replace('{address}','')).origin}catch(e){return null}}
@@ -184,7 +186,7 @@ function drawLP(){const {p,tot}=lpRows();const mx=Math.max(...p.map(x=>x.share),
  $('#lptot').textContent=fm(tot);
  const top=[...p].sort((a,b)=>b.vol7d-a.vol7d);const t6=top.slice(0,6),rest=top.slice(6).reduce((a,x)=>a+x.vol7d,0);
  const cols=['#3dffa0','#1fd17d','#14a865','#a4ffd3','#0d7a4a','#6dffbd','#2f4a3c'];charts.c3&&charts.c3.destroy();
- charts.c3=new Chart($('#c3'),{type:'doughnut',data:{labels:[...t6.map(x=>x.name),'Others'],datasets:[{data:[...t6.map(x=>x.vol7d),rest],backgroundColor:cols,borderColor:'#0b1510',borderWidth:3}]},options:{maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'right',labels:{boxWidth:12,boxHeight:12,padding:12,font:{weight:600}}},tooltip:{callbacks:{label:c=>c.label+': '+fm(c.raw)+' ('+(c.raw/tot*100).toFixed(1)+'%)'}}}}})}
+ charts.c3=new Chart($('#c3'),{type:'doughnut',data:{labels:[...t6.map(x=>x.name),'Others'],datasets:[{data:[...t6.map(x=>x.vol7d),rest],backgroundColor:cols,borderColor:'#0b1510',borderWidth:3}]},options:{maintainAspectRatio:false,cutout:'62%',plugins:{legend:{position:'bottom',labels:{boxWidth:12,boxHeight:12,padding:12,font:{weight:600}}},tooltip:{callbacks:{label:c=>c.label+': '+fm(c.raw)+' ('+(c.raw/tot*100).toFixed(1)+'%)'}}}}})}
 function drawTK(){const q=$('#q').value.trim().toLowerCase();let t=(D.trending||[]).filter(x=>!q||(x.name+x.ticker+x.pad).toLowerCase().includes(q));
  t.sort((a,b)=>{let A=a[tkSort.k],B=b[tkSort.k];if(tkSort.k==='age'){A=ageH(A);B=ageH(B)}return (typeof A==='string'?A.localeCompare(B):A-B)*tkSort.d});
  $('#tkt tbody').innerHTML=t.length?t.map((x,i)=>{const h=home(x.pad);return `<tr><td class="rk">${i+1}</td><td><div class="nm"><span class="av">${esc((x.ticker||'?')[0])}</span><div><b>${esc(x.name)}</b><small>$${esc(x.ticker)}</small></div></div></td><td><div class="nm" style="gap:8px">${logo(x.pad).replace('class="av"','class="av" style="width:22px;height:22px;border-radius:6px;font-size:11px"')}<span>${esc(x.pad)}</span></div></td><td class="r num" style="color:var(--mut)">${esc(x.age)}</td><td class="r num">${fp(x.price)}</td><td class="r num">${fm(x.mcap,2)}</td><td class="r num" style="color:var(--g)">${fm(x.vol24h,2)}</td><td class="r">${h?`<a class="go" href="${esc(h)}" target="_blank" rel="noopener">Trade</a>`:''}</td></tr>`}).join(''):'<tr><td colspan="8" class="err">No tokens match</td></tr>'}
