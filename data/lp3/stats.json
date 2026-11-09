@@ -1,0 +1,62 @@
+{
+ "fetched": "2026-11-09T06:54:20.272900",
+ "rows": [
+  [
+   " All 61 projects Ascend",
+   "$19.19M",
+   "10,262"
+  ],
+  [
+   " Launchpad Open Montra",
+   "$26.39M",
+   "13,284"
+  ],
+  [
+   " Launchpad Open ArkhamPad",
+   "$9.7K",
+   "8,996"
+  ],
+  [
+   " Launchpad Open Kleos",
+   "$5.50M",
+   "7,075"
+  ],
+  [
+   " Launchpad Open BOXA",
+   "$3.07M",
+   "6,183"
+  ],
+  [
+   " Launchpad Open ElysPump",
+   "$6.39M",
+   "5,165"
+  ],
+  [
+   " Launchpad Open Volta",
+   "$5.95M",
+   "4,912"
+  ],
+  [
+   " Launchpad Open Obol",
+   "$3.16M",
+   "3,722"
+  ],
+  [
+   " Launchpad Open Agora",
+   "$2.77M",
+   "2,151"
+  ],
+  [
+   "615 NFT Open RONS",
+   "$772.6K",
+   "1,370"
+  ],
+  [
+   " Launchpad Open Quoted",
+   "$1.30M",
+   "1,234"
+  ]
+ ],
+ "network": "Network Details 3,621,108 transactions since launch per day, since launch Projects ? All 61 projects Ascend Token launch &amp; lifecycle Partner Volume 7d $19.19M Wallets 7d 10,262 Launchpad Open Montra Launchpad On mainnet Volume 7d $26.39M Wallets 7d 13,284 Launchpad Open ArkhamPad Launchpad built for Elysium On mainnet Volume 7d $9.7K Wallets 7d 8,996 Launchpad Open Kleos Launchpad On mainnet Volume 7d $5.50M Wallets 7d 7,075 Launchpad Open BOXA Launchpad On mainnet Volume 7d $3.07M Wallets 7d 6,183 Launchpad Open ElysPump Launchpad On mainnet Volume 7d $6.39M Wallets 7d 5,165 Launchpad Open Volta Token launchpad on Uniswap v4 On mainnet Volume 7d $5.95M Wallets 7d 4,912 Launchpad Open Obol Launchpad On mainnet Volume 7d $3.16M Wallets 7d 3,722 Launchpad Open Agora Launchpad token aggregator On mainnet Volume 7d $2.77M Wallets 7d 2,151 DeFi Open Elysium Machines ERC-404 NFTs On mainnet Sales vol. 7d $556.3K Wallets 7d 1,615 NFT Open RONS Launchpad On mainnet Volume 7d $772.6K Wallets 7d 1,370 Launchpad Open Quoted Launchpad, tokens quoted in stocks On mainnet Volume 7d $1.30M Wallets 7d 1,234 Launchpad Open Building on Elysium? Send us your project: we check its contracts, list it and share the best ones. Submit a project \u2192 {\"New transactions\":[[\"01-01\",0,0],[\"10-19\",23,0],[\"10-20\",583,0],[\"10-21\",1338,0],[\"10-22\",2035,0],[\"10-23\",3031,0],[\"10-24\",1896,0],[\"10-25\",1966,0],[\"10-26\",4192,0],[\"10-27\",12172,0],[\"10-28\",13157,0],[\"10-29\",27616,0],[\"10-30\",26237,0],[\"10-31\",3394",
+ "header": " Elysium Ecosystem try{var t=localStorage.getItem('ely-theme');if(t)document.documentElement.dataset.theme=t}catch(e){} {\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://elysiumeco.xyz/#org\",\"name\":\"Elysium Ecosystem\",\"url\":\"https://elysiumeco.xyz\",\"logo\":\"https://elysiumeco.xyz/icon-512.png\",\"sameAs\":[\"https://x.com/ElysiumEco\"]},{\"@type\":\"WebSite\",\"@id\":\"https://elysiumeco.xyz/#site\",\"name\":\"Elysium Ecosystem\",\"url\":\"https://elysiumeco.xyz\",\"publisher\":{\"@id\":\"https://elysiumeco.xyz/#org\"},\"inLanguage\":\"en\"}]} [data-astro-transition-scope=\"astro-bbhp3f5g-4\"] { view-transition-name: astro-bbhp3f5g-4; }@layer astro { ::view-transition-old(astro-bbhp3f5g-4) { animation-duration: 180ms; animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1); animation-fill-mode: both; animation-name: astroFadeOut; }::view-transition-new(astro-bbhp3f5g-4) { animation-duration: 180ms; animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1); animation-fill-mode: both; animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(astro-bbhp3f5g-4) { animation-duration: 180ms; animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1); animation-fill-mode: both; animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(astro-bbhp3f5g-4) { animation-duration: 180ms; animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1); animation-fill-mode: both; animation-name: astroFadeIn; } }[data-astro-transition-fallback=\"old\"] [data-astro-transition-scope=\"astro-bbhp3f5g-4\"], [data-astro-transition-fallback=\"old\"][data-astro-transition-scope=\"astro-bbhp3f5g-4\"] { animation-duration: 180ms; animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1); animation-fill-mode: both; animation-name: astroFadeOut; }[data-astro-transition-fallback=\"new\"] [data-astro-transition-scope=\"astro-bbhp3f5g-4\"], [data-astro-transition-fallback=\"new\"][data-astro-transition-scope=\"astro-bbhp3f5g-4\"] { animation-duration: 180ms; animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1); animation-fill-mode: both; animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback=\"old\"] [data-astro-transition-scope=\"astro-bbhp3f5g-4\"], [data-astro-transition=back][data-astro-transition-fallback=\"old\"][data-astro-transition-scope=\"astro-bbhp3f5g-4\"] { animation-duration: 180ms; animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1); animation-fill-mode: both; animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback=\"new\"] [data-astro-transition-scope=\"astro-bbhp3f5g-4\"], [data-astro-transition=back][data-astro-transition-fallback=\"new\"][data-astro-transition-scope=\"astro-bbhp3f5g-4\"] { animation-duration: 180ms; animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1); animation-fill-mode: both; animation-name: astroFadeIn; } Beta: Elysium's mainnet is still private and not officially launched. This is a community directory: we give you as much data as we can, but bei"
+}
